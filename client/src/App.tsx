@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -16,21 +17,32 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location]);
+  return null;
+}
+
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/services"} component={Services} />
-      <Route path={"/portfolio"} component={Portfolio} />
-      <Route path={"/about"} component={About} />
-      <Route path={"/quote"} component={Quote} />
-      <Route path={"/blog"} component={Blog} />
-      <Route path={"/blog/:id"} component={BlogArticle} />
-      <Route path={"/contact"} component={Contact} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/services"} component={Services} />
+        <Route path={"/portfolio"} component={Portfolio} />
+        <Route path={"/about"} component={About} />
+        <Route path={"/quote"} component={Quote} />
+        <Route path={"/blog"} component={Blog} />
+        <Route path={"/blog/:id"} component={BlogArticle} />
+        <Route path={"/contact"} component={Contact} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 

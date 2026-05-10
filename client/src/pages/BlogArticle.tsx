@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import { blogArticles } from "@/data/blogArticles";
 import { Streamdown } from "streamdown";
+import { toast } from "sonner";
 
 /**
  * DDA-Web Blog Article Page
@@ -46,9 +47,11 @@ export default function BlogArticle() {
         url: window.location.href,
       });
     } else {
-      // Fallback: copy to clipboard
-      navigator.clipboard.writeText(window.location.href);
-      alert("Link copiado para a área de transferência!");
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        toast.success("Link copiado para a área de transferência!");
+      }).catch(() => {
+        toast.error("Não foi possível copiar o link.");
+      });
     }
   };
 

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,8 @@ export default function MobileNav() {
   };
 
   return (
-    <div className="md:hidden">
+    <div className="md:hidden flex items-center gap-2">
+      <ThemeToggle />
       <button
         onClick={toggleMenu}
         className="p-2 hover:bg-card rounded-lg transition"

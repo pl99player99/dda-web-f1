@@ -524,6 +524,14 @@ export default function Quote() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
+        <div className="container">
+          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
+          <p className="mt-2">Transformando negócios com tecnologia e inovação.</p>
+        </div>
+      </footer>
     </div>
   );
 }
