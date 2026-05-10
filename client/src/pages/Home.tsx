@@ -1,6 +1,17 @@
 ﻿import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Check, Zap, Target, Users, Lightbulb, Globe, BriefcaseBusiness, Rocket, SlidersHorizontal } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  Zap,
+  Target,
+  Users,
+  Lightbulb,
+  Globe,
+  BriefcaseBusiness,
+  Rocket,
+  SlidersHorizontal,
+} from "lucide-react";
 import Navigation from "@/components/Navigation";
 import ContactForm from "@/components/ContactForm";
 import { Link } from "wouter";
@@ -40,7 +51,9 @@ export default function Home() {
               <div className="space-y-4">
                 <h1 className="font-display text-5xl lg:text-6xl leading-tight">
                   Soluções Digitais para
-                  <span className="text-accent">Fazer a Sua Empresa Crescer</span>
+                  <span className="text-accent">
+                    Fazer a Sua Empresa Crescer
+                  </span>
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   Criamos sites profissionais, sistemas web, automações e apps
@@ -76,8 +89,12 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-accent font-semibold text-lg">Transformação Digital com Pessoas Reais</p>
-                  <p className="text-sm text-muted-foreground">Projetos pensados para resultados, não apenas aparência.</p>
+                  <p className="text-accent font-semibold text-lg">
+                    Transformação Digital com Pessoas Reais
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Projetos pensados para resultados, não apenas aparência.
+                  </p>
                 </div>
               </div>
             </div>
@@ -137,7 +154,11 @@ export default function Home() {
               },
             ].map((item, idx) => (
               <Card key={idx} className="card-modern overflow-hidden p-0">
-                <img src={item.image} alt={item.title} className="w-full h-44 object-cover" />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-44 object-cover"
+                />
                 <div className="p-5">
                   <h3 className="font-display text-xl mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.text}</p>
@@ -163,7 +184,9 @@ export default function Home() {
             {/* Package 1 */}
             <Card className="card-modern">
               <div className="mb-4">
-                <div className="mb-2 text-accent"><Globe className="w-7 h-7" /></div>
+                <div className="mb-2 text-accent">
+                  <Globe className="w-7 h-7" />
+                </div>
                 <h3 className="font-display text-lg">Presença Online</h3>
                 <p className="text-xs text-muted-foreground">Para começar</p>
               </div>
@@ -200,7 +223,9 @@ export default function Home() {
                 <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">
                   Mais Popular
                 </span>
-                <div className="mb-2 mt-2 text-accent"><BriefcaseBusiness className="w-7 h-7" /></div>
+                <div className="mb-2 mt-2 text-accent">
+                  <BriefcaseBusiness className="w-7 h-7" />
+                </div>
                 <h3 className="font-display text-lg">Profissional</h3>
                 <p className="text-xs text-muted-foreground">Empresa séria</p>
               </div>
@@ -232,7 +257,9 @@ export default function Home() {
             {/* Package 3 */}
             <Card className="card-modern">
               <div className="mb-4">
-                <div className="mb-2 text-accent"><Rocket className="w-7 h-7" /></div>
+                <div className="mb-2 text-accent">
+                  <Rocket className="w-7 h-7" />
+                </div>
                 <h3 className="font-display text-lg">Vendas & Captação</h3>
                 <p className="text-xs text-muted-foreground">Gerar clientes</p>
               </div>
@@ -266,7 +293,9 @@ export default function Home() {
             {/* Package 4 */}
             <Card className="card-modern">
               <div className="mb-4">
-                <div className="mb-2 text-accent"><SlidersHorizontal className="w-7 h-7" /></div>
+                <div className="mb-2 text-accent">
+                  <SlidersHorizontal className="w-7 h-7" />
+                </div>
                 <h3 className="font-display text-lg">Personalizado</h3>
                 <p className="text-xs text-muted-foreground">Sua solução</p>
               </div>
@@ -361,23 +390,20 @@ export default function Home() {
               {
                 id: 1,
                 title: "Restaurante Sabor da Terra",
-                category: "Negócio Profissional",
-                image:
-                  "/images/project-1.png",
+                category: "Site Profissional",
+                image: "/images/project-1.png",
               },
               {
-                id: 2,
-                title: "Consultoria JM - Landing Page",
-                category: "Vendas & Captação",
-                image:
-                  "/images/project-2.png",
+                id: 4,
+                title: "Sistema de Gestão de Stock Kwanza",
+                category: "Sistema Web",
+                image: "/images/blog-4.png",
               },
               {
-                id: 3,
-                title: "Salão de Beleza Estilo",
-                category: "Presença Online",
-                image:
-                  "/images/project-3.png",
+                id: 5,
+                title: "App de Agendamentos VitaCare",
+                category: "Aplicativo Mobile",
+                image: "/images/blog-5.png",
               },
             ].map((project, idx) => (
               <Link key={idx} href={`/portfolio?project=${project.id}`}>
@@ -388,7 +414,9 @@ export default function Home() {
                     className="h-40 w-full object-cover"
                   />
                   <div className="p-6">
-                    <p className="text-xs text-accent mb-2">{project.category}</p>
+                    <p className="text-xs text-accent mb-2">
+                      {project.category}
+                    </p>
                     <h3 className="font-semibold">{project.title}</h3>
                   </div>
                 </Card>
@@ -410,7 +438,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl mb-4">
-              ?sltimos Artigos do Blog
+              Últimos Artigos do Blog
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Fique atualizado com as últimas tendências em web design,
@@ -418,7 +446,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {blogArticles.slice(0, 3).map((article) => (
+            {blogArticles.slice(0, 3).map(article => (
               <Link key={article.id} href={`/blog/${article.id}`}>
                 <Card className="hover:border-accent transition-all group overflow-hidden p-0 cursor-pointer">
                   <img
@@ -427,7 +455,9 @@ export default function Home() {
                     className="h-40 w-full object-cover"
                   />
                   <div className="p-6">
-                    <p className="text-xs text-accent mb-2">{article.category}</p>
+                    <p className="text-xs text-accent mb-2">
+                      {article.category}
+                    </p>
                     <h3 className="font-semibold mb-3 group-hover:text-accent transition">
                       {article.title}
                     </h3>
@@ -479,7 +509,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
         <div className="container">
-          <p>&copy; 2025 DDA-Web. Todos os direitos reservados.</p>
+          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
           <p className="mt-2">
             Transformando negócios com tecnologia e inovação.
           </p>
@@ -488,5 +518,3 @@ export default function Home() {
     </div>
   );
 }
-
-

@@ -35,7 +35,7 @@ export default function Blog() {
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Artigos, dicas e insights sobre web design, marketing digital e
-              tecnologia. Fique atualizado com as últimas tendências do mercado.
+              tecnologia. Fique atualizado com as Ãºltimas tendÃªncias do mercado.
             </p>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function Blog() {
         <div className="container max-w-2xl text-center">
           <h2 className="font-display text-4xl mb-4">Quer Aprender Mais?</h2>
           <p className="text-muted-foreground mb-8">
-            Inscreva-se em nossa newsletter para receber os últimos artigos e
+            Inscreva-se em nossa newsletter para receber os Ãºltimos artigos e
             dicas diretamente na sua caixa de entrada.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -147,7 +147,7 @@ export default function Blog() {
               </Button>
             </Link>
             <Link href="/quote">
-              <Button variant="outline">Solicitar Orçamento</Button>
+              <Button variant="outline">Solicitar OrÃ§amento</Button>
             </Link>
           </div>
         </div>
@@ -156,13 +156,12 @@ export default function Blog() {
       {/* Footer */}
       <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
         <div className="container">
-          <p>&copy; 2025 DDA-Web. Todos os direitos reservados.</p>
+          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
           <p className="mt-2">
-            Transformando negócios com tecnologia e inovação.
+            Transformando negÃ³cios com tecnologia e inovaÃ§Ã£o.
           </p>
         </div>
       </footer>
     </div>
   );
 }
-

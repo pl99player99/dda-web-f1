@@ -77,10 +77,10 @@ export default function About() {
         <div className="container max-w-3xl">
           <h1 className="font-display text-5xl mb-6">Sobre a DDA-Web</h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Somos uma empresa de soluções digitais focada em transformar a presença
-            online de empresas em Angola. Criamos sites, sistemas web, apps,
-            automações e bases de dados sob medida, com uma missão clara: tornar
-            a tecnologia acessível, rápida e eficiente.
+            Somos uma empresa de soluções digitais focada em transformar a
+            presença online de empresas em Angola. Criamos sites, sistemas web,
+            apps, automações e bases de dados sob medida, com uma missão clara:
+            tornar a tecnologia acessível, rápida e eficiente.
           </p>
           <div className="grid grid-cols-3 gap-6 py-8 border-y border-border">
             <div>
@@ -121,8 +121,8 @@ export default function About() {
             <div>
               <h2 className="font-display text-3xl mb-4">Nossa Visão</h2>
               <p className="text-muted-foreground mb-4">
-                Ser a empresa de soluções digitais de referência em Angola, conhecida por
-                velocidade, qualidade e satisfação do cliente.
+                Ser a empresa de soluções digitais de referência em Angola,
+                conhecida por velocidade, qualidade e satisfação do cliente.
               </p>
               <p className="text-muted-foreground">
                 Queremos ajudar 1000+ negócios a transformar sua presença
@@ -245,16 +245,28 @@ export default function About() {
             Se você acredita em qualidade, velocidade e satisfação do cliente,
             vamos ser um ótimo time.
           </p>
-          <Link href="/services">
-            <Button className="btn-primary gap-2 text-lg px-8 py-6">
-              Ver Nossos Serviços <ArrowRight className="w-5 h-5" />
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/services">
+              <Button className="btn-primary gap-2 text-lg px-8 py-6">
+                Ver Nossos Serviços <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button variant="outline" className="gap-2 text-lg px-8 py-6">
+                Entrar em Contacto <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
+        <div className="container">
+          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
+          <p className="mt-2">Transformando negócios com tecnologia e inovação.</p>
+        </div>
+      </footer>
     </div>
   );
 }
-
-
-

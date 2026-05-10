@@ -1,6 +1,13 @@
 ﻿import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Check, ArrowRight, Globe, BriefcaseBusiness, Rocket, SlidersHorizontal } from "lucide-react";
+import {
+  Check,
+  ArrowRight,
+  Globe,
+  BriefcaseBusiness,
+  Rocket,
+  SlidersHorizontal,
+} from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
@@ -153,8 +160,9 @@ export default function Services() {
             Soluções Digitais para Empresas
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Mantivemos os pacotes de sites e adicionamos novas linhas de soluções
-            digitais para projetos sob medida, sistemas e apps.
+            Desde sites profissionais até sistemas completos, apps mobile e
+            automações — escolha o pacote ideal ou fale connosco para uma
+            solução personalizada.
           </p>
         </div>
       </section>
@@ -243,7 +251,8 @@ export default function Services() {
                       rel="noopener noreferrer"
                     >
                       <Button className="btn-primary w-full gap-2">
-                        Contactar via WhatsApp <ArrowRight className="w-4 h-4" />
+                        Contactar via WhatsApp{" "}
+                        <ArrowRight className="w-4 h-4" />
                       </Button>
                     </a>
 
@@ -264,10 +273,13 @@ export default function Services() {
       <section className="py-20 border-t border-border">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="font-display text-4xl mb-4">Outras Soluções Digitais</h2>
+            <h2 className="font-display text-4xl mb-4">
+              Outras Soluções Digitais
+            </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              Além dos pacotes de sites, também entregamos projetos técnicos para
-              digitalizar operações, criar produtos digitais e escalar empresas.
+              Além dos pacotes de sites, também entregamos projetos técnicos
+              para digitalizar operações, criar produtos digitais e escalar
+              empresas.
             </p>
           </div>
 
@@ -277,25 +289,41 @@ export default function Services() {
                 title: "Sistemas Web por Encomenda",
                 description:
                   "Desenvolvimento de sistemas internos, portais de clientes, áreas administrativas e fluxos sob medida.",
-                examples: ["Gestão de pedidos", "Dashboard interno", "Portal de clientes"],
+                examples: [
+                  "Gestão de pedidos",
+                  "Dashboard interno",
+                  "Portal de clientes",
+                ],
               },
               {
                 title: "Aplicativos Mobile",
                 description:
                   "Apps para Android e iOS focados em operação, vendas, atendimento e experiência do cliente.",
-                examples: ["App de agendamento", "App de equipa", "App para clientes"],
+                examples: [
+                  "App de agendamento",
+                  "App de equipa",
+                  "App para clientes",
+                ],
               },
               {
                 title: "Bases de Dados e Backoffice",
                 description:
                   "Estruturação de base de dados, organização de informação, painéis e processos para tomada de decisão.",
-                examples: ["Modelagem de dados", "Relatórios", "Painéis de gestão"],
+                examples: [
+                  "Modelagem de dados",
+                  "Relatórios",
+                  "Painéis de gestão",
+                ],
               },
               {
                 title: "Automação e Integrações",
                 description:
                   "Integração entre ferramentas e automação de tarefas repetitivas para ganhar tempo e reduzir erros.",
-                examples: ["WhatsApp + CRM", "Email + Formulários", "Fluxos automáticos"],
+                examples: [
+                  "WhatsApp + CRM",
+                  "Email + Formulários",
+                  "Fluxos automáticos",
+                ],
               },
             ].map((solution, idx) => (
               <Card key={idx} className="card-modern h-full">
@@ -325,7 +353,8 @@ export default function Services() {
                   </a>
                   <Link href="/quote?package=personalizado">
                     <Button variant="outline" className="w-full gap-2">
-                      Pedir proposta por Email <ArrowRight className="w-4 h-4" />
+                      Pedir proposta por Email{" "}
+                      <ArrowRight className="w-4 h-4" />
                     </Button>
                   </Link>
                 </div>
@@ -334,7 +363,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
 
       {/* Detailed Comparison */}
       <section className="py-20 bg-card/30 border-y border-border">
@@ -479,12 +507,14 @@ export default function Services() {
           </Link>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
+        <div className="container">
+          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
+          <p className="mt-2">Transformando negócios com tecnologia e inovação.</p>
+        </div>
+      </footer>
     </div>
   );
 }
-
-
-
-
-
-

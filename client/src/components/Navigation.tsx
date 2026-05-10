@@ -12,8 +12,8 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { label: "Serviços", path: "/services" },
-    { label: "Portfólio", path: "/portfolio" },
+    { label: "ServiÃ§os", path: "/services" },
+    { label: "PortfÃ³lio", path: "/portfolio" },
     { label: "Blog", path: "/blog" },
     { label: "Sobre", path: "/about" },
   ];
@@ -25,7 +25,11 @@ export default function Navigation() {
           href="/"
           className="flex items-center hover:opacity-90 transition"
         >
-          <img src="/logo.svg" alt="DDA-Web" className="h-10 w-auto max-w-[240px]" />
+          <img
+            src="/logo.svg"
+            alt="DDA-Web"
+            className="h-10 w-auto max-w-[240px]"
+          />
         </Link>
         <div className="hidden md:flex gap-8 items-center">
           {navItems.map(item => (
@@ -41,7 +45,14 @@ export default function Navigation() {
               {item.label}
             </Link>
           ))}
-          <Link href="/contact" className="hover:text-accent transition">
+          <Link
+            href="/contact"
+            className={`transition ${
+              isActive("/contact")
+                ? "text-accent font-semibold border-b-2 border-accent pb-1"
+                : "hover:text-accent"
+            }`}
+          >
             Contacto
           </Link>
           <ThemeToggle />
@@ -51,4 +62,3 @@ export default function Navigation() {
     </nav>
   );
 }
-
