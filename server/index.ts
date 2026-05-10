@@ -89,6 +89,11 @@ async function startServer() {
       const templateParams = {
         from_name: body.name,
         from_email: body.email,
+        to_email: body.email,
+        email: body.email,
+        user_email: body.email,
+        client_email: body.email,
+        reply_to: body.email,
         phone: body.phone || "Não fornecido",
         company: body.company || "Não fornecido",
         message: body.message,
