@@ -14,7 +14,7 @@ export default function Contact() {
           <div className="text-center mb-12">
             <h1 className="font-display text-5xl mb-4">Entre em Contacto</h1>
             <p className="text-muted-foreground">
-              Preencha o formul·rio abaixo e entraremos em contacto em breve.
+              Preencha o formul√°rio abaixo e entraremos em contacto em breve.
             </p>
           </div>
 
@@ -25,11 +25,11 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/quote">
               <Button className="btn-primary gap-2">
-                Calcular OrÁamento <ArrowRight className="w-4 h-4" />
+                Calcular Or√ßamento <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
             <Link href="/about">
-              <Button variant="outline">Saber Mais Sobre NÛs</Button>
+              <Button variant="outline">Saber Mais Sobre N√≥s</Button>
             </Link>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function Contact() {
         <div className="container">
           <p>&copy; 2025 DDA-Web. Todos os direitos reservados.</p>
           <p className="mt-2">
-            Transformando negÛcios com tecnologia e inovaÁ„o.
+            Transformando neg√≥cios com tecnologia e inova√ß√£o.
           </p>
         </div>
       </footer>

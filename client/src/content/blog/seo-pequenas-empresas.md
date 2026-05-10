@@ -1,16 +1,16 @@
-# SEO para Pequenas Empresas: Guia Completo para Começar
+# SEO para Pequenas Empresas: Guia Completo para ComeÃ§ar
 
-SEO é um processo contínuo para tornar seu site mais visível em motores de busca.
+SEO Ã© um processo contÃ­nuo para tornar seu site mais visÃ­vel em motores de busca.
 
 ## Pilares iniciais
 
 1. Pesquisa de palavras-chave
-2. Otimização on-page
-3. Conteúdo relevante
-4. SEO técnico
+2. OtimizaÃ§Ã£o on-page
+3. ConteÃºdo relevante
+4. SEO tÃ©cnico
 5. Monitoramento de resultados
 
-## Conclusão
+## ConclusÃ£o
 
-Com consistência, SEO gera tráfego qualificado e crescimento sustentável.
+Com consistÃªncia, SEO gera trÃ¡fego qualificado e crescimento sustentÃ¡vel.
 
