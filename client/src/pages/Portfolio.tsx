@@ -174,7 +174,7 @@ export default function Portfolio() {
                           <ul className="space-y-1">
                             {project.results.map((result, idx) => (
                               <li key={idx} className="text-sm text-muted-foreground flex gap-2">
-                                <span className="text-accent">?o"</span>
+                                <span className="text-accent">✓</span>
                                 {result}
                               </li>
                             ))}

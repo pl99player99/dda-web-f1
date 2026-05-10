@@ -1,16 +1,16 @@
-# Convers„o: Como Transformar Visitantes em Clientes
+# Convers√£o: Como Transformar Visitantes em Clientes
 
-Tr·fego sem convers„o n„o gera resultado de negÛcio.
+Tr√°fego sem convers√£o n√£o gera resultado de neg√≥cio.
 
-## EstratÈgias pr·ticas
+## Estrat√©gias pr√°ticas
 
 - Proposta de valor clara
 - CTAs objetivos
-- Formul·rios simples
+- Formul√°rios simples
 - Prova social
 - Testes A/B recorrentes
 
-## Conclus„o
+## Conclus√£o
 
-Pequenas melhorias de convers„o tÍm grande impacto no faturamento.
+Pequenas melhorias de convers√£o t√™m grande impacto no faturamento.
 
