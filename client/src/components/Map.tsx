@@ -1,10 +1,9 @@
 /**
  * @deprecated
- * Este componente foi descontinuado até a integração de mapa ser concluída
- * com requisitos de segurança e produto definidos.
+ * Este componente foi descontinuado atÃ© a integraÃ§Ã£o de mapa ser concluÃ­da
+ * com requisitos de seguranÃ§a e produto definidos.
  */
 
 export function MapView() {
   return null;
 }
-

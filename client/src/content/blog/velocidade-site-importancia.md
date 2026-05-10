@@ -1,16 +1,15 @@
-# A Import‚ncia da Velocidade do Site
+# A Import√¢ncia da Velocidade do Site
 
-Performance impacta experiÍncia, SEO e receita.
+Performance impacta experi√™ncia, SEO e receita.
 
 ## O que melhorar primeiro
 
-- OtimizaÁ„o de imagens
-- MinificaÁ„o de assets
+- Otimiza√ß√£o de imagens
+- Minifica√ß√£o de assets
 - Cache eficiente
 - Lazy loading
-- ReduÁ„o de scripts desnecess·rios
+- Redu√ß√£o de scripts desnecess√°rios
 
-## Conclus„o
+## Conclus√£o
 
-Velocidade È parte central da qualidade de um produto digital.
-
+Velocidade √© parte central da qualidade de um produto digital.

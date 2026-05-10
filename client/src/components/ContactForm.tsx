@@ -35,7 +35,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
-      toast.error("Por favor, preencha os campos obrigatórios");
+      toast.error("Por favor, preencha os campos obrigatÃ³rios");
       return;
     }
 
@@ -155,7 +155,7 @@ export default function ContactForm() {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder="Descreva seu projeto ou dúvida..."
+          placeholder="Descreva seu projeto ou dÃºvida..."
           rows={5}
           className="w-full px-4 py-2 rounded-lg bg-card border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent resize-none"
           required
@@ -171,9 +171,8 @@ export default function ContactForm() {
       </Button>
 
       <p className="text-xs text-muted-foreground text-center">
-        * Campos obrigatórios
+        * Campos obrigatÃ³rios
       </p>
     </form>
   );
 }
-

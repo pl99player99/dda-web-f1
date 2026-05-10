@@ -160,9 +160,8 @@ export default function Services() {
             Soluções Digitais para Empresas
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Desde sites profissionais até sistemas completos, apps mobile e
-            automações — escolha o pacote ideal ou fale connosco para uma
-            solução personalizada.
+            Mantivemos os pacotes de sites e adicionamos novas linhas de
+            soluções digitais para projetos sob medida, sistemas e apps.
           </p>
         </div>
       </section>
@@ -507,14 +506,6 @@ export default function Services() {
           </Link>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
-        <div className="container">
-          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
-          <p className="mt-2">Transformando negócios com tecnologia e inovação.</p>
-        </div>
-      </footer>
     </div>
   );
 }
