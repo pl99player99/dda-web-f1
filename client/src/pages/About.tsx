@@ -2,6 +2,7 @@
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Zap, Target, Users, Lightbulb } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Link } from "wouter";
 
 /**
@@ -57,13 +58,13 @@ export default function About() {
       year: "2025",
       title: "Expansão e Inovação",
       description:
-        "Integramos IA em nosso processo. Agora entregamos sites e soluções digitais 3x mais rápido mantendo qualidade premium.",
+        "Integramos IA no nosso processo e expandimos para sistemas web, apps mobile e automações — não apenas sites.",
     },
     {
-      year: "2025",
+      year: "2026",
       title: "Visão Futura",
       description:
-        "Objetivo: ser a empresa de soluções digitais número 1 em Angola. Ajudando 1000+ negócios a crescer com tecnologia.",
+        "Objetivo: ser a empresa de soluções digitais de referência em Angola, ajudando 1000+ negócios a crescer com tecnologia.",
     },
   ];
 
@@ -73,9 +74,15 @@ export default function About() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20">
+      <section className="pt-32 pb-20 bg-grid">
         <div className="container max-w-3xl">
-          <h1 className="font-display text-5xl mb-6">Sobre a DDA-Web</h1>
+          <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+            Quem Somos
+          </p>
+          <h1 className="font-display text-5xl mb-6">
+            Sobre a{" "}
+            <span className="text-gradient-accent">DDA-Web</span>
+          </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Somos uma empresa de soluções digitais focada em transformar a
             presença online de empresas em Angola. Criamos sites, sistemas web,
@@ -260,13 +267,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
-        <div className="container">
-          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
-          <p className="mt-2">Transformando negócios com tecnologia e inovação.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -13,6 +13,7 @@ import {
   SlidersHorizontal,
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { Link } from "wouter";
 import { blogArticles } from "@/data/blogArticles";
@@ -33,7 +34,7 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden bg-grid">
         <div className="absolute inset-0 lg:hidden">
           <img
             src="/images/home-hero.png"
@@ -49,17 +50,20 @@ export default function Home() {
             {/* Left Content */}
             <div className="space-y-6 bg-background/65 backdrop-blur-sm p-6 rounded-2xl border border-border/50 lg:bg-transparent lg:backdrop-blur-0 lg:p-0 lg:border-0">
               <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-2">
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  Soluções Digitais em Angola
+                </div>
                 <h1 className="font-display text-5xl lg:text-6xl leading-tight">
-                  Soluções Digitais para
-                  <span className="text-accent">
-                    Fazer a Sua Empresa Crescer
+                  Transformamos Ideias em{" "}
+                  <span className="text-gradient-accent">
+                    Resultados Digitais
                   </span>
                 </h1>
                 <p className="text-lg text-muted-foreground">
                   Criamos sites profissionais, sistemas web, automações e apps
-                  sob medida para transformar ideias em resultados.
-                  Desenvolvemos soluções modernas e estratégicas para empresas
-                  que querem crescer com presença digital forte.
+                  sob medida — soluções modernas para empresas que querem
+                  crescer com presença digital forte.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -103,31 +107,23 @@ export default function Home() {
       </section>
 
       {/* Quick Stats */}
-      <section className="py-12 bg-card/30 border-y border-border">
+      <section className="py-16 border-y border-border">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="font-display text-3xl text-accent mb-2">50+</div>
-              <p className="text-sm text-muted-foreground">
-                Projetos Entregues
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="font-display text-3xl text-accent mb-2">98%</div>
-              <p className="text-sm text-muted-foreground">
-                Clientes Satisfeitos
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="font-display text-3xl text-accent mb-2">
-                7 dias
+            {[
+              { value: "50+", label: "Projetos Entregues", sub: "e crescendo" },
+              { value: "98%", label: "Clientes Satisfeitos", sub: "taxa de aprovação" },
+              { value: "7 dias", label: "Entrega Média", sub: "para sites" },
+              { value: "3.2x", label: "ROI Médio", sub: "nos nossos projetos" },
+            ].map((stat, idx) => (
+              <div key={idx} className="text-center group">
+                <div className="font-display text-4xl text-accent mb-1 group-hover:scale-110 transition-transform duration-300">
+                  {stat.value}
+                </div>
+                <p className="font-medium text-sm mb-0.5">{stat.label}</p>
+                <p className="text-xs text-muted-foreground">{stat.sub}</p>
               </div>
-              <p className="text-sm text-muted-foreground">Entrega Média</p>
-            </div>
-            <div className="text-center">
-              <div className="font-display text-3xl text-accent mb-2">3.2x</div>
-              <p className="text-sm text-muted-foreground">ROI Médio</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -338,38 +334,52 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="py-20 bg-card/30 border-y border-border">
         <div className="container">
-          <h2 className="font-display text-4xl mb-12 text-center">
-            Por Que Escolher DDA-Web?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl mb-4">
+              Por Que Escolher{" "}
+              <span className="text-gradient-accent">DDA-Web?</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Não somos apenas uma agência. Somos parceiros no seu crescimento digital.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               {
-                icon: <Zap className="w-6 h-6" />,
-                title: "Velocidade",
-                desc: "Entrega rápida sem comprometer qualidade",
+                icon: <Zap className="w-5 h-5" />,
+                title: "Entrega em dias, não meses",
+                desc: "Sites em 3–7 dias úteis. Sistemas e apps com prazos definidos e cumpridos. Sem surpresas.",
+                highlight: "7 dias",
               },
               {
-                icon: <Target className="w-6 h-6" />,
-                title: "Foco no Cliente",
-                desc: "Sua satisfação é nossa prioridade",
+                icon: <Target className="w-5 h-5" />,
+                title: "Foco em resultado, não só aparência",
+                desc: "Cada projeto é desenhado para gerar clientes, vendas e credibilidade — não apenas para ficar bonito.",
+                highlight: "ROI",
               },
               {
-                icon: <Lightbulb className="w-6 h-6" />,
-                title: "Inovação",
-                desc: "Tecnologias modernas e IA",
+                icon: <Lightbulb className="w-5 h-5" />,
+                title: "Tecnologia moderna com IA",
+                desc: "Usamos as ferramentas mais avançadas do mercado para entregar mais rápido e com mais qualidade.",
+                highlight: "IA",
               },
               {
-                icon: <Users className="w-6 h-6" />,
-                title: "Parceria",
-                desc: "Crescemos juntos com você",
+                icon: <Users className="w-5 h-5" />,
+                title: "Suporte real após entrega",
+                desc: "Não desaparecemos. Estamos disponíveis para dúvidas, ajustes e melhorias depois da entrega.",
+                highlight: "Suporte",
               },
             ].map((item, idx) => (
-              <Card key={idx} className="card-modern text-center">
-                <div className="text-accent mb-4 flex justify-center">
+              <Card key={idx} className="card-modern flex gap-5 items-start">
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/15 border border-accent/30 flex items-center justify-center text-accent">
                   {item.icon}
                 </div>
-                <h3 className="font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-semibold">{item.title}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
               </Card>
             ))}
           </div>
@@ -507,14 +517,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
-        <div className="container">
-          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
-          <p className="mt-2">
-            Transformando negócios com tecnologia e inovação.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

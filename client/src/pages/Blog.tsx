@@ -3,6 +3,7 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { blogArticles, categories } from "@/data/blogArticles";
 import { Link } from "wouter";
 
@@ -27,11 +28,15 @@ export default function Blog() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
+      <section className="pt-32 pb-20 bg-grid border-b border-border">
         <div className="container">
           <div className="max-w-3xl">
+            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+              Conhecimento & Tendências
+            </p>
             <h1 className="font-display text-5xl lg:text-6xl leading-tight mb-6">
-              Blog <span className="text-accent">DDA-Web</span>
+              Blog{" "}
+              <span className="text-gradient-accent">DDA-Web</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Artigos, dicas e insights sobre web design, marketing digital e
@@ -154,14 +159,7 @@ export default function Blog() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
-        <div className="container">
-          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
-          <p className="mt-2">
-            Transformando negócios com tecnologia e inovação.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

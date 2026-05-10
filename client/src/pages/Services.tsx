@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 /**
  * DDA-Web Services Page
@@ -154,10 +155,14 @@ export default function Services() {
       <Navigation />
 
       {/* Header */}
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-16 bg-grid border-b border-border">
         <div className="container text-center">
+          <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+            O Que Fazemos
+          </p>
           <h1 className="font-display text-5xl mb-4">
-            Soluções Digitais para Empresas
+            Soluções Digitais para{" "}
+            <span className="text-gradient-accent">Empresas</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Desde sites profissionais até sistemas completos, apps mobile e
@@ -508,13 +513,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
-        <div className="container">
-          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
-          <p className="mt-2">Transformando negócios com tecnologia e inovação.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

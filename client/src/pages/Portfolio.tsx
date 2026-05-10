@@ -4,6 +4,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 /**
  * DDA-Web Portfolio Page
@@ -137,9 +138,15 @@ export default function Portfolio() {
       <Navigation />
 
       {/* Header */}
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-16 bg-grid border-b border-border">
         <div className="container text-center">
-          <h1 className="font-display text-5xl mb-4">Nosso Portfólio</h1>
+          <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+            Trabalhos Realizados
+          </p>
+          <h1 className="font-display text-5xl mb-4">
+            Nosso{" "}
+            <span className="text-gradient-accent">Portfólio</span>
+          </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Veja exemplos de sites, sistemas e apps que representam nosso padrão
             e os resultados que buscamos para cada cliente
@@ -235,8 +242,23 @@ export default function Portfolio() {
                           {project.price}
                         </p>
                       </div>
-                      <Button variant="outline" size="sm" className="gap-2">
-                        Ver Detalhes <ArrowRight className="w-3 h-3" />
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="gap-2"
+                        onClick={e => {
+                          e.stopPropagation();
+                          setSelectedProject(
+                            selectedProject === project.id ? null : project.id
+                          );
+                        }}
+                      >
+                        {selectedProject === project.id
+                          ? "Fechar"
+                          : "Ver Detalhes"}
+                        <ArrowRight
+                          className={`w-3 h-3 transition-transform ${selectedProject === project.id ? "rotate-90" : ""}`}
+                        />
                       </Button>
                     </div>
                   </div>
@@ -286,13 +308,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
-        <div className="container">
-          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
-          <p className="mt-2">Transformando negócios com tecnologia e inovação.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
