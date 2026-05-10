@@ -1,0 +1,14 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IA no Web Design">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <circle cx="230" cy="220" r="70" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="360" cy="280" r="52" fill="rgba(255,255,255,0.08)"/>
+  <rect x="540" y="180" width="480" height="280" rx="18" fill="rgba(0,0,0,0.24)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="575" y="285" fill="white" font-family="Inter, Arial" font-size="54" font-weight="700">DDA-WEB</text>
+  <text x="575" y="350" fill="rgba(255,255,255,0.88)" font-family="Inter, Arial" font-size="34">IA no Web Design</text>
+</svg>

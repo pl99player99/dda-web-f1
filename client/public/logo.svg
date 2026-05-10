@@ -1,0 +1,43 @@
+<svg width="420" height="100" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DDA-WEB - O próximo passo do seu negócio">
+  <defs>
+    <linearGradient id="ddaBlue" x1="78" y1="25" x2="250" y2="68" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EE7FF"/>
+      <stop offset="0.55" stop-color="#22B5FF"/>
+      <stop offset="1" stop-color="#0A66D8"/>
+    </linearGradient>
+    <linearGradient id="webGreen" x1="252" y1="28" x2="395" y2="68" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B9FF4D"/>
+      <stop offset="0.45" stop-color="#3EEA66"/>
+      <stop offset="1" stop-color="#1EB14A"/>
+    </linearGradient>
+    <linearGradient id="boxGreen" x1="18" y1="24" x2="96" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#89FF37"/>
+      <stop offset="1" stop-color="#12995A"/>
+    </linearGradient>
+    <linearGradient id="swoosh" x1="260" y1="73" x2="415" y2="45" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8FF48"/>
+      <stop offset="1" stop-color="#24C967"/>
+    </linearGradient>
+    <filter id="softGlow" x="0" y="0" width="430" height="110" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#softGlow)">
+    <rect x="12" y="25" width="78" height="35" rx="4" fill="url(#boxGreen)" stroke="#B9FF4D" stroke-width="2"/>
+    <path d="M32 43L44.5 35L47.5 38L37 45L47.5 52L44.5 55L32 47.5" fill="#03231E"/>
+    <path d="M70 43L57.5 35L54.5 38L65 45L54.5 52L57.5 55L70 47.5" fill="#03231E"/>
+
+    <text x="76" y="66" fill="url(#ddaBlue)" font-family="Poppins, Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="0.6">DDA</text>
+    <text x="248" y="66" fill="url(#webGreen)" font-family="Poppins, Inter, Arial, sans-serif" font-size="50" font-weight="800" letter-spacing="0.8">-WEB</text>
+
+    <path d="M255 74C292 79 336 78 402 58C389 74 372 88 346 93C324 97 289 95 255 90V74Z" fill="url(#swoosh)"/>
+    <path d="M395 40L415 30L406 49L390 45" fill="url(#swoosh)"/>
+
+    <text x="48" y="93" fill="#6B7A86" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">O próximo passo do seu negócio</text>
+  </g>
+</svg>
