@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -23,61 +23,97 @@ export default function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<number | null>(initialProject);
 
   const projects = [
-    {
-      id: 1,
-      title: "Restaurante Sabor da Terra",
-      category: "Negócio Profissional",
-      image: "/images/project-1.png",
-      description: "Site profissional para restaurante com cardápio digital e integração WhatsApp",
-      challenge: "O restaurante tinha presença fraca nas redes sociais e perdia clientes por não ter um site profissional.",
-      solution: "Criámos um site moderno com cardápio digital, galeria de pratos, reservas online e botão WhatsApp direto.",
-      results: [
-        "Aumento de 40% em consultas de clientes",
-        "Redução de 50% em chamadas telefônicas (via WhatsApp)",
-        "Melhor apresentação profissional",
-        "Integração com redes sociais",
-      ],
-      technologies: ["React", "Tailwind CSS", "WhatsApp API"],
-      package: "Negócio Profissional",
-      price: "70.000 Kz",
-    },
-    {
-      id: 2,
-      title: "Consultoria JM - Landing Page",
-      category: "Vendas & Captação",
-      image: "/images/project-2.png",
-      description: "Landing page otimizada para captação de leads de consultoria empresarial",
-      challenge: "Consultora precisava de uma página focada em conversão para seus anúncios no Facebook.",
-      solution: "Desenvolvemos uma landing page com copywriting estratégico, CTA otimizado e integração com WhatsApp para captar leads.",
-      results: [
-        "Taxa de conversão de 12%",
-        "Custo por lead reduzido em 35%",
-        "Mais de 50 consultas no primeiro mês",
-        "ROI positivo em 2 semanas",
-      ],
-      technologies: ["React", "Tailwind CSS", "Email Marketing", "WhatsApp"],
-      package: "Vendas & Captação",
-      price: "120.000 Kz",
-    },
-    {
-      id: 3,
-      title: "Salão de Beleza Estilo",
-      category: "Presença Online",
-      image: "/images/project-3.png",
-      description: "One Page simples e elegante para salão de beleza com agendamento via WhatsApp",
-      challenge: "Salão pequeno precisava de presença online rápida e acessível.",
-      solution: "Criámos uma página one-page limpa com galeria de serviços, preços e botão WhatsApp para agendamentos.",
-      results: [
-        "Presença online estabelecida em 3 dias",
-        "Aumento de 25% em agendamentos",
-        "Melhor profissionalismo",
-        "Pagamento único, sem mensalidades",
-      ],
-      technologies: ["HTML", "CSS", "JavaScript", "WhatsApp API"],
-      package: "Presença Online",
-      price: "35.000 Kz",
-    },
-  ];
+  {
+    id: 1,
+    title: "Restaurante Sabor da Terra",
+    category: "Negócio Profissional",
+    image: "/images/project-1.png",
+    description: "Site profissional para restaurante com cardápio digital e integração WhatsApp",
+    challenge: "O restaurante tinha presença fraca nas redes sociais e perdia clientes por não ter um site profissional.",
+    solution: "Criámos um site moderno com cardápio digital, galeria de pratos, reservas online e botão WhatsApp direto.",
+    results: [
+      "Aumento de 40% em consultas de clientes",
+      "Redução de 50% em chamadas telefônicas (via WhatsApp)",
+      "Melhor apresentação profissional",
+      "Integração com redes sociais",
+    ],
+    technologies: ["React", "Tailwind CSS", "WhatsApp API"],
+    package: "Negócio Profissional",
+    price: "70.000 Kz",
+  },
+  {
+    id: 2,
+    title: "Consultoria JM - Landing Page",
+    category: "Vendas & Captação",
+    image: "/images/project-2.png",
+    description: "Landing page otimizada para captação de leads de consultoria empresarial",
+    challenge: "Consultora precisava de uma página focada em conversão para seus anúncios no Facebook.",
+    solution: "Desenvolvemos uma landing page com copywriting estratégico, CTA otimizado e integração com WhatsApp para captar leads.",
+    results: [
+      "Taxa de conversão de 12%",
+      "Custo por lead reduzido em 35%",
+      "Mais de 50 consultas no primeiro mês",
+      "ROI positivo em 2 semanas",
+    ],
+    technologies: ["React", "Tailwind CSS", "Email Marketing", "WhatsApp"],
+    package: "Vendas & Captação",
+    price: "120.000 Kz",
+  },
+  {
+    id: 3,
+    title: "Salão de Beleza Estilo",
+    category: "Presença Online",
+    image: "/images/project-3.png",
+    description: "One Page simples e elegante para salão de beleza com agendamento via WhatsApp",
+    challenge: "Salão pequeno precisava de presença online rápida e acessível.",
+    solution: "Criámos uma página one-page limpa com galeria de serviços, preços e botão WhatsApp para agendamentos.",
+    results: [
+      "Presença online estabelecida em 3 dias",
+      "Aumento de 25% em agendamentos",
+      "Melhor profissionalismo",
+      "Pagamento único, sem mensalidades",
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "WhatsApp API"],
+    package: "Presença Online",
+    price: "35.000 Kz",
+  },
+  {
+    id: 4,
+    title: "Sistema de Gestão de Stock Kwanza",
+    category: "Sistemas Web",
+    image: "/images/blog-4.png",
+    description: "Sistema web para gestão de stock, vendas e relatórios em tempo real.",
+    challenge: "A empresa controlava stock em planilhas e perdia vendas por falta de visibilidade.",
+    solution: "Construímos um painel web com entradas e saídas, alertas de reposição e relatórios automatizados.",
+    results: [
+      "Redução de 60% em rupturas de stock",
+      "Fecho de caixa 3x mais rápido",
+      "Relatórios semanais automáticos",
+      "Equipa alinhada com dados em tempo real",
+    ],
+    technologies: ["React", "Node.js", "PostgreSQL", "Dashboards"],
+    package: "Personalizado",
+    price: "Sob consulta",
+  },
+  {
+    id: 5,
+    title: "App de Agendamentos VitaCare",
+    category: "Aplicativo Mobile",
+    image: "/images/blog-5.png",
+    description: "Aplicativo mobile para marcações, lembretes e gestão de pacientes.",
+    challenge: "A clínica dependia de chamadas e tinha faltas frequentes.",
+    solution: "Criámos um app com marcação online, lembretes por WhatsApp e painel administrativo.",
+    results: [
+      "Redução de 35% em faltas",
+      "Agenda centralizada",
+      "Atendimento mais rápido",
+      "Mais fidelização",
+    ],
+    technologies: ["React Native", "Firebase", "WhatsApp API"],
+    package: "Personalizado",
+    price: "Sob consulta",
+  },
+];
 
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
@@ -89,7 +125,7 @@ export default function Portfolio() {
         <div className="container text-center">
           <h1 className="font-display text-5xl mb-4">Nosso Portfólio</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Veja exemplos de projetos que representam nosso padrão visual e os resultados que buscamos para cada cliente
+            Veja exemplos de sites, sistemas e apps que representam nosso padrão e os resultados que buscamos para cada cliente
           </p>
         </div>
       </section>
@@ -138,7 +174,7 @@ export default function Portfolio() {
                           <ul className="space-y-1">
                             {project.results.map((result, idx) => (
                               <li key={idx} className="text-sm text-muted-foreground flex gap-2">
-                                <span className="text-accent">✓</span>
+                                <span className="text-accent">?o"</span>
                                 {result}
                               </li>
                             ))}
@@ -203,3 +239,6 @@ export default function Portfolio() {
     </div>
   );
 }
+
+
+

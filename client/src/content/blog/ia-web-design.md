@@ -1,14 +1,15 @@
 # IA no Web Design
 
-A inteligÃªncia artificial acelera produÃ§Ã£o e personalizaÃ§Ã£o, mas precisa de direÃ§Ã£o estratÃ©gica.
+A inteligência artificial acelera produção e personalização, mas precisa de direção estratégica.
 
 ## Onde a IA ajuda
 
-- GeraÃ§Ã£o de variaÃ§Ãµes de layout
-- SugestÃµes de conteÃºdo
-- AnÃ¡lise de comportamento do usuÃ¡rio
-- AutomaÃ§Ã£o de tarefas repetitivas
+- Geração de variações de layout
+- Sugestões de conteúdo
+- Análise de comportamento do usuário
+- Automação de tarefas repetitivas
 
-## ConclusÃ£o
+## Conclusão
 
-IA funciona melhor quando combinada com estratÃ©gia, UX e visÃ£o de marca.
+IA funciona melhor quando combinada com estratégia, UX e visão de marca.
+

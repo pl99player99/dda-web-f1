@@ -31,14 +31,14 @@ export default function MobileNav() {
               onClick={closeMenu}
               className="block py-2 hover:text-accent transition"
             >
-              ServiÃ§os
+              Serviços
             </Link>
             <Link
               href="/portfolio"
               onClick={closeMenu}
               className="block py-2 hover:text-accent transition"
             >
-              PortfÃ³lio
+              Portfólio
             </Link>
             <Link
               href="/blog"
@@ -67,3 +67,4 @@ export default function MobileNav() {
     </div>
   );
 }
+

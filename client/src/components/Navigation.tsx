@@ -12,8 +12,8 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { label: "ServiÃ§os", path: "/services" },
-    { label: "PortfÃ³lio", path: "/portfolio" },
+    { label: "Serviços", path: "/services" },
+    { label: "Portfólio", path: "/portfolio" },
     { label: "Blog", path: "/blog" },
     { label: "Sobre", path: "/about" },
   ];
@@ -51,3 +51,4 @@ export default function Navigation() {
     </nav>
   );
 }
+

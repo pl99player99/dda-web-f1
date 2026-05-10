@@ -1,15 +1,16 @@
-# Web Design Moderno em 2025: TendÃªncias que VocÃª Precisa Conhecer
+# Web Design Moderno em 2025: Tendências que Você Precisa Conhecer
 
-O web design continua evoluindo rapidamente com foco em usabilidade, performance e personalizaÃ§Ã£o.
+O web design continua evoluindo rapidamente com foco em usabilidade, performance e personalização.
 
-## TendÃªncias em destaque
+## Tendências em destaque
 
 - Minimalismo com hierarquia visual forte
-- MicrointeraÃ§Ãµes com propÃ³sito
+- Microinterações com propósito
 - Interfaces orientadas por IA
 - Acessibilidade como requisito de base
-- Layouts responsivos para mÃºltiplos dispositivos
+- Layouts responsivos para múltiplos dispositivos
 
-## ConclusÃ£o
+## Conclusão
 
-Sites modernos precisam equilibrar estÃ©tica, clareza e conversÃ£o.
+Sites modernos precisam equilibrar estética, clareza e conversão.
+

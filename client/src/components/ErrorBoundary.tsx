@@ -52,7 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
               )}
             >
               <RotateCcw size={16} />
-              Recarregar p√°gina
+              Recarregar p·gina
             </button>
           </div>
         </div>
@@ -64,3 +64,4 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+

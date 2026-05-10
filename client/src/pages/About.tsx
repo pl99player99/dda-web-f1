@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Zap, Target, Users, Lightbulb } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -57,13 +57,13 @@ export default function About() {
       year: "2025",
       title: "Expansão e Inovação",
       description:
-        "Integramos IA em nosso processo. Agora criamos sites 3x mais rápido mantendo qualidade premium.",
+        "Integramos IA em nosso processo. Agora entregamos sites e soluções digitais 3x mais rápido mantendo qualidade premium.",
     },
     {
       year: "2025",
       title: "Visão Futura",
       description:
-        "Objetivo: ser a agência digital número 1 em Angola. Ajudando 1000+ negócios a crescer online.",
+        "Objetivo: ser a empresa de soluções digitais número 1 em Angola. Ajudando 1000+ negócios a crescer com tecnologia.",
     },
   ];
 
@@ -77,8 +77,9 @@ export default function About() {
         <div className="container max-w-3xl">
           <h1 className="font-display text-5xl mb-6">Sobre a DDA-Web</h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Somos uma agência de web design focada em transformar a presença
-            digital de empresas em Angola. Nascemos com uma missão clara: tornar
+            Somos uma empresa de soluções digitais focada em transformar a presença
+            online de empresas em Angola. Criamos sites, sistemas web, apps,
+            automações e bases de dados sob medida, com uma missão clara: tornar
             a tecnologia acessível, rápida e eficiente.
           </p>
           <div className="grid grid-cols-3 gap-6 py-8 border-y border-border">
@@ -110,19 +111,17 @@ export default function About() {
               <h2 className="font-display text-3xl mb-4">Nossa Missão</h2>
               <p className="text-muted-foreground mb-4">
                 Criar soluções digitais de alta qualidade que capacitem empresas
-                angolanas a crescer, vender mais e construir uma presença online
-                profissional e confiável.
+                angolanas a crescer, vender mais e operar melhor com tecnologia.
               </p>
               <p className="text-muted-foreground">
-                Acreditamos que toda empresa, independentemente do tamanho,
-                merece um site profissional que a represente bem e gere
-                resultados reais.
+                Acreditamos que toda empresa merece uma presença digital forte e
+                sistemas eficientes que gerem resultados reais.
               </p>
             </div>
             <div>
               <h2 className="font-display text-3xl mb-4">Nossa Visão</h2>
               <p className="text-muted-foreground mb-4">
-                Ser a agência digital de referência em Angola, conhecida por
+                Ser a empresa de soluções digitais de referência em Angola, conhecida por
                 velocidade, qualidade e satisfação do cliente.
               </p>
               <p className="text-muted-foreground">
@@ -256,3 +255,6 @@ export default function About() {
     </div>
   );
 }
+
+
+

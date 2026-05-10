@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Check, Zap, Target, Users, Lightbulb, Globe, BriefcaseBusiness, Rocket, SlidersHorizontal } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -410,7 +410,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl mb-4">
-              Últimos Artigos do Blog
+              ?sltimos Artigos do Blog
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Fique atualizado com as últimas tendências em web design,
@@ -488,3 +488,5 @@ export default function Home() {
     </div>
   );
 }
+
+

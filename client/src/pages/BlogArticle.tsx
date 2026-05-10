@@ -22,7 +22,7 @@ export default function BlogArticle() {
     return (
       <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-display text-4xl mb-4">Artigo n√£o encontrado</h1>
+          <h1 className="font-display text-4xl mb-4">Artigo n„o encontrado</h1>
           <Link href="/blog">
             <Button className="gap-2">
               <ArrowLeft className="w-4 h-4" />
@@ -48,7 +48,7 @@ export default function BlogArticle() {
     } else {
       // Fallback: copy to clipboard
       navigator.clipboard.writeText(window.location.href);
-      alert("Link copiado para a √°rea de transfer√™ncia!");
+      alert("Link copiado para a ·rea de transferÍncia!");
     }
   };
 
@@ -124,7 +124,7 @@ export default function BlogArticle() {
           <div className="bg-card/50 border border-border rounded-lg p-8 mb-12">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center text-2xl">
-                ‚úçÔ∏è
+                ?o??
               </div>
               <div>
                 <h3 className="font-display text-lg mb-1">Sobre o Autor</h3>
@@ -165,7 +165,7 @@ export default function BlogArticle() {
                         {relatedArticle.excerpt}
                       </p>
                       <div className="flex items-center gap-2 text-accent text-sm font-semibold">
-                        Ler Mais ‚Üí
+                        Ler Mais ??'
                       </div>
                     </div>
                   </Card>
@@ -180,18 +180,18 @@ export default function BlogArticle() {
       <section className="py-20 border-t border-border">
         <div className="container max-w-2xl text-center">
           <h2 className="font-display text-4xl mb-4">
-            Pronto para Transformar Seu Neg√≥cio?
+            Pronto para Transformar Seu NegÛcio?
           </h2>
           <p className="text-muted-foreground mb-8">
-            Deixe a DDA-Web ajudar voc√™ a criar um site que n√£o apenas parece
-            bem, mas que tamb√©m converte visitantes em clientes.
+            Deixe a DDA-Web ajudar vocÍ a criar um site que n„o apenas parece
+            bem, mas que tambÈm converte visitantes em clientes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="btn-primary">Entre em Contacto</Button>
             </Link>
             <Link href="/quote">
-              <Button variant="outline">Solicitar Or√ßamento</Button>
+              <Button variant="outline">Solicitar OrÁamento</Button>
             </Link>
           </div>
         </div>
@@ -202,10 +202,11 @@ export default function BlogArticle() {
         <div className="container">
           <p>&copy; 2025 DDA-Web. Todos os direitos reservados.</p>
           <p className="mt-2">
-            Transformando neg√≥cios com tecnologia e inova√ß√£o.
+            Transformando negÛcios com tecnologia e inovaÁ„o.
           </p>
         </div>
       </footer>
     </div>
   );
 }
+

@@ -14,16 +14,16 @@ export default function NotFound() {
           </div>
 
           <p className="text-accent font-semibold tracking-wide mb-3">Erro 404</p>
-          <h1 className="font-display text-5xl mb-4">P√°gina n√£o encontrada</h1>
+          <h1 className="font-display text-5xl mb-4">P·gina n„o encontrada</h1>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-            O link que voc√™ tentou acessar n√£o existe ou foi movido.
-            Volte para a p√°gina inicial ou continue navegando pelos nossos servi√ßos.
+            O link que vocÍ tentou acessar n„o existe ou foi movido.
+            Volte para a p·gina inicial ou continue navegando pelos nossos serviÁos.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button className="btn-primary gap-2" onClick={() => setLocation("/")}> 
               <Home className="w-4 h-4" />
-              Ir para In√≠cio
+              Ir para InÌcio
             </Button>
             <Button variant="outline" className="gap-2" onClick={() => window.history.back()}>
               <ArrowLeft className="w-4 h-4" />
@@ -35,3 +35,4 @@ export default function NotFound() {
     </div>
   );
 }
+

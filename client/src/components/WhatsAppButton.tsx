@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppButton() {
   const phoneNumber = "+244930723070";
-  const message = "Ol√°! Gostaria de saber mais sobre os servi√ßos da DDA-Web.";
+  const message = "Ol·! Gostaria de saber mais sobre os serviÁos da DDA-Web.";
   
   // Create WhatsApp URL
   const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
@@ -19,3 +19,4 @@ export default function WhatsAppButton() {
     </a>
   );
 }
+
