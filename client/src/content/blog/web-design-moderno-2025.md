@@ -13,4 +13,3 @@ O web design continua evoluindo rapidamente com foco em usabilidade, performance
 ## Conclusão
 
 Sites modernos precisam equilibrar estética, clareza e conversão.
-

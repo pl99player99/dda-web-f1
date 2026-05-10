@@ -13,4 +13,3 @@ SEO é um processo contínuo para tornar seu site mais visível em motores de bu
 ## Conclusão
 
 Com consistência, SEO gera tráfego qualificado e crescimento sustentável.
-

@@ -101,7 +101,6 @@ export default function BlogArticle() {
             </Button>
           </div>
 
-
           <div className="relative h-72 md:h-96 mt-8 overflow-hidden rounded-xl border border-border">
             <img
               src={article.image}
@@ -209,4 +208,3 @@ export default function BlogArticle() {
     </div>
   );
 }
-

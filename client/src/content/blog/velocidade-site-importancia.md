@@ -13,4 +13,3 @@ Performance impacta experiência, SEO e receita.
 ## Conclusão
 
 Velocidade é parte central da qualidade de um produto digital.
-

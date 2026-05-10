@@ -13,4 +13,3 @@ Tráfego sem conversão não gera resultado de negócio.
 ## Conclusão
 
 Pequenas melhorias de conversão têm grande impacto no faturamento.
-

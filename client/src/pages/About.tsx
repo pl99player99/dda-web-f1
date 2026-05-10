@@ -77,10 +77,10 @@ export default function About() {
         <div className="container max-w-3xl">
           <h1 className="font-display text-5xl mb-6">Sobre a DDA-Web</h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Somos uma empresa de soluções digitais focada em transformar a presença
-            online de empresas em Angola. Criamos sites, sistemas web, apps,
-            automações e bases de dados sob medida, com uma missão clara: tornar
-            a tecnologia acessível, rápida e eficiente.
+            Somos uma empresa de soluções digitais focada em transformar a
+            presença online de empresas em Angola. Criamos sites, sistemas web,
+            apps, automações e bases de dados sob medida, com uma missão clara:
+            tornar a tecnologia acessível, rápida e eficiente.
           </p>
           <div className="grid grid-cols-3 gap-6 py-8 border-y border-border">
             <div>
@@ -121,8 +121,8 @@ export default function About() {
             <div>
               <h2 className="font-display text-3xl mb-4">Nossa Visão</h2>
               <p className="text-muted-foreground mb-4">
-                Ser a empresa de soluções digitais de referência em Angola, conhecida por
-                velocidade, qualidade e satisfação do cliente.
+                Ser a empresa de soluções digitais de referência em Angola,
+                conhecida por velocidade, qualidade e satisfação do cliente.
               </p>
               <p className="text-muted-foreground">
                 Queremos ajudar 1000+ negócios a transformar sua presença
@@ -255,6 +255,3 @@ export default function About() {
     </div>
   );
 }
-
-
-
