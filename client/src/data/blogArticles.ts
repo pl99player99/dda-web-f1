@@ -91,4 +91,3 @@ export const categories: BlogArticle["category"][] = [
   "Marketing",
   "Tecnologia",
 ];
-

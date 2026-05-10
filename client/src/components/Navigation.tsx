@@ -25,7 +25,11 @@ export default function Navigation() {
           href="/"
           className="flex items-center hover:opacity-90 transition"
         >
-          <img src="/logo.svg" alt="DDA-Web" className="h-10 w-auto max-w-[240px]" />
+          <img
+            src="/logo.svg"
+            alt="DDA-Web"
+            className="h-10 w-auto max-w-[240px]"
+          />
         </Link>
         <div className="hidden md:flex gap-8 items-center">
           {navItems.map(item => (
@@ -51,4 +55,3 @@ export default function Navigation() {
     </nav>
   );
 }
-

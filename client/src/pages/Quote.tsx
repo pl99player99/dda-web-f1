@@ -40,13 +40,14 @@ export default function Quote() {
     personalizado: "Personalizado",
   };
 
-  const selectedPackageName = packageNameMap[packageFromQuery] || "Não especificado";
+  const selectedPackageName =
+    packageNameMap[packageFromQuery] || "Não especificado";
 
   const basePrice = {
     "1": 20000,
     "3": 35000,
     "5": 50000,
-    "custom": 40000,
+    custom: 40000,
   };
 
   const featurePrice: Record<string, number> = {
@@ -70,7 +71,7 @@ export default function Quote() {
   const calculatePrice = () => {
     let price = basePrice[formData.pages as keyof typeof basePrice] || 35000;
 
-    formData.features.forEach((feature) => {
+    formData.features.forEach(feature => {
       price += featurePrice[feature] || 0;
     });
 
@@ -91,7 +92,7 @@ export default function Quote() {
 
   const handleFeatureToggle = (featureId: string) => {
     const newFeatures = formData.features.includes(featureId)
-      ? formData.features.filter((f) => f !== featureId)
+      ? formData.features.filter(f => f !== featureId)
       : [...formData.features, featureId];
     setFormData({ ...formData, features: newFeatures });
   };
@@ -107,8 +108,10 @@ export default function Quote() {
     setIsLoading(true);
 
     try {
-      const selectedFeatureLabels = formData.features.map((featureId) => {
-        const selectedFeature = features.find((feature) => feature.id === featureId);
+      const selectedFeatureLabels = formData.features.map(featureId => {
+        const selectedFeature = features.find(
+          feature => feature.id === featureId
+        );
         return selectedFeature ? selectedFeature.label : featureId;
       });
 
@@ -139,7 +142,9 @@ export default function Quote() {
         throw new Error(result?.error || "Erro ao enviar orçamento.");
       }
 
-      toast.success("Orçamento enviado com sucesso! Entraremos em contacto em breve.");
+      toast.success(
+        "Orçamento enviado com sucesso! Entraremos em contacto em breve."
+      );
       setSubmitted(true);
 
       setFormData({
@@ -156,7 +161,7 @@ export default function Quote() {
       toast.error(
         error instanceof Error
           ? error.message
-          : "Erro ao enviar orçamento. Tente novamente mais tarde.",
+          : "Erro ao enviar orçamento. Tente novamente mais tarde."
       );
     } finally {
       setIsLoading(false);
@@ -179,7 +184,9 @@ export default function Quote() {
       {/* Header */}
       <section className="pt-32 pb-16">
         <div className="container text-center">
-          <h1 className="font-display text-5xl mb-4">Calculadora de Orçamento</h1>
+          <h1 className="font-display text-5xl mb-4">
+            Calculadora de Orçamento
+          </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Customize seu projeto e veja o preço em tempo real
           </p>
@@ -200,27 +207,39 @@ export default function Quote() {
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Business Info */}
                 <Card className="card-modern">
-                  <h3 className="font-display text-xl mb-6">1. Informações do Negócio</h3>
+                  <h3 className="font-display text-xl mb-6">
+                    1. Informações do Negócio
+                  </h3>
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-semibold mb-2">Nome do Negócio</label>
+                      <label className="block text-sm font-semibold mb-2">
+                        Nome do Negócio
+                      </label>
                       <input
                         type="text"
                         placeholder="Ex: Restaurante Sabor"
                         value={formData.businessName}
-                        onChange={(e) =>
-                          setFormData({ ...formData, businessName: e.target.value })
+                        onChange={e =>
+                          setFormData({
+                            ...formData,
+                            businessName: e.target.value,
+                          })
                         }
                         required
                         className="w-full px-4 py-2 rounded-lg bg-input border border-border focus:border-accent focus:outline-none transition text-foreground"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold mb-2">Tipo de Negócio</label>
+                      <label className="block text-sm font-semibold mb-2">
+                        Tipo de Negócio
+                      </label>
                       <select
                         value={formData.businessType}
-                        onChange={(e) =>
-                          setFormData({ ...formData, businessType: e.target.value })
+                        onChange={e =>
+                          setFormData({
+                            ...formData,
+                            businessType: e.target.value,
+                          })
                         }
                         required
                         className="w-full px-4 py-2 rounded-lg bg-input border border-border focus:border-accent focus:outline-none transition text-foreground"
@@ -239,9 +258,11 @@ export default function Quote() {
 
                 {/* Pages Selection */}
                 <Card className="card-modern">
-                  <h3 className="font-display text-xl mb-6">2. Número de Páginas</h3>
+                  <h3 className="font-display text-xl mb-6">
+                    2. Número de Páginas
+                  </h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    {["1", "3", "5", "custom"].map((option) => (
+                    {["1", "3", "5", "custom"].map(option => (
                       <button
                         key={option}
                         type="button"
@@ -265,10 +286,15 @@ export default function Quote() {
 
                 {/* Features */}
                 <Card className="card-modern">
-                  <h3 className="font-display text-xl mb-6">3. Funcionalidades Adicionais</h3>
+                  <h3 className="font-display text-xl mb-6">
+                    3. Funcionalidades Adicionais
+                  </h3>
                   <div className="space-y-3">
-                    {features.map((feature) => (
-                      <label key={feature.id} className="flex items-center gap-3 cursor-pointer">
+                    {features.map(feature => (
+                      <label
+                        key={feature.id}
+                        className="flex items-center gap-3 cursor-pointer"
+                      >
                         <input
                           type="checkbox"
                           checked={formData.features.includes(feature.id)}
@@ -276,7 +302,9 @@ export default function Quote() {
                           className="w-4 h-4 rounded accent-accent"
                         />
                         <span className="flex-grow">{feature.label}</span>
-                        <span className="text-accent font-semibold">+{feature.price.toLocaleString()}Kz</span>
+                        <span className="text-accent font-semibold">
+                          +{feature.price.toLocaleString()}Kz
+                        </span>
                       </label>
                     ))}
                   </div>
@@ -292,11 +320,17 @@ export default function Quote() {
                         name="hosting"
                         value="gratuita"
                         checked={formData.hosting === "gratuita"}
-                        onChange={(e) => setFormData({ ...formData, hosting: e.target.value })}
+                        onChange={e =>
+                          setFormData({ ...formData, hosting: e.target.value })
+                        }
                         className="w-4 h-4"
                       />
-                      <span className="flex-grow">Hospedagem Gratuita (Netlify)</span>
-                      <span className="text-muted-foreground text-sm">Incluído</span>
+                      <span className="flex-grow">
+                        Hospedagem Gratuita (Netlify)
+                      </span>
+                      <span className="text-muted-foreground text-sm">
+                        Incluído
+                      </span>
                     </label>
                     <label className="flex items-center gap-3 cursor-pointer">
                       <input
@@ -304,18 +338,26 @@ export default function Quote() {
                         name="hosting"
                         value="paga"
                         checked={formData.hosting === "paga"}
-                        onChange={(e) => setFormData({ ...formData, hosting: e.target.value })}
+                        onChange={e =>
+                          setFormData({ ...formData, hosting: e.target.value })
+                        }
                         className="w-4 h-4"
                       />
-                      <span className="flex-grow">Hospedagem Profissional (Domínio + Suporte)</span>
-                      <span className="text-accent font-semibold">+10.000Kz/mês</span>
+                      <span className="flex-grow">
+                        Hospedagem Profissional (Domínio + Suporte)
+                      </span>
+                      <span className="text-accent font-semibold">
+                        +10.000Kz/mês
+                      </span>
                     </label>
                   </div>
                 </Card>
 
                 {/* Timeline */}
                 <Card className="card-modern">
-                  <h3 className="font-display text-xl mb-6">5. Prazo de Entrega</h3>
+                  <h3 className="font-display text-xl mb-6">
+                    5. Prazo de Entrega
+                  </h3>
                   <div className="space-y-3">
                     <label className="flex items-center gap-3 cursor-pointer">
                       <input
@@ -323,11 +365,17 @@ export default function Quote() {
                         name="timeline"
                         value="normal"
                         checked={formData.timeline === "normal"}
-                        onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
+                        onChange={e =>
+                          setFormData({ ...formData, timeline: e.target.value })
+                        }
                         className="w-4 h-4"
                       />
-                      <span className="flex-grow">Normal (5-10 dias úteis)</span>
-                      <span className="text-muted-foreground text-sm">Padrão</span>
+                      <span className="flex-grow">
+                        Normal (5-10 dias úteis)
+                      </span>
+                      <span className="text-muted-foreground text-sm">
+                        Padrão
+                      </span>
                     </label>
                     <label className="flex items-center gap-3 cursor-pointer">
                       <input
@@ -335,11 +383,17 @@ export default function Quote() {
                         name="timeline"
                         value="express"
                         checked={formData.timeline === "express"}
-                        onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
+                        onChange={e =>
+                          setFormData({ ...formData, timeline: e.target.value })
+                        }
                         className="w-4 h-4"
                       />
-                      <span className="flex-grow">Express (3-5 dias úteis)</span>
-                      <span className="text-accent font-semibold">+20.000Kz</span>
+                      <span className="flex-grow">
+                        Express (3-5 dias úteis)
+                      </span>
+                      <span className="text-accent font-semibold">
+                        +20.000Kz
+                      </span>
                     </label>
                   </div>
                 </Card>
@@ -351,15 +405,27 @@ export default function Quote() {
                     type="email"
                     placeholder="seu@email.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={e =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     required
                     className="w-full px-4 py-2 rounded-lg bg-input border border-border focus:border-accent focus:outline-none transition text-foreground"
                   />
                 </Card>
 
-                <Button type="submit" className="btn-primary w-full gap-2 text-lg py-6" disabled={submitted || isLoading}>
-                  {isLoading ? "Enviando..." : submitted ? "Orçamento Enviado!" : "Enviar Orçamento"}{" "}
-                  {!submitted && !isLoading && <ArrowRight className="w-5 h-5" />}
+                <Button
+                  type="submit"
+                  className="btn-primary w-full gap-2 text-lg py-6"
+                  disabled={submitted || isLoading}
+                >
+                  {isLoading
+                    ? "Enviando..."
+                    : submitted
+                      ? "Orçamento Enviado!"
+                      : "Enviar Orçamento"}{" "}
+                  {!submitted && !isLoading && (
+                    <ArrowRight className="w-5 h-5" />
+                  )}
                 </Button>
               </form>
             </div>
@@ -367,23 +433,28 @@ export default function Quote() {
             {/* Price Summary */}
             <div className="lg:col-span-1">
               <Card className="card-modern sticky top-24">
-                <h3 className="font-display text-2xl mb-6">Resumo do Orçamento</h3>
+                <h3 className="font-display text-2xl mb-6">
+                  Resumo do Orçamento
+                </h3>
 
                 <div className="space-y-4 mb-6 pb-6 border-b border-border">
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Base ({formData.pages} páginas)</span>
+                    <span className="text-muted-foreground">
+                      Base ({formData.pages} páginas)
+                    </span>
                     <span>
                       {(
-                        basePrice[formData.pages as keyof typeof basePrice] || 35000
+                        basePrice[formData.pages as keyof typeof basePrice] ||
+                        35000
                       ).toLocaleString()}
                       Kz
                     </span>
                   </div>
 
-                  {formData.features.map((feature) => (
+                  {formData.features.map(feature => (
                     <div key={feature} className="flex justify-between text-sm">
                       <span className="text-muted-foreground">
-                        {features.find((f) => f.id === feature)?.label}
+                        {features.find(f => f.id === feature)?.label}
                       </span>
                       <span>
                         +{(featurePrice[feature] || 0).toLocaleString()}Kz
@@ -393,14 +464,18 @@ export default function Quote() {
 
                   {formData.hosting === "paga" && (
                     <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Hospedagem Profissional</span>
+                      <span className="text-muted-foreground">
+                        Hospedagem Profissional
+                      </span>
                       <span>+10.000Kz/mês</span>
                     </div>
                   )}
 
                   {formData.timeline === "express" && (
                     <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Entrega Express</span>
+                      <span className="text-muted-foreground">
+                        Entrega Express
+                      </span>
                       <span>+20.000Kz</span>
                     </div>
                   )}
@@ -422,7 +497,9 @@ export default function Quote() {
                 </div>
 
                 <div className="space-y-2 p-4 bg-accent/10 rounded-lg">
-                  <p className="text-sm font-semibold text-accent">O que está incluído:</p>
+                  <p className="text-sm font-semibold text-accent">
+                    O que está incluído:
+                  </p>
                   <ul className="space-y-1">
                     <li className="text-xs flex gap-2">
                       <Check className="w-3 h-3 text-accent flex-shrink-0 mt-0.5" />
@@ -450,4 +527,3 @@ export default function Quote() {
     </div>
   );
 }
-
