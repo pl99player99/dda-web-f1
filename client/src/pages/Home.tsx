@@ -390,20 +390,20 @@ export default function Home() {
               {
                 id: 1,
                 title: "Restaurante Sabor da Terra",
-                category: "Negócio Profissional",
+                category: "Site Profissional",
                 image: "/images/project-1.png",
               },
               {
-                id: 2,
-                title: "Consultoria JM - Landing Page",
-                category: "Vendas & Captação",
-                image: "/images/project-2.png",
+                id: 4,
+                title: "Sistema de Gestão de Stock Kwanza",
+                category: "Sistema Web",
+                image: "/images/blog-4.png",
               },
               {
-                id: 3,
-                title: "Salão de Beleza Estilo",
-                category: "Presença Online",
-                image: "/images/project-3.png",
+                id: 5,
+                title: "App de Agendamentos VitaCare",
+                category: "Aplicativo Mobile",
+                image: "/images/blog-5.png",
               },
             ].map((project, idx) => (
               <Link key={idx} href={`/portfolio?project=${project.id}`}>
@@ -438,7 +438,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl mb-4">
-              ?sltimos Artigos do Blog
+              Últimos Artigos do Blog
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Fique atualizado com as últimas tendências em web design,
@@ -509,7 +509,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
         <div className="container">
-          <p>&copy; 2025 DDA-Web. Todos os direitos reservados.</p>
+          <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
           <p className="mt-2">
             Transformando negócios com tecnologia e inovação.
           </p>
