@@ -95,10 +95,10 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-accent flex-shrink-0" />
                 <a
-                  href="mailto:geral@dda-web.ao"
+                  href="mailto:dinheirodigitalangola@gmail.com"
                   className="hover:text-accent transition"
                 >
-                  geral@dda-web.ao
+                  dinheirodigitalangola@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
