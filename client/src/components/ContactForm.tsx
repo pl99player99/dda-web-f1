@@ -94,7 +94,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Seu nome"
-            className="w-full px-4 py-2 rounded-lg bg-card border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full px-4 py-3 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition"
             required
           />
         </div>
@@ -110,7 +110,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder="seu@email.com"
-            className="w-full px-4 py-2 rounded-lg bg-card border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full px-4 py-3 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition"
             required
           />
         </div>
@@ -126,7 +126,7 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="+244 123 456 789"
-            className="w-full px-4 py-2 rounded-lg bg-card border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full px-4 py-3 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition"
           />
         </div>
 
@@ -141,7 +141,7 @@ export default function ContactForm() {
             value={formData.company}
             onChange={handleChange}
             placeholder="Nome da sua empresa"
-            className="w-full px-4 py-2 rounded-lg bg-card border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full px-4 py-3 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition"
           />
         </div>
       </div>
@@ -157,7 +157,7 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="Descreva seu projeto ou dúvida..."
           rows={5}
-          className="w-full px-4 py-2 rounded-lg bg-card border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent resize-none"
+          className="w-full px-4 py-3 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition resize-none"
           required
         />
       </div>
@@ -165,14 +165,15 @@ export default function ContactForm() {
       <Button
         type="submit"
         disabled={isLoading}
-        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 rounded-lg transition-all"
+        className="btn-primary w-full"
       >
         {isLoading ? "Enviando..." : "Enviar Mensagem"}
       </Button>
 
-      <p className="text-xs text-muted-foreground text-center">
-        * Campos obrigatórios
-      </p>
+      <div className="flex justify-between items-center">
+        <p className="text-xs text-muted-foreground">* Campos obrigatórios</p>
+        <p className="text-xs text-muted-foreground">{formData.message.length}/500</p>
+      </div>
     </form>
   );
 }

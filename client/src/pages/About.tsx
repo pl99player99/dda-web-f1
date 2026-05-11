@@ -1,43 +1,38 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Zap, Target, Users, Lightbulb } from "lucide-react";
+import { ArrowRight, Zap, Target, Users, Lightbulb, Check } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
+import AnimatedStats from "@/components/AnimatedStats";
 
-/**
- * DDA-Web About Page
- * Design Philosophy: Modern & Technological
- * - Company story and values
- * - Team and mission
- * - Why choose DDA-Web
- */
+const aboutStats = [
+  { numericValue: 50, suffix: "+", label: "Projetos Entregues", sub: "e crescendo" },
+  { numericValue: 98, suffix: "%", label: "Satisfação", sub: "dos clientes" },
+  { numericValue: 7, suffix: " dias", label: "Entrega Média", sub: "para sites" },
+];
 
 export default function About() {
   const values = [
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-6 h-6" />,
       title: "Velocidade",
-      description:
-        "Entrega rápida sem comprometer a qualidade. Seus projetos prontos em dias, não semanas.",
+      description: "Entrega rápida sem comprometer qualidade. Projetos prontos em dias, não semanas.",
     },
     {
-      icon: <Target className="w-8 h-8" />,
+      icon: <Target className="w-6 h-6" />,
       title: "Foco no Cliente",
-      description:
-        "Sua satisfação é nossa prioridade. Trabalhamos para resolver seus problemas, não apenas criar sites.",
+      description: "Trabalhamos para resolver problemas reais, não apenas criar sites bonitos.",
     },
     {
-      icon: <Lightbulb className="w-8 h-8" />,
+      icon: <Lightbulb className="w-6 h-6" />,
       title: "Inovação",
-      description:
-        "Usamos as tecnologias mais modernas e IA para criar soluções à frente do mercado.",
+      description: "Usamos tecnologias modernas e IA para criar soluções à frente do mercado.",
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-6 h-6" />,
       title: "Parceria",
-      description:
-        "Não somos apenas prestadores de serviço. Somos parceiros no seu crescimento digital.",
+      description: "Não somos prestadores de serviço. Somos parceiros no seu crescimento digital.",
     },
   ];
 
@@ -45,119 +40,123 @@ export default function About() {
     {
       year: "2024",
       title: "Nascimento da DDA-Web",
-      description:
-        "Começamos com uma visão clara: tornar a presença digital acessível e profissional para empresas em Angola.",
+      description: "Começamos com uma visão clara: tornar a presença digital acessível e profissional para empresas em Angola.",
     },
     {
       year: "2024",
       title: "Primeiros Clientes",
-      description:
-        "Entregamos os primeiros 5 projetos com 100% de satisfação. Começamos a construir reputação.",
+      description: "Entregamos os primeiros 5 projetos com 100% de satisfação. Começamos a construir reputação.",
     },
     {
       year: "2025",
       title: "Expansão e Inovação",
-      description:
-        "Integramos IA no nosso processo e expandimos para sistemas web, apps mobile e automações — não apenas sites.",
+      description: "Integramos IA no nosso processo e expandimos para sistemas web, apps mobile e automações.",
     },
     {
       year: "2026",
       title: "Visão Futura",
-      description:
-        "Objetivo: ser a empresa de soluções digitais de referência em Angola, ajudando 1000+ negócios a crescer com tecnologia.",
+      description: "Objetivo: ser a empresa de soluções digitais de referência em Angola, ajudando 1000+ negócios a crescer.",
     },
+  ];
+
+  const whyUs = [
+    { title: "IA + Humano", desc: "Aceleramos com IA, mas garantimos qualidade com revisão humana em cada entrega." },
+    { title: "Preços Justos", desc: "Soluções profissionais a preços acessíveis para o mercado angolano." },
+    { title: "Entrega Rápida", desc: "Projetos prontos em dias. Começamos assim que approvas o escopo." },
+    { title: "Suporte Real", desc: "Não desaparecemos. Estamos disponíveis para dúvidas e melhorias após entrega." },
+    { title: "Foco em Resultados", desc: "Cada decisão de design é pensada para gerar clientes e vendas." },
+    { title: "Transparência Total", desc: "Sabes exatamente o que pagas, o que inclui e quando será entregue." },
   ];
 
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
-      {/* Navigation */}
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-grid">
-        <div className="container max-w-3xl">
-          <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
-            Quem Somos
-          </p>
-          <h1 className="font-display text-5xl mb-6">
-            Sobre a{" "}
-            <span className="text-gradient-accent">DDA-Web</span>
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Somos uma empresa de soluções digitais focada em transformar a
-            presença online de empresas em Angola. Criamos sites, sistemas web,
-            apps, automações e bases de dados sob medida, com uma missão clara:
-            tornar a tecnologia acessível, rápida e eficiente.
-          </p>
-          <div className="grid grid-cols-3 gap-6 py-8 border-y border-border">
+      {/* Hero */}
+      <section className="pt-32 pb-20 bg-grid border-b border-border">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="font-display text-3xl text-accent mb-2">50+</div>
-              <p className="text-sm text-muted-foreground">
-                Projetos Entregues
+              <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+                Quem Somos
               </p>
-            </div>
-            <div>
-              <div className="font-display text-3xl text-accent mb-2">98%</div>
-              <p className="text-sm text-muted-foreground">Satisfação</p>
-            </div>
-            <div>
-              <div className="font-display text-3xl text-accent mb-2">
-                7 dias
+              <h1 className="font-display text-5xl lg:text-6xl leading-tight mb-6">
+                Sobre a{" "}
+                <span className="text-gradient-accent">DDA-Web</span>
+              </h1>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Somos uma empresa de soluções digitais focada em transformar a
+                presença online de empresas em Angola. Criamos sites, sistemas
+                web, apps, automações e bases de dados sob medida — tornando a
+                tecnologia acessível, rápida e eficiente.
+              </p>
+              <div className="flex gap-4">
+                <Link href="/services">
+                  <Button className="btn-primary gap-2">
+                    Ver Serviços <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline">Falar Connosco</Button>
+                </Link>
               </div>
-              <p className="text-sm text-muted-foreground">Entrega Média</p>
+            </div>
+            <div className="grid grid-cols-1 gap-4">
+              <AnimatedStats stats={aboutStats} />
             </div>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-card/30 border-y border-border">
+      <section className="py-20">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="font-display text-3xl mb-4">Nossa Missão</h2>
-              <p className="text-muted-foreground mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="card-modern border-l-4 border-l-accent">
+              <div className="w-10 h-10 rounded-lg bg-accent/15 border border-accent/30 flex items-center justify-center mb-4">
+                <Target className="w-5 h-5 text-accent" />
+              </div>
+              <h2 className="font-display text-2xl mb-3">Nossa Missão</h2>
+              <p className="text-muted-foreground leading-relaxed">
                 Criar soluções digitais de alta qualidade que capacitem empresas
                 angolanas a crescer, vender mais e operar melhor com tecnologia.
-              </p>
-              <p className="text-muted-foreground">
-                Acreditamos que toda empresa merece uma presença digital forte e
+                Acreditamos que toda empresa merece presença digital forte e
                 sistemas eficientes que gerem resultados reais.
               </p>
-            </div>
-            <div>
-              <h2 className="font-display text-3xl mb-4">Nossa Visão</h2>
-              <p className="text-muted-foreground mb-4">
+            </Card>
+            <Card className="card-modern border-l-4 border-l-accent">
+              <div className="w-10 h-10 rounded-lg bg-accent/15 border border-accent/30 flex items-center justify-center mb-4">
+                <Lightbulb className="w-5 h-5 text-accent" />
+              </div>
+              <h2 className="font-display text-2xl mb-3">Nossa Visão</h2>
+              <p className="text-muted-foreground leading-relaxed">
                 Ser a empresa de soluções digitais de referência em Angola,
                 conhecida por velocidade, qualidade e satisfação do cliente.
+                Queremos ajudar 1000+ negócios a transformar a sua presença
+                digital e alcançar os seus objetivos de crescimento.
               </p>
-              <p className="text-muted-foreground">
-                Queremos ajudar 1000+ negócios a transformar sua presença
-                digital e alcançar seus objetivos de crescimento através da
-                tecnologia.
-              </p>
-            </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-20">
+      <section className="py-20 bg-card/30 border-y border-border">
         <div className="container">
-          <h2 className="font-display text-4xl mb-12 text-center">
-            Nossos Valores
-          </h2>
+          <div className="text-center mb-12">
+            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">O Que Nos Move</p>
+            <h2 className="font-display text-4xl mb-4">
+              Nossos <span className="text-gradient-accent">Valores</span>
+            </h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, idx) => (
-              <Card
-                key={idx}
-                className="card-modern flex flex-col items-center text-center"
-              >
-                <div className="text-accent mb-4">{value.icon}</div>
-                <h3 className="font-display text-xl mb-2">{value.title}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {value.description}
-                </p>
+              <Card key={idx} className="card-modern text-center">
+                <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center text-accent mx-auto mb-4">
+                  {value.icon}
+                </div>
+                <h3 className="font-display text-lg mb-2">{value.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
               </Card>
             ))}
           </div>
@@ -165,28 +164,29 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-card/30 border-y border-border">
+      <section className="py-20">
         <div className="container max-w-3xl">
-          <h2 className="font-display text-4xl mb-12 text-center">
-            Nossa Jornada
-          </h2>
-          <div className="space-y-8">
+          <div className="text-center mb-12">
+            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">Evolução</p>
+            <h2 className="font-display text-4xl mb-4">
+              Nossa <span className="text-gradient-accent">Jornada</span>
+            </h2>
+          </div>
+          <div className="space-y-0">
             {timeline.map((item, idx) => (
               <div key={idx} className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center font-display font-bold text-accent">
-                    {idx + 1}
+                  <div className="w-12 h-12 rounded-full bg-accent/15 border-2 border-accent flex items-center justify-center font-display font-bold text-accent text-sm flex-shrink-0">
+                    {item.year.slice(2)}
                   </div>
                   {idx < timeline.length - 1 && (
-                    <div className="w-1 h-16 bg-gradient-to-b from-accent to-transparent mt-2"></div>
+                    <div className="w-px flex-1 bg-gradient-to-b from-accent/40 to-transparent my-2 min-h-[3rem]" />
                   )}
                 </div>
-                <div className="pb-8">
-                  <h3 className="font-display text-xl mb-1">{item.year}</h3>
-                  <h4 className="font-semibold text-accent mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-muted-foreground">{item.description}</p>
+                <div className="pb-10">
+                  <p className="text-xs text-accent font-bold tracking-widest mb-1">{item.year}</p>
+                  <h3 className="font-semibold text-lg mb-1">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -195,62 +195,39 @@ export default function About() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="container max-w-3xl">
-          <h2 className="font-display text-4xl mb-12 text-center">
-            Por Que Escolher DDA-Web?
-          </h2>
-          <div className="space-y-6">
-            {[
-              {
-                title: "IA + Humano",
-                description:
-                  "Usamos inteligência artificial para acelerar o processo, mas sempre com revisão humana para garantir qualidade.",
-              },
-              {
-                title: "Preços Acessíveis",
-                description:
-                  "Oferecemos soluções profissionais a preços justos, sem sacrificar qualidade ou funcionalidade.",
-              },
-              {
-                title: "Entrega Rápida",
-                description:
-                  "Seus projetos prontos em dias. Começamos assim que você aprova o escopo.",
-              },
-              {
-                title: "Suporte Pós-Entrega",
-                description:
-                  "Não desaparecemos após a entrega. Estamos aqui para ajudar com dúvidas e melhorias.",
-              },
-              {
-                title: "Foco em Resultados",
-                description:
-                  "Não criamos apenas sites bonitos. Criamos sites que geram clientes e vendas.",
-              },
-              {
-                title: "Transparência Total",
-                description:
-                  "Você sabe exatamente o que está pagando, o que está incluído e quando será entregue.",
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="card-modern">
-                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
+      <section className="py-20 bg-card/30 border-y border-border">
+        <div className="container">
+          <div className="text-center mb-12">
+            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">Diferenciais</p>
+            <h2 className="font-display text-4xl mb-4">
+              Por Que Escolher{" "}
+              <span className="text-gradient-accent">DDA-Web?</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {whyUs.map((item, idx) => (
+              <div key={idx} className="flex gap-3 p-5 rounded-xl border border-border hover:border-accent/40 transition-colors">
+                <div className="w-6 h-6 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Check className="w-3 h-3 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-card/30 border-t border-border">
-        <div className="container text-center">
-          <h2 className="font-display text-4xl mb-6">
-            Vamos Trabalhar Juntos?
+      {/* CTA */}
+      <section className="py-20">
+        <div className="container text-center max-w-2xl">
+          <h2 className="font-display text-4xl mb-4">
+            Vamos Trabalhar <span className="text-gradient-accent">Juntos?</span>
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Se você acredita em qualidade, velocidade e satisfação do cliente,
-            vamos ser um ótimo time.
+          <p className="text-lg text-muted-foreground mb-8">
+            Se acreditas em qualidade, velocidade e resultados, vamos ser um ótimo parceiro.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/services">

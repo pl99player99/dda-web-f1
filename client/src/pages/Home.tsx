@@ -377,49 +377,6 @@ export default function Home() {
       <section className="py-20 bg-grid">
         <div className="container">
           <div className="text-center mb-16">
-            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">Processo Simples</p>
-            <h2 className="font-display text-4xl mb-4">
-              Como <span className="text-gradient-accent">Funciona?</span>
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Do primeiro contacto à entrega final, em poucos dias.
-            </p>
-          </div>
-          <div className="relative">
-            {/* Connector line desktop */}
-            <div className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {[
-                { step: "01", icon: "💬", title: "Contacto", desc: "Fala connosco pelo WhatsApp ou formulário e conta-nos o teu projeto." },
-                { step: "02", icon: "📋", title: "Briefing", desc: "Recolhemos todos os detalhes — objetivos, estilo, conteúdo e prazo." },
-                { step: "03", icon: "⚡", title: "Desenvolvimento", desc: "A nossa equipa cria o teu projeto com tecnologia moderna e atenção aos detalhes." },
-                { step: "04", icon: "🚀", title: "Entrega", desc: "Entregamos, fazemos os ajustes finais e publicamos o projeto online." },
-              ].map((item, idx) => (
-                <div key={idx} className="text-center relative">
-                  <div className="w-16 h-16 rounded-full bg-accent/10 border-2 border-accent/30 flex items-center justify-center text-2xl mx-auto mb-4 relative z-10">
-                    {item.icon}
-                  </div>
-                  <p className="text-xs text-accent font-bold tracking-widest mb-1">{item.step}</p>
-                  <h3 className="font-display text-lg mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/contact">
-              <Button className="btn-primary gap-2">
-                Começar Agora <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* How it Works */}
-      <section className="py-20 bg-grid">
-        <div className="container">
-          <div className="text-center mb-16">
             <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
               Processo Simples
             </p>

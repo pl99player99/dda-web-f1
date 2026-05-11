@@ -1,43 +1,56 @@
 import { Button } from "@/components/ui/button";
-import { AlertCircle, ArrowLeft, Home } from "lucide-react";
-import { useLocation } from "wouter";
+import { ArrowLeft, Home, Search, MessageCircle } from "lucide-react";
+import { Link, useLocation } from "wouter";
+import Navigation from "@/components/Navigation";
 
 export default function NotFound() {
   const [, setLocation] = useLocation();
 
+  const suggestions = [
+    { label: "Página Inicial", href: "/", icon: <Home className="w-4 h-4" /> },
+    { label: "Serviços", href: "/services", icon: <Search className="w-4 h-4" /> },
+    { label: "Portfólio", href: "/portfolio", icon: <Search className="w-4 h-4" /> },
+    { label: "Contacto", href: "/contact", icon: <MessageCircle className="w-4 h-4" /> },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
-      <section className="pt-32 pb-20">
+      <Navigation />
+      <section className="pt-32 pb-20 flex items-center justify-center min-h-screen bg-grid">
         <div className="container max-w-2xl text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-accent/15 border border-accent/30 mb-8">
-            <AlertCircle className="w-10 h-10 text-accent" />
+          <div className="font-display text-[10rem] leading-none text-accent/10 select-none mb-0">
+            404
+          </div>
+          <div className="-mt-8 mb-8">
+            <h1 className="font-display text-4xl mb-3">Página não encontrada</h1>
+            <p className="text-muted-foreground text-lg">
+              O link que tentaste aceder não existe ou foi movido.
+            </p>
           </div>
 
-          <p className="text-accent font-semibold tracking-wide mb-3">
-            Erro 404
-          </p>
-          <h1 className="font-display text-5xl mb-4">Página não encontrada</h1>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-            O link que você tentou acessar não existe ou foi movido. Volte para
-            a página inicial ou continue navegando pelos nossos serviços.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button
-              className="btn-primary gap-2"
-              onClick={() => setLocation("/")}
-            >
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
+            <Button className="btn-primary gap-2" onClick={() => setLocation("/")}>
               <Home className="w-4 h-4" />
               Ir para Início
             </Button>
-            <Button
-              variant="outline"
-              className="gap-2"
-              onClick={() => window.history.back()}
-            >
+            <Button variant="outline" className="gap-2" onClick={() => window.history.back()}>
               <ArrowLeft className="w-4 h-4" />
               Voltar
             </Button>
+          </div>
+
+          <div className="border-t border-border pt-8">
+            <p className="text-sm text-muted-foreground mb-4">Talvez estejas à procura de:</p>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {suggestions.map(s => (
+                <Link key={s.href} href={s.href}>
+                  <button className="flex items-center gap-2 px-4 py-2 rounded-full border border-border hover:border-accent text-sm transition-colors">
+                    {s.icon}
+                    {s.label}
+                  </button>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
