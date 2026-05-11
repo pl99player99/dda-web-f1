@@ -172,6 +172,18 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react": ["react", "react-dom"],
+          "vendor-router": ["wouter"],
+          "vendor-ui": ["@radix-ui/react-tooltip", "lucide-react"],
+          "vendor-markdown": ["streamdown"],
+          "vendor-sonner": ["sonner"],
+        },
+      },
+    },
   },
   server: {
     port: 3000,
