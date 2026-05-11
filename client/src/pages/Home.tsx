@@ -17,6 +17,7 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { Link } from "wouter";
 import { blogArticles } from "@/data/blogArticles";
+import AnimatedStats from "@/components/AnimatedStats";
 
 /**
  * DDA-Web Home Page
@@ -109,22 +110,7 @@ export default function Home() {
       {/* Quick Stats */}
       <section className="py-16 border-y border-border">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: "50+", label: "Projetos Entregues", sub: "e crescendo" },
-              { value: "98%", label: "Clientes Satisfeitos", sub: "taxa de aprovação" },
-              { value: "7 dias", label: "Entrega Média", sub: "para sites" },
-              { value: "3.2x", label: "ROI Médio", sub: "nos nossos projetos" },
-            ].map((stat, idx) => (
-              <div key={idx} className="text-center group">
-                <div className="font-display text-4xl text-accent mb-1 group-hover:scale-110 transition-transform duration-300">
-                  {stat.value}
-                </div>
-                <p className="font-medium text-sm mb-0.5">{stat.label}</p>
-                <p className="text-xs text-muted-foreground">{stat.sub}</p>
-              </div>
-            ))}
-          </div>
+          <AnimatedStats />
         </div>
       </section>
 
@@ -386,6 +372,116 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* How it Works */}
+      <section className="py-20 bg-grid">
+        <div className="container">
+          <div className="text-center mb-16">
+            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">Processo Simples</p>
+            <h2 className="font-display text-4xl mb-4">
+              Como <span className="text-gradient-accent">Funciona?</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Do primeiro contacto à entrega final, em poucos dias.
+            </p>
+          </div>
+          <div className="relative">
+            {/* Connector line desktop */}
+            <div className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {[
+                { step: "01", icon: "💬", title: "Contacto", desc: "Fala connosco pelo WhatsApp ou formulário e conta-nos o teu projeto." },
+                { step: "02", icon: "📋", title: "Briefing", desc: "Recolhemos todos os detalhes — objetivos, estilo, conteúdo e prazo." },
+                { step: "03", icon: "⚡", title: "Desenvolvimento", desc: "A nossa equipa cria o teu projeto com tecnologia moderna e atenção aos detalhes." },
+                { step: "04", icon: "🚀", title: "Entrega", desc: "Entregamos, fazemos os ajustes finais e publicamos o projeto online." },
+              ].map((item, idx) => (
+                <div key={idx} className="text-center relative">
+                  <div className="w-16 h-16 rounded-full bg-accent/10 border-2 border-accent/30 flex items-center justify-center text-2xl mx-auto mb-4 relative z-10">
+                    {item.icon}
+                  </div>
+                  <p className="text-xs text-accent font-bold tracking-widest mb-1">{item.step}</p>
+                  <h3 className="font-display text-lg mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/contact">
+              <Button className="btn-primary gap-2">
+                Começar Agora <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* How it Works */}
+      <section className="py-20 bg-grid">
+        <div className="container">
+          <div className="text-center mb-16">
+            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+              Processo Simples
+            </p>
+            <h2 className="font-display text-4xl mb-4">
+              Como <span className="text-gradient-accent">Funciona?</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Do primeiro contacto à entrega final, em poucos dias.
+            </p>
+          </div>
+          <div className="relative">
+            <div className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {[
+                {
+                  step: "01",
+                  emoji: "💬",
+                  title: "Contacto",
+                  desc: "Fala connosco pelo WhatsApp ou formulário e conta-nos o teu projeto.",
+                },
+                {
+                  step: "02",
+                  emoji: "📋",
+                  title: "Briefing",
+                  desc: "Recolhemos todos os detalhes — objetivos, estilo, conteúdo e prazo.",
+                },
+                {
+                  step: "03",
+                  emoji: "⚡",
+                  title: "Desenvolvimento",
+                  desc: "A nossa equipa cria o teu projeto com tecnologia moderna e atenção aos detalhes.",
+                },
+                {
+                  step: "04",
+                  emoji: "🚀",
+                  title: "Entrega",
+                  desc: "Entregamos, fazemos os ajustes finais e publicamos o projeto online.",
+                },
+              ].map((item, idx) => (
+                <div key={idx} className="text-center relative">
+                  <div className="w-16 h-16 rounded-full bg-accent/10 border-2 border-accent/30 flex items-center justify-center text-2xl mx-auto mb-4 relative z-10">
+                    {item.emoji}
+                  </div>
+                  <p className="text-xs text-accent font-bold tracking-widest mb-1">
+                    {item.step}
+                  </p>
+                  <h3 className="font-display text-lg mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/contact">
+              <Button className="btn-primary gap-2">
+                Começar Agora <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio Preview */}
       <section className="py-20">
         <div className="container">
@@ -439,6 +535,58 @@ export default function Home() {
                 Ver Portfólio Completo <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-card/30 border-y border-border">
+        <div className="container">
+          <div className="text-center mb-12">
+            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+              O Que Dizem
+            </p>
+            <h2 className="font-display text-4xl mb-4">
+              Clientes que{" "}
+              <span className="text-gradient-accent">Confiaram</span> em Nós
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Maria João",
+                role: "Proprietária · Restaurante Sabor da Terra",
+                text: "Em menos de uma semana tínhamos o site online. As reservas pelo WhatsApp aumentaram logo no primeiro mês. Recomendo a toda a gente!",
+                rating: 5,
+              },
+              {
+                name: "Carlos Mendes",
+                role: "Sócio · Consultoria JM",
+                text: "A landing page que criaram converteu muito melhor do que esperávamos. O custo por lead caiu a metade e o ROI foi positivo em duas semanas.",
+                rating: 5,
+              },
+              {
+                name: "Ana Luísa",
+                role: "Gestora · Salão Estilo",
+                text: "Profissionais, rápidos e com ótimo gosto. O site ficou exatamente como eu queria e os clientes adoram. Valeu cada kwanza!",
+                rating: 5,
+              },
+            ].map((t, idx) => (
+              <Card key={idx} className="card-modern flex flex-col gap-4">
+                <div className="flex gap-1">
+                  {Array.from({ length: t.rating }).map((_, i) => (
+                    <span key={i} className="text-accent text-sm">★</span>
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
+                  "{t.text}"
+                </p>
+                <div className="border-t border-border pt-4">
+                  <p className="font-semibold text-sm">{t.name}</p>
+                  <p className="text-xs text-muted-foreground">{t.role}</p>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

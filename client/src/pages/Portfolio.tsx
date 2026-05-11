@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AnimatedStats from "@/components/AnimatedStats";
 
 /**
  * DDA-Web Portfolio Page
@@ -272,21 +273,7 @@ export default function Portfolio() {
       {/* Stats Section */}
       <section className="py-20 bg-card/30 border-y border-border">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { number: "50+", label: "Projetos Entregues" },
-              { number: "98%", label: "Clientes Satisfeitos" },
-              { number: "3.2x", label: "ROI Médio" },
-              { number: "7 dias", label: "Entrega Média" },
-            ].map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <div className="font-display text-4xl text-accent mb-2">
-                  {stat.number}
-                </div>
-                <p className="text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+          <AnimatedStats />
         </div>
       </section>
 
