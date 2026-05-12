@@ -20,13 +20,13 @@ export interface BlogArticle {
 export const blogArticles: BlogArticle[] = [
   {
     id: "web-design-moderno-2025",
-    title: "Web Design Moderno em 2025: Tendências que Você Precisa Conhecer",
+    title: "Web Design Moderno em 2026: Tendências que Você Precisa Conhecer",
     excerpt:
-      "Descubra as tendências mais quentes em web design para 2025 e como aplicá-las no seu site.",
+      "Minimalismo intencional, mobile-first real e velocidade como feature — descubra as tendências que definem o web design em 2026 e como aplicá-las.",
     category: "Web Design",
     author: "DDA-Web",
     date: "2026-04-15",
-    readTime: 8,
+    readTime: 10,
     image: "/images/blog-1.png",
     imageAlt: "Designer a trabalhar num layout moderno de website",
     content: webDesignModerno2025,
@@ -35,11 +35,11 @@ export const blogArticles: BlogArticle[] = [
     id: "seo-pequenas-empresas",
     title: "SEO para Pequenas Empresas: Guia Completo para Começar",
     excerpt:
-      "Aprenda como otimizar seu site para motores de busca com ações simples e consistentes.",
+      "SEO local, Google Meu Negócio e palavras-chave certas — um guia prático para negócios angolanos aparecerem no Google e atraírem mais clientes.",
     category: "Marketing",
     author: "DDA-Web",
     date: "2026-04-10",
-    readTime: 10,
+    readTime: 12,
     image: "/images/blog-2.png",
     imageAlt: "Profissional analisando métricas de SEO em portátil",
     content: seoPequenasEmpresas,
@@ -48,21 +48,20 @@ export const blogArticles: BlogArticle[] = [
     id: "conversao-visitantes-clientes",
     title: "Conversão: Como Transformar Visitantes em Clientes",
     excerpt:
-      "Estratégias comprovadas para aumentar conversão e gerar mais resultado com o tráfego atual.",
+      "97% dos visitantes saem sem agir. Veja as estratégias concretas para transformar mais visitas em contactos, orçamentos e vendas.",
     category: "Marketing",
     author: "DDA-Web",
     date: "2026-04-05",
-    readTime: 9,
+    readTime: 10,
     image: "/images/blog-3.png",
     imageAlt: "Empreendedora feliz vendo crescimento das vendas online",
     content: conversaoVisitantesClientes,
   },
   {
     id: "velocidade-site-importancia",
-    title:
-      "A Importância da Velocidade do Site: Por que Importa e Como Melhorar",
+    title: "A Importância da Velocidade do Site: Como 3 Segundos Podem Custar Clientes",
     excerpt:
-      "Entenda por que performance impacta SEO, UX e vendas — e como melhorar rapidamente.",
+      "53% dos utilizadores abandonam sites que demoram mais de 3 segundos. Saiba o que torna um site lento e 8 acções concretas para melhorar hoje.",
     category: "Tecnologia",
     author: "DDA-Web",
     date: "2026-03-28",
@@ -75,7 +74,7 @@ export const blogArticles: BlogArticle[] = [
     id: "ia-web-design",
     title: "IA no Web Design: Oportunidades e Limites",
     excerpt:
-      "Como usar IA para acelerar entregas sem perder estratégia, identidade e qualidade.",
+      "IA cria sites em minutos — mas estratégia, identidade de marca e relação com o cliente continuam a ser humanos. Saiba como equilibrar os dois.",
     category: "Tecnologia",
     author: "DDA-Web",
     date: "2026-03-20",
