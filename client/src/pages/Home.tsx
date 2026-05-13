@@ -35,74 +35,99 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden bg-grid">
-        <div className="absolute inset-0 lg:hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Full-bleed background image with overlay — visible on ALL screens */}
+        <div className="absolute inset-0">
           <img
             src="/images/home-hero.png"
             alt=""
             aria-hidden="true"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center hero-img"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background" />
+          {/* Layered gradient: dark on left for text, subtle on right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30 lg:to-background/20" />
+          {/* Bottom fade */}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+          {/* Subtle grid on top */}
+          <div className="absolute inset-0 bg-grid opacity-30" />
         </div>
 
-        <div className="container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="space-y-6 bg-background/65 backdrop-blur-sm p-6 rounded-2xl border border-border/50 lg:bg-transparent lg:backdrop-blur-0 lg:p-0 lg:border-0">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-2">
-                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                  Soluções Digitais em Angola
-                </div>
-                <h1 className="font-display text-5xl lg:text-6xl leading-tight">
-                  Transformamos Ideias em{" "}
-                  <span className="text-gradient-accent">
-                    Resultados Digitais
-                  </span>
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  Criamos sites profissionais, sistemas web, automações e apps
-                  sob medida — soluções modernas para empresas que querem
-                  crescer com presença digital forte.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link href="/quote">
-                  <Button className="btn-primary gap-2">
-                    Calcular Orçamento <ArrowRight className="w-4 h-4" />
-                  </Button>
-                </Link>
-                <Link href="/portfolio">
-                  <Button
-                    variant="outline"
-                    className="border-border hover:border-accent"
-                  >
-                    Ver Portfólio
-                  </Button>
-                </Link>
-              </div>
+        {/* Decorative glow blob */}
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px] pointer-events-none" />
+
+        <div className="container relative z-10 pt-32 pb-20">
+          <div className="max-w-2xl">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/15 border border-accent/30 text-accent text-sm font-medium mb-8 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse flex-shrink-0" />
+              Soluções Digitais em Angola
             </div>
 
-            {/* Right Visual */}
-            <div className="hidden lg:flex justify-center items-center">
-              <div className="w-full max-w-xl relative rounded-2xl overflow-hidden border border-accent/30">
-                <img
-                  src="/images/home-hero.png"
-                  alt="Equipa colaborando no desenvolvimento de um projeto digital"
-                  className="w-full h-80 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-accent font-semibold text-lg">
-                    Transformação Digital com Pessoas Reais
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Projetos pensados para resultados, não apenas aparência.
-                  </p>
+            {/* Headline */}
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] mb-6">
+              Transformamos
+              <br />
+              Ideias em{" "}
+              <span className="text-gradient-accent">
+                Resultados
+                <br className="hidden sm:block" />
+                Digitais
+              </span>
+            </h1>
+
+            {/* Subtext */}
+            <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed">
+              Sites, sistemas web, apps e automações sob medida — para empresas
+              que querem crescer com tecnologia de verdade.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/quote">
+                <Button className="btn-primary gap-2 text-base px-8 py-6 w-full sm:w-auto shadow-lg shadow-accent/20">
+                  Calcular Orçamento <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
+              <Link href="/portfolio">
+                <Button
+                  variant="outline"
+                  className="border-border/60 hover:border-accent bg-background/30 backdrop-blur-sm text-base px-8 py-6 w-full sm:w-auto"
+                >
+                  Ver Portfólio
+                </Button>
+              </Link>
+            </div>
+
+            {/* Social proof mini */}
+            <div className="flex items-center gap-6 mt-10 pt-8 border-t border-border/30">
+              <div className="flex -space-x-2">
+                {["🧑🏾‍💼", "👩🏽‍💻", "👨🏿‍🏫", "👩🏾‍🔬"].map((emoji, i) => (
+                  <div
+                    key={i}
+                    className="w-8 h-8 rounded-full bg-card border-2 border-background flex items-center justify-center text-sm"
+                  >
+                    {emoji}
+                  </div>
+                ))}
+              </div>
+              <div>
+                <div className="flex gap-0.5 mb-0.5">
+                  {[1,2,3,4,5].map(i => (
+                    <span key={i} className="text-accent text-sm">★</span>
+                  ))}
                 </div>
+                <p className="text-xs text-muted-foreground">
+                  <span className="text-foreground font-semibold">50+ empresas</span> confiam em nós
+                </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50 animate-bounce">
+          <div className="w-5 h-8 rounded-full border border-muted-foreground/30 flex items-start justify-center pt-1.5">
+            <div className="w-1 h-2 rounded-full bg-accent/60" />
           </div>
         </div>
       </section>

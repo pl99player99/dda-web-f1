@@ -285,6 +285,15 @@
   background-clip: text;
 }
 
+/* Hero image slow zoom */
+@keyframes heroZoom {
+  from { transform: scale(1.05); }
+  to   { transform: scale(1.12); }
+}
+.hero-img {
+  animation: heroZoom 12s ease-in-out infinite alternate;
+}
+
 /* Subtle grid background for hero sections */
 .bg-grid {
   background-image:
