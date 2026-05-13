@@ -1,4 +1,4 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
   ArrowRight,
@@ -64,13 +64,13 @@ export default function Home() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] mb-6">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl leading-[1.05] mb-6">
               Transformamos
               <br />
               Ideias em{" "}
               <span className="text-gradient-accent">
                 Resultados
-                <br className="hidden sm:block" />
+                <br />
                 Digitais
               </span>
             </h1>
