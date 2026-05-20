@@ -43,121 +43,109 @@
 }
 
 :root {
-  --primary: #007bff;
+  --primary: #0066ff;
   --primary-foreground: #ffffff;
-  --sidebar-primary: #007bff;
+  --sidebar-primary: #0066ff;
   --sidebar-primary-foreground: #ffffff;
-  --chart-1: #007bff;
-  --chart-2: #00d9ff;
-  --chart-3: #0a0a0a;
-  --chart-4: #a0a0a0;
+  --chart-1: #0066ff;
+  --chart-2: #ff6b35;
+  --chart-3: #0d0d0d;
+  --chart-4: #888888;
   --chart-5: #ffffff;
-  --radius: 0.65rem;
-  --background: #0a0a0a;
-  --foreground: #ffffff;
-  --card: #161616;
-  --card-foreground: #ffffff;
-  --popover: #161616;
-  --popover-foreground: #ffffff;
-  --secondary: #00d9ff;
-  --secondary-foreground: #0a0a0a;
-  --muted: #a0a0a0;
-  --muted-foreground: #a0a0a0;
-  --accent: #007bff;
+  --radius: 0.75rem;
+
+  /* Dark theme (default) */
+  --background: #0d0d0d;
+  --foreground: #f0f0f0;
+  --card: #181818;
+  --card-foreground: #f0f0f0;
+  --popover: #181818;
+  --popover-foreground: #f0f0f0;
+  --secondary: #ff6b35;
+  --secondary-foreground: #ffffff;
+  --muted: #888888;
+  --muted-foreground: #999999;
+  --accent: #0066ff;
   --accent-foreground: #ffffff;
+  --accent-warm: #ff6b35;
   --destructive: #ff4444;
   --destructive-foreground: #ffffff;
-  --border: #333333;
-  --input: #1a1a1a;
-  --ring: #007bff;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #ffffff;
-  --sidebar-accent: #007bff;
+  --border: #2a2a2a;
+  --input: #1e1e1e;
+  --ring: #0066ff;
+  --sidebar: #0d0d0d;
+  --sidebar-foreground: #f0f0f0;
+  --sidebar-accent: #0066ff;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #333333;
-  --sidebar-ring: #007bff;
+  --sidebar-border: #2a2a2a;
+  --sidebar-ring: #0066ff;
 }
 
 .light {
-  --primary: #007bff;
+  --primary: #0055dd;
   --primary-foreground: #ffffff;
-  --sidebar-primary: #007bff;
-  --sidebar-primary-foreground: #ffffff;
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --card: #f0f4ff;
-  --card-foreground: #1a1a1a;
+  --background: #fafafa;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
   --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
-  --secondary: #00d9ff;
-  --secondary-foreground: #0a0a0a;
-  --muted: #e0e0e0;
+  --popover-foreground: #111111;
+  --secondary: #ff6b35;
+  --secondary-foreground: #ffffff;
+  --muted: #dddddd;
   --muted-foreground: #666666;
-  --accent: #007bff;
+  --accent: #0055dd;
   --accent-foreground: #ffffff;
   --destructive: #ff4444;
   --destructive-foreground: #ffffff;
-  --border: #e0e0e0;
-  --input: #f5f5f5;
-  --ring: #007bff;
-  --chart-1: #007bff;
-  --chart-2: #00d9ff;
-  --chart-3: #0a0a0a;
-  --chart-4: #a0a0a0;
-  --chart-5: #ffffff;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #1a1a1a;
-  --sidebar-accent: #007bff;
+  --border: #e5e5e5;
+  --input: #f4f4f4;
+  --ring: #0055dd;
+  --chart-1: #0055dd;
+  --chart-2: #ff6b35;
+  --chart-3: #111111;
+  --chart-4: #888888;
+  --chart-5: #111111;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #111111;
+  --sidebar-accent: #0055dd;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e0e0e0;
-  --sidebar-ring: #007bff;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #0055dd;
 }
 
 .dark {
-  --primary: #007bff;
+  --primary: #0066ff;
   --primary-foreground: #ffffff;
-  --sidebar-primary: #007bff;
-  --sidebar-primary-foreground: #ffffff;
-  --background: #0a0a0a;
-  --foreground: #ffffff;
-  --card: #1a1a1a;
-  --card-foreground: #ffffff;
-  --popover: #1a1a1a;
-  --popover-foreground: #ffffff;
-  --secondary: #00d9ff;
-  --secondary-foreground: #0a0a0a;
-  --muted: #a0a0a0;
-  --muted-foreground: #a0a0a0;
-  --accent: #007bff;
+  --background: #0d0d0d;
+  --foreground: #f0f0f0;
+  --card: #181818;
+  --card-foreground: #f0f0f0;
+  --popover: #181818;
+  --popover-foreground: #f0f0f0;
+  --secondary: #ff6b35;
+  --secondary-foreground: #ffffff;
+  --muted: #888888;
+  --muted-foreground: #999999;
+  --accent: #0066ff;
   --accent-foreground: #ffffff;
   --destructive: #ff4444;
   --destructive-foreground: #ffffff;
-  --border: #333333;
-  --input: #1a1a1a;
-  --ring: #007bff;
-  --chart-1: #007bff;
-  --chart-2: #00d9ff;
-  --chart-3: #0a0a0a;
-  --chart-4: #a0a0a0;
-  --chart-5: #ffffff;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #ffffff;
-  --sidebar-accent: #007bff;
+  --border: #2a2a2a;
+  --input: #1e1e1e;
+  --ring: #0066ff;
+  --sidebar: #0d0d0d;
+  --sidebar-foreground: #f0f0f0;
+  --sidebar-accent: #0066ff;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #333333;
-  --sidebar-ring: #007bff;
+  --sidebar-border: #2a2a2a;
+  --sidebar-ring: #0066ff;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+  html { scroll-behavior: smooth; }
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -172,160 +160,156 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
-
+  .flex { min-height: 0; min-width: 0; }
   @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
-    }
+    .container { padding-left: 1.5rem; padding-right: 1.5rem; }
   }
-
   @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
-    }
+    .container { padding-left: 2rem; padding-right: 2rem; max-width: 1280px; }
   }
 }
 
-/* Additional Custom Styles for DDA-Web */
+/* ── Typography ────────────────────────────────── */
 .font-display {
   @apply font-bold tracking-tight;
   font-family: "Poppins", sans-serif;
 }
-
 .font-body {
   @apply font-normal;
   font-family: "Inter", sans-serif;
 }
 
+/* ── Buttons ───────────────────────────────────── */
 .btn-primary {
-  @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
-  background-color: #007bff;
+  @apply px-6 py-3 rounded-xl font-semibold transition-all duration-200;
+  background: #0066ff;
   color: #ffffff;
 }
-
 .btn-primary:hover {
-  background-color: #0060df;
-  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.4);
+  background: #0052cc;
+  box-shadow: 0 0 0 4px rgba(0,102,255,0.18);
+  transform: translateY(-1px);
 }
-
-.card-modern {
-  @apply rounded-lg p-6 transition-all duration-300;
-  background-color: #1a1a1a;
-  border: 1px solid #333333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.card-modern:hover {
-  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.2);
-  border-color: rgba(0, 123, 255, 0.6);
-}
-
-.text-gradient {
-  background: linear-gradient(135deg, #007bff 0%, #00d9ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Light mode overrides */
-.light .btn-primary {
-  background-color: #007bff;
+.btn-warm {
+  @apply px-6 py-3 rounded-xl font-semibold transition-all duration-200;
+  background: #ff6b35;
   color: #ffffff;
 }
-
-.light .btn-primary:hover {
-  background-color: #0056cc;
-  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3);
+.btn-warm:hover {
+  background: #e55a27;
+  box-shadow: 0 0 0 4px rgba(255,107,53,0.18);
+  transform: translateY(-1px);
 }
 
+/* ── Cards ─────────────────────────────────────── */
+.card-modern {
+  @apply rounded-2xl p-6 transition-all duration-200;
+  background: #181818;
+  border: 1px solid #2a2a2a;
+}
+.card-modern:hover {
+  border-color: rgba(0,102,255,0.4);
+  box-shadow: 0 8px 32px rgba(0,102,255,0.08);
+}
 .light .card-modern {
-  background-color: #f0f4ff;
-  border: 1px solid #d0deff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
-
 .light .card-modern:hover {
-  box-shadow: 0 12px 32px rgba(0, 123, 255, 0.1);
-  border-color: #007bff;
+  border-color: rgba(0,85,221,0.35);
+  box-shadow: 0 8px 32px rgba(0,85,221,0.08);
 }
 
-/* Gradient accent text */
+/* ── Gradients ─────────────────────────────────── */
 .text-gradient-accent {
-  background: linear-gradient(135deg, #007bff 0%, #00d9ff 100%);
+  background: linear-gradient(135deg, #0066ff 0%, #33aaff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-gradient-warm {
+  background: linear-gradient(135deg, #ff6b35 0%, #ffaa00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-gradient-mixed {
+  background: linear-gradient(135deg, #0066ff 0%, #ff6b35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Hero image slow zoom */
-@keyframes heroZoom {
-  from { transform: scale(1.05); }
-  to   { transform: scale(1.12); }
-}
-.hero-img {
-  animation: heroZoom 12s ease-in-out infinite alternate;
-}
-
-/* Subtle grid background for hero sections */
+/* ── Backgrounds ───────────────────────────────── */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(0, 123, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 123, 255, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgba(0,102,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,102,255,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.bg-warm-grid {
+  background-image:
+    linear-gradient(rgba(255,107,53,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,107,53,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.bg-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 12px,
+    rgba(255,255,255,0.015) 12px,
+    rgba(255,255,255,0.015) 24px
+  );
 }
 
-/* Glow effect for accent elements */
-.glow-accent {
-  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3), 0 0 40px rgba(0, 123, 255, 0.1);
+/* ── Decorative ────────────────────────────────── */
+.glow-blue  { box-shadow: 0 0 40px rgba(0,102,255,0.25), 0 0 80px rgba(0,102,255,0.08); }
+.glow-warm  { box-shadow: 0 0 40px rgba(255,107,53,0.25), 0 0 80px rgba(255,107,53,0.08); }
+
+/* ── Animations ────────────────────────────────── */
+@keyframes heroZoom {
+  from { transform: scale(1.04); }
+  to   { transform: scale(1.10); }
+}
+.hero-img { animation: heroZoom 14s ease-in-out infinite alternate; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.6s ease forwards; }
+
+@keyframes pulseWarm {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+.animate-pulse-warm { animation: pulseWarm 2s ease-in-out infinite; }
+
+/* ── Pill / Badge ──────────────────────────────── */
+.pill-blue {
+  @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium;
+  background: rgba(0,102,255,0.12);
+  border: 1px solid rgba(0,102,255,0.25);
+  color: #4d99ff;
+}
+.pill-warm {
+  @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium;
+  background: rgba(255,107,53,0.12);
+  border: 1px solid rgba(255,107,53,0.25);
+  color: #ff8c5a;
 }
 
-/* Animated underline for links */
-.link-animated {
-  position: relative;
-}
-.link-animated::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #007bff;
-  transition: width 0.3s ease;
-}
-.link-animated:hover::after {
-  width: 100%;
-}
-
-/* Better outline button contrast */
-.light .border-border {
-  border-color: #c0cfe8;
+/* ── Section divider ───────────────────────────── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2a2a2a 30%, #2a2a2a 70%, transparent);
 }

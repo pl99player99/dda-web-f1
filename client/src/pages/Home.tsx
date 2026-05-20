@@ -1,42 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import {
-  ArrowRight,
-  Check,
-  Zap,
-  Target,
-  Users,
-  Lightbulb,
-  Globe,
-  BriefcaseBusiness,
-  Rocket,
-  SlidersHorizontal,
-} from "lucide-react";
+import { ArrowRight, Zap, Target, Users, Lightbulb } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
 import { Link } from "wouter";
 import { blogArticles } from "@/data/blogArticles";
 import AnimatedStats from "@/components/AnimatedStats";
 
-/**
- * DDA-Web Home Page
- * Design Philosophy: Modern & Technological
- * - Dark background (#0A0A0A) with electric blue accents (#007BFF)
- * - Asymmetric layout with generous whitespace
- * - Poppins for display, Inter for body
- * - Geometric elements and network patterns
- */
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
-      {/* Navigation */}
       <Navigation />
 
-      {/* Hero Section */}
+      {/* ── HERO ─────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Full-bleed background image with overlay — visible on ALL screens */}
+        {/* Background image */}
         <div className="absolute inset-0">
           <img
             src="/images/home-hero.png"
@@ -44,609 +21,416 @@ export default function Home() {
             aria-hidden="true"
             className="w-full h-full object-cover object-center hero-img"
           />
-          {/* Layered gradient: dark on left for text, subtle on right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30 lg:to-background/20" />
-          {/* Bottom fade */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-          {/* Subtle grid on top */}
-          <div className="absolute inset-0 bg-grid opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/80 to-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
         </div>
 
-        {/* Decorative glow blob */}
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px] pointer-events-none" />
+        {/* Glow blobs */}
+        <div className="absolute top-1/4 left-0 w-[500px] h-[500px] rounded-full bg-accent/8 blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-orange-500/6 blur-[100px] pointer-events-none" />
 
-        <div className="container relative z-10 pt-32 pb-20">
-          <div className="max-w-2xl">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/15 border border-accent/30 text-accent text-sm font-medium mb-8 backdrop-blur-sm">
+        <div className="container relative z-10 pt-28 pb-16">
+          <div className="max-w-3xl">
+            {/* Eyebrow */}
+            <div className="pill-blue mb-8">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse flex-shrink-0" />
-              Soluções Digitais em Angola
+              Angola · Soluções Digitais
             </div>
 
-            {/* Headline */}
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl leading-[1.05] mb-6">
-              Transformamos
-              <br />
-              Ideias em{" "}
-              <span className="text-gradient-accent">
-                Resultados
-                <br />
-                Digitais
+            {/* Headline — asymmetric sizing for human feel */}
+            <h1 className="font-display leading-[1.04] mb-6">
+              <span className="text-4xl sm:text-5xl lg:text-6xl block text-foreground/70">
+                O seu negócio merece
+              </span>
+              <span className="text-5xl sm:text-6xl lg:text-8xl block mt-1">
+                estar online
+              </span>
+              <span className="text-4xl sm:text-5xl lg:text-6xl block mt-1">
+                do jeito{" "}
+                <span className="text-gradient-warm">certo.</span>
               </span>
             </h1>
 
-            {/* Subtext */}
-            <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed">
-              Sites, sistemas web, apps e automações sob medida — para empresas
-              que querem crescer com tecnologia de verdade.
+            <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed">
+              Criamos sites, sistemas e apps para empresas angolanas que querem
+              crescer. Rápido, profissional e sem complicação.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/quote">
-                <Button className="btn-primary gap-2 text-base px-8 py-6 w-full sm:w-auto shadow-lg shadow-accent/20">
-                  Calcular Orçamento <ArrowRight className="w-4 h-4" />
+                <Button className="btn-primary gap-2 text-base px-8 py-6 w-full sm:w-auto">
+                  Quero um Orçamento <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
               <Link href="/portfolio">
                 <Button
                   variant="outline"
-                  className="border-border/60 hover:border-accent bg-background/30 backdrop-blur-sm text-base px-8 py-6 w-full sm:w-auto"
+                  className="border-border hover:border-accent text-base px-8 py-6 w-full sm:w-auto"
                 >
-                  Ver Portfólio
+                  Ver Projetos
                 </Button>
               </Link>
             </div>
 
-            {/* Social proof mini */}
-            <div className="flex items-center gap-6 mt-10 pt-8 border-t border-border/30">
-              <div className="flex -space-x-2">
-                {["🧑🏾‍💼", "👩🏽‍💻", "👨🏿‍🏫", "👩🏾‍🔬"].map((emoji, i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full bg-card border-2 border-background flex items-center justify-center text-sm"
-                  >
-                    {emoji}
-                  </div>
-                ))}
-              </div>
-              <div>
-                <div className="flex gap-0.5 mb-0.5">
-                  {[1,2,3,4,5].map(i => (
-                    <span key={i} className="text-accent text-sm">★</span>
+            {/* Social proof */}
+            <div className="flex flex-wrap items-center gap-6 mt-10 pt-8 border-t border-border/30">
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-2">
+                  {["🧑🏾‍💼","👩🏽‍💻","👨🏿‍💼","👩🏾‍🔬"].map((e,i) => (
+                    <div key={i} className="w-9 h-9 rounded-full bg-card border-2 border-background flex items-center justify-center text-base">
+                      {e}
+                    </div>
                   ))}
                 </div>
-                <p className="text-xs text-muted-foreground">
-                  <span className="text-foreground font-semibold">50+ empresas</span> confiam em nós
-                </p>
+                <div>
+                  <div className="flex gap-0.5">{[1,2,3,4,5].map(i=><span key={i} className="text-yellow-400 text-sm">★</span>)}</div>
+                  <p className="text-xs text-muted-foreground"><span className="text-foreground font-semibold">50+ clientes</span> satisfeitos</p>
+                </div>
+              </div>
+              <div className="h-8 w-px bg-border hidden sm:block" />
+              <div className="text-xs text-muted-foreground">
+                <span className="text-foreground font-semibold">7 dias</span> de entrega média
+              </div>
+              <div className="h-8 w-px bg-border hidden sm:block" />
+              <div className="text-xs text-muted-foreground">
+                <span className="text-foreground font-semibold">Luanda,</span> Angola
               </div>
             </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50 animate-bounce">
-          <div className="w-5 h-8 rounded-full border border-muted-foreground/30 flex items-start justify-center pt-1.5">
-            <div className="w-1 h-2 rounded-full bg-accent/60" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-40 animate-bounce">
+          <div className="w-5 h-8 rounded-full border border-foreground/30 flex items-start justify-center pt-1.5">
+            <div className="w-1 h-2 rounded-full bg-foreground/60" />
           </div>
         </div>
       </section>
 
-      {/* Quick Stats */}
-      <section className="py-16 border-y border-border">
+      {/* ── STATS ────────────────────────────────────── */}
+      <section className="py-14 border-y border-border bg-card/20">
         <div className="container">
           <AnimatedStats />
         </div>
       </section>
 
-      {/* Social Proof Visual */}
-      <section className="py-16">
+      {/* ── SERVICES PREVIEW ─────────────────────────── */}
+      <section className="py-24">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                image: "/images/home-proof-1.png",
-                title: "Reuniões Estratégicas",
-                text: "Planeamento com foco em metas reais do negócio.",
-              },
-              {
-                image: "/images/home-proof-2.png",
-                title: "Design e Conversão",
-                text: "Layouts modernos pensados para vender e gerar contactos.",
-              },
-              {
-                image: "/images/home-proof-3.png",
-                title: "Resultados Medíveis",
-                text: "Projetos com acompanhamento de desempenho e melhoria contínua.",
-              },
-            ].map((item, idx) => (
-              <Card key={idx} className="card-modern overflow-hidden p-0">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-44 object-cover"
-                />
-                <div className="p-5">
-                  <h3 className="font-display text-xl mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.text}</p>
+          {/* Header — left-aligned, not centred */}
+          <div className="max-w-xl mb-14">
+            <p className="pill-warm mb-4">O que fazemos</p>
+            <h2 className="font-display text-4xl lg:text-5xl mb-4">
+              Tudo o que o seu negócio precisa
+              <span className="text-gradient-accent"> no digital</span>
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Do site simples ao sistema complexo — entregamos o que faz sentido
+              para o seu negócio crescer.
+            </p>
+          </div>
+
+          {/* Services grid — asymmetric */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            {/* Large card */}
+            <div className="lg:col-span-2 card-modern bg-gradient-to-br from-card to-card/50 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-all duration-500" />
+              <div className="relative">
+                <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center mb-4 text-accent text-2xl">
+                  🌐
                 </div>
-              </Card>
-            ))}
+                <h3 className="font-display text-2xl mb-2">Sites Profissionais</h3>
+                <p className="text-muted-foreground mb-6">
+                  Desde uma página simples até um site completo com múltiplas secções, formulários, galeria e integração com WhatsApp. Entrega em 3–7 dias.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {["Presença Online","Negócio Profissional","Vendas & Captação"].map(t => (
+                    <span key={t} className="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/15">{t}</span>
+                  ))}
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="font-display text-3xl">35.000 <span className="text-muted-foreground text-lg font-normal">Kz</span></span>
+                  <Link href="/services">
+                    <Button className="btn-primary gap-2">Ver Pacotes <ArrowRight className="w-4 h-4" /></Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Stack of 2 small cards */}
+            <div className="flex flex-col gap-5">
+              <div className="card-modern relative overflow-hidden group flex-1">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl group-hover:bg-orange-500/10 transition-all duration-500" />
+                <div className="relative">
+                  <div className="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center mb-3 text-orange-400 text-xl">⚙️</div>
+                  <h3 className="font-display text-lg mb-1">Sistemas Web</h3>
+                  <p className="text-sm text-muted-foreground mb-4">CRM, ERP, gestão interna, dashboards. Criados à medida do negócio.</p>
+                  <Link href="/services" className="text-sm text-accent hover:underline flex items-center gap-1">
+                    Saber mais <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </div>
+              </div>
+              <div className="card-modern relative overflow-hidden group flex-1">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-full blur-2xl group-hover:bg-purple-500/10 transition-all duration-500" />
+                <div className="relative">
+                  <div className="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/20 flex items-center justify-center mb-3 text-purple-400 text-xl">📱</div>
+                  <h3 className="font-display text-lg mb-1">Apps Mobile</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Android e iOS. Agendamentos, e-commerce, plataformas sob medida.</p>
+                  <Link href="/services" className="text-sm text-accent hover:underline flex items-center gap-1">
+                    Saber mais <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-20">
+      {/* ── HOW IT WORKS ─────────────────────────────── */}
+      <section className="py-24 bg-card/20 border-y border-border bg-grid">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="font-display text-4xl mb-4">Nossos Pacotes</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Escolha o pacote ideal para seu negócio ou solicite uma solução
-              personalizada
+            <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">Processo</p>
+            <h2 className="font-display text-4xl lg:text-5xl mb-4">
+              Simples como deve ser
+            </h2>
+            <p className="text-muted-foreground max-w-lg mx-auto">
+              Sem reuniões intermináveis. Sem processos complicados. Do contacto à entrega em dias.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {/* Package 1 */}
-            <Card className="card-modern">
-              <div className="mb-4">
-                <div className="mb-2 text-accent">
-                  <Globe className="w-7 h-7" />
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+            <div className="hidden md:block absolute top-10 left-[13%] right-[13%] h-px">
+              <div className="w-full h-full bg-gradient-to-r from-transparent via-border to-transparent" />
+            </div>
+            {[
+              { step:"01", emoji:"💬", title:"Fala connosco", desc:"WhatsApp ou formulário. Conta-nos o projeto em 2 frases." },
+              { step:"02", emoji:"📋", title:"Definimos o escopo", desc:"Objetivos, estilo, prazo e preço. Tudo claro antes de começar." },
+              { step:"03", emoji:"⚡", title:"Desenvolvemos", desc:"A equipa trabalha. Tu vês o progresso. Sem surpresas." },
+              { step:"04", emoji:"🚀", title:"Entregamos", desc:"Revisão final, ajustes e publicação. Pronto a gerar clientes." },
+            ].map((s, i) => (
+              <div key={i} className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 rounded-2xl bg-card border border-border flex flex-col items-center justify-center mb-4 relative z-10 shadow-sm">
+                  <span className="text-2xl">{s.emoji}</span>
+                  <span className="text-xs text-accent font-bold mt-0.5">{s.step}</span>
                 </div>
-                <h3 className="font-display text-lg">Presença Online</h3>
-                <p className="text-xs text-muted-foreground">Para começar</p>
+                <h3 className="font-display text-lg mb-2">{s.title}</h3>
+                <p className="text-sm text-muted-foreground">{s.desc}</p>
               </div>
-              <div className="mb-4 pb-4 border-b border-border">
-                <div className="flex items-baseline gap-1">
-                  <span className="font-display text-2xl">35.000</span>
-                  <span className="text-muted-foreground text-sm">Kz</span>
-                </div>
-              </div>
-              <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>1 página</span>
-                </li>
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>WhatsApp integrado</span>
-                </li>
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>Responsivo</span>
-                </li>
-              </ul>
-              <Link href="/services">
-                <Button variant="outline" className="w-full">
-                  Ver Detalhes
-                </Button>
-              </Link>
-            </Card>
-
-            {/* Package 2 */}
-            <Card className="card-modern border-accent/50 ring-1 ring-accent/30">
-              <div className="mb-4">
-                <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">
-                  Mais Popular
-                </span>
-                <div className="mb-2 mt-2 text-accent">
-                  <BriefcaseBusiness className="w-7 h-7" />
-                </div>
-                <h3 className="font-display text-lg">Profissional</h3>
-                <p className="text-xs text-muted-foreground">Empresa séria</p>
-              </div>
-              <div className="mb-4 pb-4 border-b border-border">
-                <div className="flex items-baseline gap-1">
-                  <span className="font-display text-2xl">70.000</span>
-                  <span className="text-muted-foreground text-sm">Kz</span>
-                </div>
-              </div>
-              <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>Até 5 páginas</span>
-                </li>
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>SEO básico</span>
-                </li>
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>Formulário</span>
-                </li>
-              </ul>
-              <Link href="/services">
-                <Button className="btn-primary w-full">Ver Detalhes</Button>
-              </Link>
-            </Card>
-
-            {/* Package 3 */}
-            <Card className="card-modern">
-              <div className="mb-4">
-                <div className="mb-2 text-accent">
-                  <Rocket className="w-7 h-7" />
-                </div>
-                <h3 className="font-display text-lg">Vendas & Captação</h3>
-                <p className="text-xs text-muted-foreground">Gerar clientes</p>
-              </div>
-              <div className="mb-4 pb-4 border-b border-border">
-                <div className="flex items-baseline gap-1">
-                  <span className="font-display text-2xl">120.000</span>
-                  <span className="text-muted-foreground text-sm">Kz</span>
-                </div>
-              </div>
-              <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>Landing page</span>
-                </li>
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>Copywriting</span>
-                </li>
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>Otimizado</span>
-                </li>
-              </ul>
-              <Link href="/services">
-                <Button variant="outline" className="w-full">
-                  Ver Detalhes
-                </Button>
-              </Link>
-            </Card>
-
-            {/* Package 4 */}
-            <Card className="card-modern">
-              <div className="mb-4">
-                <div className="mb-2 text-accent">
-                  <SlidersHorizontal className="w-7 h-7" />
-                </div>
-                <h3 className="font-display text-lg">Personalizado</h3>
-                <p className="text-xs text-muted-foreground">Sua solução</p>
-              </div>
-              <div className="mb-4 pb-4 border-b border-border">
-                <div className="flex items-baseline gap-1">
-                  <span className="font-display text-2xl">A partir de</span>
-                </div>
-                <p className="text-sm text-accent">20.000 Kz</p>
-              </div>
-              <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>Escopo definido</span>
-                </li>
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>Orçamento fechado</span>
-                </li>
-                <li className="flex gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span>Flexível</span>
-                </li>
-              </ul>
-              <Link href="/quote">
-                <Button className="btn-primary w-full">Calcular</Button>
-              </Link>
-            </Card>
+            ))}
           </div>
 
-          <div className="text-center">
-            <Link href="/services">
-              <Button variant="outline" className="gap-2">
-                Ver Todos os Pacotes <ArrowRight className="w-4 h-4" />
+          <div className="flex justify-center mt-14">
+            <Link href="/contact">
+              <Button className="btn-warm gap-2 text-base px-8 py-6">
+                Começar o Meu Projeto <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-card/30 border-y border-border">
+      {/* ── WHY US ───────────────────────────────────── */}
+      <section className="py-24">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl mb-4">
-              Por Que Escolher{" "}
-              <span className="text-gradient-accent">DDA-Web?</span>
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Não somos apenas uma agência. Somos parceiros no seu crescimento digital.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[
-              {
-                icon: <Zap className="w-5 h-5" />,
-                title: "Entrega em dias, não meses",
-                desc: "Sites em 3–7 dias úteis. Sistemas e apps com prazos definidos e cumpridos. Sem surpresas.",
-                highlight: "7 dias",
-              },
-              {
-                icon: <Target className="w-5 h-5" />,
-                title: "Foco em resultado, não só aparência",
-                desc: "Cada projeto é desenhado para gerar clientes, vendas e credibilidade — não apenas para ficar bonito.",
-                highlight: "ROI",
-              },
-              {
-                icon: <Lightbulb className="w-5 h-5" />,
-                title: "Tecnologia moderna com IA",
-                desc: "Usamos as ferramentas mais avançadas do mercado para entregar mais rápido e com mais qualidade.",
-                highlight: "IA",
-              },
-              {
-                icon: <Users className="w-5 h-5" />,
-                title: "Suporte real após entrega",
-                desc: "Não desaparecemos. Estamos disponíveis para dúvidas, ajustes e melhorias depois da entrega.",
-                highlight: "Suporte",
-              },
-            ].map((item, idx) => (
-              <Card key={idx} className="card-modern flex gap-5 items-start">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/15 border border-accent/30 flex items-center justify-center text-accent">
-                  {item.icon}
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-semibold">{item.title}</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left — text */}
+            <div>
+              <p className="pill-blue mb-4">Por que escolher-nos</p>
+              <h2 className="font-display text-4xl lg:text-5xl mb-6">
+                Não somos uma agência.<br />
+                Somos o teu<br />
+                <span className="text-gradient-warm">parceiro digital.</span>
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                Conhecemos Angola. Sabemos o que funciona aqui. E estamos presentes
+                antes, durante e depois da entrega.
+              </p>
+              <Link href="/about">
+                <Button variant="outline" className="gap-2 border-border hover:border-accent">
+                  Conhecer a Equipa <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
+            </div>
 
-
-      {/* How it Works */}
-      <section className="py-20 bg-grid">
-        <div className="container">
-          <div className="text-center mb-16">
-            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
-              Processo Simples
-            </p>
-            <h2 className="font-display text-4xl mb-4">
-              Como <span className="text-gradient-accent">Funciona?</span>
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Do primeiro contacto à entrega final, em poucos dias.
-            </p>
-          </div>
-          <div className="relative">
-            <div className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Right — feature cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                {
-                  step: "01",
-                  emoji: "💬",
-                  title: "Contacto",
-                  desc: "Fala connosco pelo WhatsApp ou formulário e conta-nos o teu projeto.",
-                },
-                {
-                  step: "02",
-                  emoji: "📋",
-                  title: "Briefing",
-                  desc: "Recolhemos todos os detalhes — objetivos, estilo, conteúdo e prazo.",
-                },
-                {
-                  step: "03",
-                  emoji: "⚡",
-                  title: "Desenvolvimento",
-                  desc: "A nossa equipa cria o teu projeto com tecnologia moderna e atenção aos detalhes.",
-                },
-                {
-                  step: "04",
-                  emoji: "🚀",
-                  title: "Entrega",
-                  desc: "Entregamos, fazemos os ajustes finais e publicamos o projeto online.",
-                },
-              ].map((item, idx) => (
-                <div key={idx} className="text-center relative">
-                  <div className="w-16 h-16 rounded-full bg-accent/10 border-2 border-accent/30 flex items-center justify-center text-2xl mx-auto mb-4 relative z-10">
-                    {item.emoji}
+                { icon:<Zap className="w-5 h-5" />, title:"7 dias de entrega", desc:"Sites prontos em menos de uma semana. Garantido.", color:"text-yellow-400", bg:"bg-yellow-400/10 border-yellow-400/20" },
+                { icon:<Target className="w-5 h-5" />, title:"Focados em resultado", desc:"Cada detalhe pensado para gerar clientes, não só aparecer bonito.", color:"text-blue-400", bg:"bg-blue-400/10 border-blue-400/20" },
+                { icon:<Lightbulb className="w-5 h-5" />, title:"Tecnologia moderna", desc:"Ferramentas do mercado global aplicadas ao contexto angolano.", color:"text-purple-400", bg:"bg-purple-400/10 border-purple-400/20" },
+                { icon:<Users className="w-5 h-5" />, title:"Suporte após entrega", desc:"Não desaparecemos. Estamos cá para o que for preciso.", color:"text-orange-400", bg:"bg-orange-400/10 border-orange-400/20" },
+              ].map((f, i) => (
+                <div key={i} className="card-modern flex flex-col gap-3">
+                  <div className={`w-10 h-10 rounded-xl border flex items-center justify-center flex-shrink-0 ${f.bg} ${f.color}`}>
+                    {f.icon}
                   </div>
-                  <p className="text-xs text-accent font-bold tracking-widest mb-1">
-                    {item.step}
-                  </p>
-                  <h3 className="font-display text-lg mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  <div>
+                    <h3 className="font-semibold mb-1">{f.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="text-center mt-12">
-            <Link href="/contact">
-              <Button className="btn-primary gap-2">
-                Começar Agora <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Portfolio Preview */}
-      <section className="py-20">
+      {/* ── TESTIMONIALS ─────────────────────────────── */}
+      <section className="py-24 bg-card/20 border-y border-border">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl mb-4">Projetos Recentes</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Veja alguns dos projetos que desenvolvemos
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {[
-              {
-                id: 1,
-                title: "Restaurante Sabor da Terra",
-                category: "Site Profissional",
-                image: "/images/project-1.png",
-              },
-              {
-                id: 4,
-                title: "Sistema de Gestão de Stock Kwanza",
-                category: "Sistema Web",
-                image: "/images/blog-4.png",
-              },
-              {
-                id: 5,
-                title: "App de Agendamentos VitaCare",
-                category: "Aplicativo Mobile",
-                image: "/images/blog-5.png",
-              },
-            ].map((project, idx) => (
-              <Link key={idx} href={`/portfolio?project=${project.id}`}>
-                <Card className="card-modern overflow-hidden p-0 cursor-pointer hover:border-accent transition-all">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-40 w-full object-cover"
-                  />
-                  <div className="p-6">
-                    <p className="text-xs text-accent mb-2">
-                      {project.category}
-                    </p>
-                    <h3 className="font-semibold">{project.title}</h3>
-                  </div>
-                </Card>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center">
-            <Link href="/portfolio">
-              <Button variant="outline" className="gap-2">
-                Ver Portfólio Completo <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-card/30 border-y border-border">
-        <div className="container">
-          <div className="text-center mb-12">
-            <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
-              O Que Dizem
-            </p>
-            <h2 className="font-display text-4xl mb-4">
-              Clientes que{" "}
-              <span className="text-gradient-accent">Confiaram</span> em Nós
+          <div className="max-w-xl mb-14">
+            <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">Clientes</p>
+            <h2 className="font-display text-4xl lg:text-5xl">
+              Quem já deu<br />o próximo passo
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
-                name: "Maria João",
-                role: "Proprietária · Restaurante Sabor da Terra",
-                text: "Em menos de uma semana tínhamos o site online. As reservas pelo WhatsApp aumentaram logo no primeiro mês. Recomendo a toda a gente!",
-                rating: 5,
+                name:"Maria João", role:"Restaurante Sabor da Terra",
+                text:"Em menos de uma semana o site estava online. As reservas pelo WhatsApp aumentaram logo no primeiro mês.",
+                tag:"Site Profissional"
               },
               {
-                name: "Carlos Mendes",
-                role: "Sócio · Consultoria JM",
-                text: "A landing page que criaram converteu muito melhor do que esperávamos. O custo por lead caiu a metade e o ROI foi positivo em duas semanas.",
-                rating: 5,
+                name:"Carlos Mendes", role:"Consultoria JM",
+                text:"O custo por lead caiu a metade e o ROI foi positivo em duas semanas. Valeu muito o investimento.",
+                tag:"Landing Page", highlight:true
               },
               {
-                name: "Ana Luísa",
-                role: "Gestora · Salão Estilo",
-                text: "Profissionais, rápidos e com ótimo gosto. O site ficou exatamente como eu queria e os clientes adoram. Valeu cada kwanza!",
-                rating: 5,
+                name:"Ana Luísa", role:"Salão Estilo",
+                text:"Profissionais, rápidos e com ótimo gosto. O site ficou exactamente como eu queria.",
+                tag:"Presença Online"
               },
-            ].map((t, idx) => (
-              <Card key={idx} className="card-modern flex flex-col gap-4">
-                <div className="flex gap-1">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <span key={i} className="text-accent text-sm">★</span>
-                  ))}
+            ].map((t,i) => (
+              <div key={i} className={`card-modern flex flex-col gap-4 ${t.highlight ? "border-accent/40 ring-1 ring-accent/20" : ""}`}>
+                <div className="flex items-start justify-between">
+                  <div className="flex gap-0.5">
+                    {[1,2,3,4,5].map(s=><span key={s} className="text-yellow-400 text-sm">★</span>)}
+                  </div>
+                  <span className="text-xs px-2 py-1 rounded-full bg-accent/10 text-accent border border-accent/15">{t.tag}</span>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
+                <p className="text-muted-foreground leading-relaxed flex-grow italic">
                   "{t.text}"
                 </p>
-                <div className="border-t border-border pt-4">
-                  <p className="font-semibold text-sm">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">{t.role}</p>
+                <div className="border-t border-border pt-4 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-sm">
+                    {t.name[0]}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm">{t.name}</p>
+                    <p className="text-xs text-muted-foreground">{t.role}</p>
+                  </div>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Blog Preview Section */}
-      <section className="py-20 border-t border-border">
+      {/* ── PORTFOLIO PREVIEW ────────────────────────── */}
+      <section className="py-24">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl mb-4">
-              Últimos Artigos do Blog
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Fique atualizado com as últimas tendências em web design,
-              marketing digital e tecnologia.
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+            <div>
+              <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-2">Portfólio</p>
+              <h2 className="font-display text-4xl">Projetos recentes</h2>
+            </div>
+            <Link href="/portfolio">
+              <Button variant="outline" className="gap-2 border-border hover:border-accent flex-shrink-0">
+                Ver Todos <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {blogArticles.slice(0, 3).map(article => (
-              <Link key={article.id} href={`/blog/${article.id}`}>
-                <Card className="hover:border-accent transition-all group overflow-hidden p-0 cursor-pointer">
-                  <img
-                    src={article.image}
-                    alt={article.imageAlt}
-                    className="h-40 w-full object-cover"
-                  />
-                  <div className="p-6">
-                    <p className="text-xs text-accent mb-2">
-                      {article.category}
-                    </p>
-                    <h3 className="font-semibold mb-3 group-hover:text-accent transition">
-                      {article.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {article.excerpt}
-                    </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              { id:1, title:"Restaurante Sabor da Terra", cat:"Site Profissional", image:"/images/project-1.png" },
+              { id:4, title:"Sistema de Gestão Kwanza", cat:"Sistema Web", image:"/images/blog-4.png" },
+              { id:5, title:"App VitaCare", cat:"App Mobile", image:"/images/blog-5.png" },
+            ].map((p, i) => (
+              <Link key={i} href={`/portfolio?project=${p.id}`}>
+                <div className="card-modern overflow-hidden p-0 cursor-pointer group">
+                  <div className="relative h-48 overflow-hidden">
+                    <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                    <span className="absolute top-3 left-3 text-xs px-2.5 py-1 rounded-full bg-accent/90 text-white font-medium">{p.cat}</span>
                   </div>
-                </Card>
+                  <div className="p-5">
+                    <h3 className="font-semibold group-hover:text-accent transition">{p.title}</h3>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
-          <div className="text-center">
+        </div>
+      </section>
+
+      {/* ── BLOG PREVIEW ─────────────────────────────── */}
+      <section className="py-24 bg-card/20 border-y border-border">
+        <div className="container">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+            <div>
+              <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-2">Blog</p>
+              <h2 className="font-display text-4xl">Últimos artigos</h2>
+            </div>
             <Link href="/blog">
-              <Button variant="outline" className="gap-2">
-                Ver Todos os Artigos <ArrowRight className="w-4 h-4" />
+              <Button variant="outline" className="gap-2 border-border hover:border-accent flex-shrink-0">
+                Ver Todos <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {blogArticles.slice(0,3).map(a => (
+              <Link key={a.id} href={`/blog/${a.id}`}>
+                <div className="card-modern overflow-hidden p-0 cursor-pointer group h-full flex flex-col">
+                  <div className="relative h-44 overflow-hidden flex-shrink-0">
+                    <img src={a.image} alt={a.imageAlt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                    <span className="absolute top-3 left-3 text-xs px-2.5 py-1 rounded-full bg-background/80 backdrop-blur text-accent border border-accent/20">{a.category}</span>
+                  </div>
+                  <div className="p-5 flex flex-col flex-grow">
+                    <h3 className="font-semibold mb-2 group-hover:text-accent transition leading-snug">{a.title}</h3>
+                    <p className="text-sm text-muted-foreground line-clamp-2 flex-grow">{a.excerpt}</p>
+                    <p className="text-xs text-muted-foreground mt-3">{a.readTime} min de leitura</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-card/30 border-t border-border">
-        <div className="container max-w-2xl">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl mb-4">
-              Entre em Contacto Conosco
-            </h2>
-            <p className="text-muted-foreground">
-              Preencha o formulário abaixo e entraremos em contacto em breve.
-            </p>
-          </div>
-          <div className="bg-background/50 border border-border rounded-lg p-8 mb-8">
-            <ContactForm />
-          </div>
+      {/* ── CTA FINAL ────────────────────────────────── */}
+      <section className="py-28 relative overflow-hidden">
+        <div className="absolute inset-0 bg-stripe" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/6 blur-[120px] rounded-full" />
+        <div className="container relative z-10 text-center max-w-2xl">
+          <h2 className="font-display text-4xl lg:text-6xl mb-6">
+            Pronto para dar o<br />
+            <span className="text-gradient-mixed">próximo passo?</span>
+          </h2>
+          <p className="text-muted-foreground text-xl mb-10">
+            Orçamento gratuito. Sem compromisso. Resposta em menos de 2 horas.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/quote">
-              <Button className="btn-primary gap-2">
-                Calcular Orçamento <ArrowRight className="w-4 h-4" />
+              <Button className="btn-primary gap-2 text-lg px-10 py-7">
+                Calcular Orçamento <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-            <Link href="/about">
-              <Button variant="outline">Saber Mais Sobre Nós</Button>
-            </Link>
+            <a href="https://wa.me/244930723070?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20DDA-Web." target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="gap-2 text-lg px-10 py-7 border-border hover:border-accent">
+                💬 Falar no WhatsApp
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
