@@ -4,23 +4,33 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
-  { label: "Serviços", path: "/services", emoji: "🛠️" },
-  { label: "Portfólio", path: "/portfolio", emoji: "💼" },
-  { label: "Blog", path: "/blog", emoji: "📝" },
-  { label: "Sobre", path: "/about", emoji: "👋" },
+  { label: "Serviços", path: "/services" },
+  { label: "Portfólio", path: "/portfolio" },
+  { label: "Blog", path: "/blog" },
+  { label: "Sobre", path: "/about" },
 ];
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
 
-  // Close on route change
   useEffect(() => { setIsOpen(false); }, [location]);
 
-  // Prevent body scroll when open
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    if (isOpen) {
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
   return (
@@ -34,11 +44,13 @@ export default function MobileNav() {
         {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
       </button>
 
-      {/* Full screen overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-background z-40 flex flex-col" style={{ top: 0 }}>
+        <div
+          className="fixed left-0 right-0 bottom-0 bg-background z-[999] flex flex-col"
+          style={{ top: 0 }}
+        >
           {/* Header */}
-          <div className="flex items-center justify-between px-5 pt-5 pb-4">
+          <div className="flex items-center justify-between px-5 py-4 flex-shrink-0">
             <Link href="/" onClick={() => setIsOpen(false)}>
               <img src="/logo.svg" alt="DDA-Web" className="h-9 w-auto" />
             </Link>
@@ -51,7 +63,7 @@ export default function MobileNav() {
           </div>
 
           {/* Nav links */}
-          <nav className="flex-1 px-5 py-6 space-y-2 overflow-y-auto">
+          <nav className="flex-1 px-5 py-4 space-y-1 overflow-y-auto">
             {navItems.map(item => (
               <Link
                 key={item.path}
@@ -59,21 +71,18 @@ export default function MobileNav() {
                 onClick={() => setIsOpen(false)}
                 className={`flex items-center justify-between px-5 py-4 rounded-2xl transition-all ${
                   location.startsWith(item.path)
-                    ? "bg-accent/10 text-accent"
-                    : "hover:bg-card text-foreground"
+                    ? "bg-accent/10 text-accent font-semibold"
+                    : "hover:bg-card text-foreground font-medium"
                 }`}
               >
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">{item.emoji}</span>
-                  <span className="font-medium text-lg">{item.label}</span>
-                </div>
-                <ArrowRight className="w-4 h-4 opacity-40" />
+                <span className="text-lg">{item.label}</span>
+                <ArrowRight className="w-4 h-4 opacity-30" />
               </Link>
             ))}
           </nav>
 
-          {/* Bottom CTA */}
-          <div className="px-5 pb-10 pt-4 space-y-3">
+          {/* Bottom CTAs */}
+          <div className="px-5 pb-10 pt-4 space-y-3 flex-shrink-0">
             <Link href="/quote" onClick={() => setIsOpen(false)}>
               <button className="btn-primary w-full text-base py-4 flex items-center justify-center gap-2">
                 Calcular Orçamento <ArrowRight className="w-4 h-4" />
@@ -85,11 +94,11 @@ export default function MobileNav() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-4 rounded-xl border border-border text-sm font-medium hover:border-green-500 hover:text-green-400 transition"
             >
-              💬 Falar no WhatsApp
+              WhatsApp
             </a>
             <Link href="/contact" onClick={() => setIsOpen(false)}>
               <button className="w-full py-3 text-sm text-muted-foreground hover:text-foreground transition text-center">
-                Enviar mensagem →
+                Contacto →
               </button>
             </Link>
           </div>

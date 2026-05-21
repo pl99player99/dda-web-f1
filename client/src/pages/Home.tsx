@@ -77,7 +77,7 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-6 mt-10 pt-8/30">
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-2">
-                  {["🧑🏾‍💼","👩🏽‍💻","👨🏿‍💼","👩🏾‍🔬"].map((e,i) => (
+                  {["D","W","A","C"].map((e,i) => (
                     <div key={i} className="w-9 h-9 rounded-full bg-card border-2 border-background flex items-center justify-center text-base">
                       {e}
                     </div>
@@ -138,7 +138,7 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-all duration-500" />
               <div className="relative">
                 <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center mb-4 text-accent text-2xl">
-                  🌐
+                  
                 </div>
                 <h3 className="font-display text-2xl mb-2">Sites Profissionais</h3>
                 <p className="text-muted-foreground mb-6">
@@ -163,7 +163,7 @@ export default function Home() {
               <div className="card-modern relative overflow-hidden group flex-1">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl group-hover:bg-orange-500/10 transition-all duration-500" />
                 <div className="relative">
-                  <div className="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center mb-3 text-orange-400 text-xl">⚙️</div>
+                  <div className="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center mb-3 text-orange-400 text-orange-400 text-xl font-bold">S</div>
                   <h3 className="font-display text-lg mb-1">Sistemas Web</h3>
                   <p className="text-sm text-muted-foreground mb-4">CRM, ERP, gestão interna, dashboards. Criados à medida do negócio.</p>
                   <Link href="/services" className="text-sm text-accent hover:underline flex items-center gap-1">
@@ -174,7 +174,7 @@ export default function Home() {
               <div className="card-modern relative overflow-hidden group flex-1">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-full blur-2xl group-hover:bg-purple-500/10 transition-all duration-500" />
                 <div className="relative">
-                  <div className="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/20 flex items-center justify-center mb-3 text-purple-400 text-xl">📱</div>
+                  <div className="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/20 flex items-center justify-center mb-3 text-purple-400 text-purple-400 text-xl font-bold">A</div>
                   <h3 className="font-display text-lg mb-1">Apps Mobile</h3>
                   <p className="text-sm text-muted-foreground mb-4">Android e iOS. Agendamentos, e-commerce, plataformas sob medida.</p>
                   <Link href="/services" className="text-sm text-accent hover:underline flex items-center gap-1">
@@ -205,15 +205,14 @@ export default function Home() {
               <div className="w-full h-full bg-gradient-to-r from-transparent via-border to-transparent" />
             </div>
             {[
-              { step:"01", emoji:"💬", title:"Fala connosco", desc:"WhatsApp ou formulário. Conta-nos o projeto em 2 frases." },
-              { step:"02", emoji:"📋", title:"Definimos o escopo", desc:"Objetivos, estilo, prazo e preço. Tudo claro antes de começar." },
-              { step:"03", emoji:"⚡", title:"Desenvolvemos", desc:"A equipa trabalha. Tu vês o progresso. Sem surpresas." },
-              { step:"04", emoji:"🚀", title:"Entregamos", desc:"Revisão final, ajustes e publicação. Pronto a gerar clientes." },
+              { step:"01", emoji:"", title:"Fala connosco", desc:"WhatsApp ou formulário. Conta-nos o projeto em 2 frases." },
+              { step:"02", emoji:"", title:"Definimos o escopo", desc:"Objetivos, estilo, prazo e preço. Tudo claro antes de começar." },
+              { step:"03", emoji:"", title:"Desenvolvemos", desc:"A equipa trabalha. Tu vês o progresso. Sem surpresas." },
+              { step:"04", emoji:"", title:"Entregamos", desc:"Revisão final, ajustes e publicação. Pronto a gerar clientes." },
             ].map((s, i) => (
               <div key={i} className="flex flex-col items-center text-center">
                 <div className="w-20 h-20 rounded-2xl bg-card border border-border flex flex-col items-center justify-center mb-4 relative z-10 shadow-sm">
-                  <span className="text-2xl">{s.emoji}</span>
-                  <span className="text-xs text-accent font-bold mt-0.5">{s.step}</span>
+                  <span className="text-lg font-display font-bold text-accent">{s.step}</span>
                 </div>
                 <h3 className="font-display text-lg mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
@@ -424,7 +423,7 @@ export default function Home() {
             </Link>
             <a href="https://wa.me/244930723070?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20DDA-Web." target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="gap-2 text-base sm:text-lg px-7 sm:px-10 py-5 sm:py-7 border-border hover:border-accent w-full sm:w-auto">
-                💬 Falar no WhatsApp
+                Falar no WhatsApp
               </Button>
             </a>
           </div>
