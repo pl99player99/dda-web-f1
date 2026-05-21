@@ -73,7 +73,7 @@ export default function About() {
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-grid border-b border-border">
+      <section className="pt-32 pb-20 bg-grid">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -141,7 +141,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-card/30 border-y border-border">
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-12">
             <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">O Que Nos Move</p>
@@ -195,7 +195,7 @@ export default function About() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-card/30 border-y border-border">
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-12">
             <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">Diferenciais</p>

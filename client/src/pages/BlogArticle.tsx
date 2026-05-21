@@ -61,7 +61,7 @@ export default function BlogArticle() {
       <Navigation />
 
       {/* Article Header */}
-      <section className="pt-32 pb-12 border-b border-border">
+      <section className="pt-32 pb-12">
         <div className="container max-w-3xl">
           <Link href="/blog">
             <Button variant="ghost" className="gap-2 mb-8">
@@ -80,7 +80,7 @@ export default function BlogArticle() {
             {article.title}
           </h1>
 
-          <div className="flex flex-wrap items-center gap-6 text-muted-foreground border-b border-border pb-6">
+          <div className="flex flex-wrap items-center gap-6 text-muted-foreground pb-6">
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5" />
               {new Date(article.date).toLocaleDateString("pt-PT", {
@@ -142,7 +142,7 @@ export default function BlogArticle() {
 
       {/* Related Articles */}
       {relatedArticles.length > 0 && (
-        <section className="py-12 bg-card/30 border-t border-border">
+        <section className="py-12">
           <div className="container">
             <h2 className="font-display text-3xl mb-8">Artigos Relacionados</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -179,7 +179,7 @@ export default function BlogArticle() {
       )}
 
       {/* CTA Section */}
-      <section className="py-20 border-t border-border">
+      <section className="py-20">
         <div className="container max-w-2xl text-center">
           <h2 className="font-display text-4xl mb-4">
             Pronto para Transformar Seu Negócio?
@@ -200,7 +200,7 @@ export default function BlogArticle() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border text-center text-muted-foreground text-sm">
+      <footer className="py-12 text-center text-muted-foreground text-sm">
         <div className="container">
           <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
           <p className="mt-2">

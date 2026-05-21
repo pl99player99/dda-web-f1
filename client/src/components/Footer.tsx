@@ -5,7 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-card/30 border-t border-border">
+    <footer className="bg-card/30">
       {/* Top CTA bar */}
       <div className="border-b border-border">
         <div className="container py-10 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -114,7 +114,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
+        <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
           <p>&copy; {year} DDA-Web. Todos os direitos reservados.</p>
           <p>Feito com ❤️ em Luanda, Angola</p>
         </div>

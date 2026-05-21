@@ -232,7 +232,7 @@ export default function Quote() {
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-12 bg-grid border-b border-border">
+      <section className="pt-32 pb-12 bg-grid">
         <div className="container text-center max-w-2xl">
           <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
             Orçamento Gratuito
@@ -584,7 +584,7 @@ export default function Quote() {
                 )}
 
                 {/* Navigation Buttons */}
-                <div className="flex justify-between items-center mt-8 pt-6 border-t border-border">
+                <div className="flex justify-between items-center mt-8 pt-6">
                   <Button
                     type="button"
                     variant="outline"

@@ -74,7 +74,7 @@ export default function Home() {
             </div>
 
             {/* Social proof */}
-            <div className="flex flex-wrap items-center gap-6 mt-10 pt-8 border-t border-border/30">
+            <div className="flex flex-wrap items-center gap-6 mt-10 pt-8/30">
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-2">
                   {["🧑🏾‍💼","👩🏽‍💻","👨🏿‍💼","👩🏾‍🔬"].map((e,i) => (
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* ── STATS ────────────────────────────────────── */}
-      <section className="py-14 border-y border-border bg-card/20">
+      <section className="py-14">
         <div className="container">
           <AnimatedStats />
         </div>
@@ -132,9 +132,9 @@ export default function Home() {
           </div>
 
           {/* Services grid — asymmetric */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Large card */}
-            <div className="lg:col-span-2 card-modern bg-gradient-to-br from-card to-card/50 relative overflow-hidden group">
+            <div className="md:col-span-2 card-modern bg-gradient-to-br from-card to-card/50 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-all duration-500" />
               <div className="relative">
                 <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center mb-4 text-accent text-2xl">
@@ -188,7 +188,7 @@ export default function Home() {
       </section>
 
       {/* ── HOW IT WORKS ─────────────────────────────── */}
-      <section className="py-24 bg-card/20 border-y border-border bg-grid">
+      <section className="py-24 bg-grid">
         <div className="container">
           <div className="text-center mb-16">
             <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">Processo</p>
@@ -200,7 +200,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative">
             <div className="hidden md:block absolute top-10 left-[13%] right-[13%] h-px">
               <div className="w-full h-full bg-gradient-to-r from-transparent via-border to-transparent" />
             </div>
@@ -234,7 +234,7 @@ export default function Home() {
       {/* ── WHY US ───────────────────────────────────── */}
       <section className="py-24">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left — text */}
             <div>
               <p className="pill-blue mb-4">Por que escolher-nos</p>
@@ -255,7 +255,7 @@ export default function Home() {
             </div>
 
             {/* Right — feature cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { icon:<Zap className="w-5 h-5" />, title:"7 dias de entrega", desc:"Sites prontos em menos de uma semana. Garantido.", color:"text-yellow-400", bg:"bg-yellow-400/10 border-yellow-400/20" },
                 { icon:<Target className="w-5 h-5" />, title:"Focados em resultado", desc:"Cada detalhe pensado para gerar clientes, não só aparecer bonito.", color:"text-blue-400", bg:"bg-blue-400/10 border-blue-400/20" },
@@ -278,7 +278,7 @@ export default function Home() {
       </section>
 
       {/* ── TESTIMONIALS ─────────────────────────────── */}
-      <section className="py-24 bg-card/20 border-y border-border">
+      <section className="py-24">
         <div className="container">
           <div className="max-w-xl mb-14">
             <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">Clientes</p>
@@ -287,7 +287,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               {
                 name:"Maria João", role:"Restaurante Sabor da Terra",
@@ -315,7 +315,7 @@ export default function Home() {
                 <p className="text-muted-foreground leading-relaxed flex-grow italic">
                   "{t.text}"
                 </p>
-                <div className="border-t border-border pt-4 flex items-center gap-3">
+                <div className="pt-4 flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-sm">
                     {t.name[0]}
                   </div>
@@ -345,7 +345,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { id:1, title:"Restaurante Sabor da Terra", cat:"Site Profissional", image:"/images/project-1.png" },
               { id:4, title:"Sistema de Gestão Kwanza", cat:"Sistema Web", image:"/images/blog-4.png" },
@@ -369,7 +369,7 @@ export default function Home() {
       </section>
 
       {/* ── BLOG PREVIEW ─────────────────────────────── */}
-      <section className="py-24 bg-card/20 border-y border-border">
+      <section className="py-24">
         <div className="container">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
@@ -383,7 +383,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {blogArticles.slice(0,3).map(a => (
               <Link key={a.id} href={`/blog/${a.id}`}>
                 <div className="card-modern overflow-hidden p-0 cursor-pointer group h-full flex flex-col">
@@ -405,7 +405,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA FINAL ────────────────────────────────── */}
-      <section className="py-28 relative overflow-hidden">
+      <section className="py-20 sm:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-stripe" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/6 blur-[120px] rounded-full" />
         <div className="container relative z-10 text-center max-w-2xl">
@@ -418,12 +418,12 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/quote">
-              <Button className="btn-primary gap-2 text-lg px-10 py-7">
+              <Button className="btn-primary gap-2 text-base sm:text-lg px-7 sm:px-10 py-5 sm:py-7 w-full sm:w-auto">
                 Calcular Orçamento <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
             <a href="https://wa.me/244930723070?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20DDA-Web." target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="gap-2 text-lg px-10 py-7 border-border hover:border-accent">
+              <Button variant="outline" className="gap-2 text-base sm:text-lg px-7 sm:px-10 py-5 sm:py-7 border-border hover:border-accent w-full sm:w-auto">
                 💬 Falar no WhatsApp
               </Button>
             </a>

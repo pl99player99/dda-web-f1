@@ -39,7 +39,7 @@ export default function NotFound() {
             </Button>
           </div>
 
-          <div className="border-t border-border pt-8">
+          <div className="pt-8">
             <p className="text-sm text-muted-foreground mb-4">Talvez estejas à procura de:</p>
             <div className="flex flex-wrap gap-2 justify-center">
               {suggestions.map(s => (

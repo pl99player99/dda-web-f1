@@ -29,7 +29,7 @@ export default function Navigation() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled
-        ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
+        ? "bg-background/95 backdrop-blur-md shadow-sm"
         : "bg-transparent"
     }`}>
       <div className="container flex justify-between items-center py-4">

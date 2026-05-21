@@ -139,7 +139,7 @@ export default function Portfolio() {
       <Navigation />
 
       {/* Header */}
-      <section className="pt-32 pb-16 bg-grid border-b border-border">
+      <section className="pt-32 pb-16 bg-grid">
         <div className="container text-center">
           <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
             Trabalhos Realizados
@@ -195,7 +195,7 @@ export default function Portfolio() {
 
                     {/* Expandable Details */}
                     {selectedProject === project.id && (
-                      <div className="space-y-4 pt-4 border-t border-border animate-in fade-in">
+                      <div className="space-y-4 pt-4 animate-in fade-in">
                         <div>
                           <h4 className="font-semibold text-sm mb-2">
                             Desafio:
@@ -233,7 +233,7 @@ export default function Portfolio() {
                   </div>
 
                   {/* Footer */}
-                  <div className="p-6 pt-0 border-t border-border/50">
+                  <div className="p-6 pt-0/50">
                     <div className="flex justify-between items-center">
                       <div>
                         <p className="text-xs text-muted-foreground">
@@ -271,7 +271,7 @@ export default function Portfolio() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-card/30 border-y border-border">
+      <section className="py-20">
         <div className="container">
           <AnimatedStats />
         </div>

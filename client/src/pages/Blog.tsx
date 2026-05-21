@@ -28,7 +28,7 @@ export default function Blog() {
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-grid border-b border-border">
+      <section className="pt-32 pb-16 bg-grid">
         <div className="container">
           <div className="max-w-3xl mb-10">
             <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
@@ -57,7 +57,7 @@ export default function Blog() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-6 border-b border-border sticky top-16 bg-background/90 backdrop-blur-md z-30">
+      <section className="py-6 sticky top-16 bg-background/90 backdrop-blur-md z-30">
         <div className="container">
           <div className="flex flex-wrap gap-2">
             <button
@@ -89,7 +89,7 @@ export default function Blog() {
 
       {/* Featured Article (only when no filter active) */}
       {!selectedCategory && !searchQuery && (
-        <section className="py-12 border-b border-border">
+        <section className="py-12">
           <div className="container">
             <p className="text-xs text-accent font-bold tracking-widest uppercase mb-6">Destaque</p>
             <Link href={`/blog/${featuredArticle.id}`}>
@@ -172,7 +172,7 @@ export default function Blog() {
                       <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                         {article.excerpt}
                       </p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground border-t border-border pt-4 mt-auto">
+                      <div className="flex items-center justify-between text-xs text-muted-foreground pt-4 mt-auto">
                         <div className="flex items-center gap-3">
                           <span className="flex items-center gap-1">
                             <Calendar className="w-3 h-3" />
@@ -197,7 +197,7 @@ export default function Blog() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-card/30 border-t border-border">
+      <section className="py-20">
         <div className="container max-w-2xl text-center">
           <h2 className="font-display text-4xl mb-4">
             Pronto para <span className="text-gradient-accent">Crescer Digitalmente?</span>

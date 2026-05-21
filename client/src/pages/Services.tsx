@@ -155,7 +155,7 @@ export default function Services() {
       <Navigation />
 
       {/* Header */}
-      <section className="pt-32 pb-16 bg-grid border-b border-border">
+      <section className="pt-32 pb-16 bg-grid">
         <div className="container text-center">
           <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
             O Que Fazemos
@@ -208,7 +208,7 @@ export default function Services() {
                   </div>
 
                   {/* Price */}
-                  <div className="mb-6 pb-6 border-b border-border">
+                  <div className="mb-6 pb-6">
                     <div className="flex items-baseline gap-2">
                       <span className="font-display text-3xl">{pkg.price}</span>
                       <span className="text-muted-foreground">
@@ -275,7 +275,7 @@ export default function Services() {
       </section>
 
       {/* Additional Digital Solutions */}
-      <section className="py-20 border-t border-border">
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl mb-4">
@@ -370,7 +370,7 @@ export default function Services() {
       </section>
 
       {/* Detailed Comparison */}
-      <section className="py-20 bg-card/30 border-y border-border">
+      <section className="py-20">
         <div className="container">
           <h2 className="font-display text-4xl mb-12 text-center">
             Comparação Detalhada
@@ -434,7 +434,7 @@ export default function Services() {
                 ].map((row, idx) => (
                   <tr
                     key={idx}
-                    className="border-b border-border hover:bg-card/50 transition"
+                    className="hover:bg-card/50 transition"
                   >
                     <td className="py-4 px-4 font-semibold text-sm">
                       {row.feature}
@@ -498,7 +498,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-card/30 border-t border-border">
+      <section className="py-20">
         <div className="container text-center">
           <h2 className="font-display text-4xl mb-6">Pronto para Começar?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

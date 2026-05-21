@@ -43,7 +43,7 @@ export default function Contact() {
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 border-b border-border">
+      <section className="pt-32 pb-16">
         <div className="container text-center max-w-2xl">
           <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
             Fale Connosco
@@ -116,7 +116,7 @@ export default function Contact() {
                 </a>
               </div>
 
-              <div className="border-t border-border pt-6">
+              <div className="pt-6">
                 <h3 className="font-semibold mb-2">
                   Quer calcular um orçamento?
                 </h3>
@@ -131,7 +131,7 @@ export default function Contact() {
                 </Link>
               </div>
 
-              <div className="border-t border-border pt-6">
+              <div className="pt-6">
                 <h3 className="font-semibold mb-2">Primeira vez aqui?</h3>
                 <p className="text-sm text-muted-foreground mb-4">
                   Veja os nossos projetos e perceba o tipo de trabalho que
