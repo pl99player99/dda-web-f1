@@ -234,7 +234,7 @@ export default function Quote() {
       {/* Hero */}
       <section className="pt-32 pb-12 bg-grid">
         <div className="container text-center max-w-2xl">
-          <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+          <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">
             Orçamento Gratuito
           </p>
           <h1 className="font-display text-5xl mb-4">

@@ -141,7 +141,7 @@ export default function Portfolio() {
       {/* Header */}
       <section className="pt-32 pb-16 bg-grid">
         <div className="container text-center">
-          <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+          <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">
             Trabalhos Realizados
           </p>
           <h1 className="font-display text-5xl mb-4">
@@ -222,7 +222,7 @@ export default function Portfolio() {
                                 key={idx}
                                 className="text-sm text-muted-foreground flex gap-2"
                               >
-                                <span className="text-accent">✓</span>
+                                <span className="text-accent"></span>
                                 {result}
                               </li>
                             ))}
@@ -287,7 +287,7 @@ export default function Portfolio() {
             Cada projeto é único e customizado para as necessidades específicas
             do seu negócio. Vamos criar algo incrível juntos!
           </p>
-          <Button asChild className="btn-primary gap-2 text-lg px-8 py-6">
+          <Button asChild className="btn-primary gap-2 text-lg px-8 py-6 w-full sm:w-auto">
             <Link href="/quote">
               Solicitar Orçamento <ArrowRight className="w-5 h-5" />
             </Link>

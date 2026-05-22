@@ -5,9 +5,9 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-card/30">
+    <footer className="bg-card/20">
       {/* Top CTA bar */}
-      <div className="border-b border-border">
+      <div>
         <div className="container py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="font-display text-2xl mb-1">

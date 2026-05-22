@@ -157,7 +157,7 @@ export default function Services() {
       {/* Header */}
       <section className="pt-32 pb-16 bg-grid">
         <div className="container text-center">
-          <p className="text-accent font-semibold tracking-wide mb-3 text-sm uppercase">
+          <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">
             O Que Fazemos
           </p>
           <h1 className="font-display text-5xl mb-4">
@@ -401,31 +401,31 @@ export default function Services() {
                   },
                   {
                     feature: "WhatsApp Integrado",
-                    values: ["✓", "✓", "✓", "✓"],
+                    values: ["", "", "", ""],
                   },
                   {
                     feature: "Formulário de Contacto",
-                    values: ["Básico", "✓", "✓", "Variável"],
+                    values: ["Básico", "", "", "Variável"],
                   },
                   {
                     feature: "SEO Otimizado",
-                    values: ["Básico", "✓", "✓", "Variável"],
+                    values: ["Básico", "", "", "Variável"],
                   },
                   {
                     feature: "Design Responsivo",
-                    values: ["✓", "✓", "✓", "✓"],
+                    values: ["", "", "", ""],
                   },
                   {
                     feature: "Copywriting Estratégico",
-                    values: ["—", "—", "✓", "Variável"],
+                    values: ["—", "—", "", "Variável"],
                   },
                   {
                     feature: "Estrutura para Anúncios",
-                    values: ["—", "Básica", "✓", "Variável"],
+                    values: ["—", "Básica", "", "Variável"],
                   },
                   {
                     feature: "Hospedagem Gratuita",
-                    values: ["✓", "—", "—", "✓"],
+                    values: ["", "—", "—", ""],
                   },
                   {
                     feature: "Suporte Pós-Entrega",
@@ -441,8 +441,8 @@ export default function Services() {
                     </td>
                     {row.values.map((value, vidx) => (
                       <td key={vidx} className="text-center py-4 px-4 text-sm">
-                        {value === "✓" ? (
-                          <span className="text-accent font-semibold">✓</span>
+                        {value === "" ? (
+                          <span className="text-accent font-semibold"></span>
                         ) : value === "—" ? (
                           <span className="text-muted-foreground">—</span>
                         ) : (
@@ -506,7 +506,7 @@ export default function Services() {
             sistemas, apps, automações e projetos digitais sob medida!
           </p>
           <Link href="/contact">
-            <Button className="btn-primary gap-2 text-lg px-8 py-6">
+            <Button className="btn-primary gap-2 text-lg px-8 py-6 w-full sm:w-auto">
               Falar com a Equipa <ArrowRight className="w-5 h-5" />
             </Button>
           </Link>
