@@ -139,7 +139,7 @@ export default function Portfolio() {
       <Navigation />
 
       {/* Header */}
-      <section className="pt-32 pb-16 bg-grid">
+      <section className="pt-28 pb-16 bg-grid">
         <div className="container text-center">
           <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">
             Trabalhos Realizados
@@ -278,8 +278,9 @@ export default function Portfolio() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container text-center">
+      <section className="py-20 bg-stripe relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-accent/5 blur-[80px] rounded-full" />
+        <div className="container relative text-center">
           <h2 className="font-display text-4xl mb-6">
             Quer um Projeto Como Estes?
           </h2>

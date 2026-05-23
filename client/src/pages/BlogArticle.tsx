@@ -71,7 +71,7 @@ export default function BlogArticle() {
           </Link>
 
           <div className="mb-6">
-            <span className="inline-block px-3 py-1 bg-accent/20 text-accent text-xs font-semibold rounded-full">
+            <span className="pill-warm text-xs">
               {article.category}
             </span>
           </div>

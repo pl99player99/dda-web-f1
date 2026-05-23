@@ -185,12 +185,12 @@ export default function Quote() {
     return (
       <div className="min-h-screen bg-background text-foreground font-body">
         <Navigation />
-        <section className="pt-32 pb-20 flex items-center justify-center min-h-screen">
+        <section className="pt-28 pb-20 flex items-center justify-center min-h-screen bg-grid">
           <div className="container max-w-lg text-center">
             <div className="w-20 h-20 rounded-full bg-accent/15 border-2 border-accent flex items-center justify-center mx-auto mb-8">
               <Check className="w-10 h-10 text-accent" />
             </div>
-            <h1 className="font-display text-4xl mb-4">Orçamento Enviado!</h1>
+            <h1 className="font-display text-4xl mb-4">Orçamento <span className="text-gradient-warm">Enviado!</span></h1>
             <p className="text-muted-foreground text-lg mb-4">
               Recebemos o seu pedido. A nossa equipa vai entrar em contacto em
               breve com uma proposta personalizada.
@@ -232,7 +232,7 @@ export default function Quote() {
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-12 bg-grid">
+      <section className="pt-28 pb-12 bg-grid">
         <div className="container text-center max-w-2xl">
           <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">
             Orçamento Gratuito

@@ -155,14 +155,15 @@ export default function Services() {
       <Navigation />
 
       {/* Header */}
-      <section className="pt-32 pb-16 bg-grid">
+      <section className="pt-28 pb-16 bg-grid">
         <div className="container text-center">
           <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">
             O Que Fazemos
           </p>
-          <h1 className="font-display text-5xl mb-4">
-            Soluções Digitais para{" "}
-            <span className="text-gradient-accent">Empresas</span>
+          <div className="pill-blue mb-4 mx-auto w-fit">O que fazemos</div>
+          <h1 className="font-display text-4xl sm:text-5xl mb-4">
+            Soluções para o seu<br />
+            <span className="text-gradient-warm">negócio crescer</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Desde sites profissionais até sistemas completos, apps mobile e
@@ -506,7 +507,7 @@ export default function Services() {
             sistemas, apps, automações e projetos digitais sob medida!
           </p>
           <Link href="/contact">
-            <Button className="btn-primary gap-2 text-lg px-8 py-6 w-full sm:w-auto">
+            <Button className="btn-warm gap-2 text-lg px-8 py-6 w-full sm:w-auto">
               Falar com a Equipa <ArrowRight className="w-5 h-5" />
             </Button>
           </Link>
