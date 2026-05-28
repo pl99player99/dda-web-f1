@@ -506,6 +506,16 @@ export default function Services() {
             Escolha um pacote de site ou solicite uma solução personalizada para
             sistemas, apps, automações e projetos digitais sob medida!
           </p>
+          <Link href="/faq">
+            <Button variant="outline" className="border-border hover:border-accent gap-2 w-full sm:w-auto">
+              Ver FAQ <ArrowRight className="w-4 h-4" />
+            </Button>
+          </Link>
+          <Link href="/garantias">
+            <Button variant="outline" className="border-border hover:border-accent gap-2 w-full sm:w-auto">
+              Garantias
+            </Button>
+          </Link>
           <Link href="/contact">
             <Button className="btn-warm gap-2 text-lg px-8 py-6 w-full sm:w-auto">
               Falar com a Equipa <ArrowRight className="w-5 h-5" />

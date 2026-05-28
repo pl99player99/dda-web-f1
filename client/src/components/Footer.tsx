@@ -69,9 +69,15 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-sm mb-4">Serviços</h4>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
-              {["Sites Profissionais","Sistemas Web","Apps Mobile","Automações","Portfólio"].map(s => (
-                <li key={s}>
-                  <Link href="/services" className="hover:text-foreground transition-colors">{s}</Link>
+              {[
+                { label: "Sites Profissionais", href: "/services" },
+                { label: "Sistemas Web", href: "/services" },
+                { label: "Apps Mobile", href: "/services" },
+                { label: "Automações", href: "/services" },
+                { label: "Casos de Estudo", href: "/casos" },
+              ].map(s => (
+                <li key={s.label}>
+                  <Link href={s.href} className="hover:text-foreground transition-colors">{s.label}</Link>
                 </li>
               ))}
             </ul>
@@ -82,11 +88,12 @@ export default function Footer() {
             <h4 className="font-semibold text-sm mb-4">Empresa</h4>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
               {[
-                { label:"Sobre Nós", href:"/about" },
-                { label:"Portfólio", href:"/portfolio" },
-                { label:"Blog", href:"/blog" },
-                { label:"Contacto", href:"/contact" },
-                { label:"Orçamento", href:"/quote" },
+                { label: "Sobre Nós", href: "/about" },
+                { label: "Portfólio", href: "/portfolio" },
+                { label: "Blog", href: "/blog" },
+                { label: "FAQ", href: "/faq" },
+                { label: "Garantias", href: "/garantias" },
+                { label: "Termos", href: "/termos" },
               ].map(l => (
                 <li key={l.label}>
                   <Link href={l.href} className="hover:text-foreground transition-colors">{l.label}</Link>

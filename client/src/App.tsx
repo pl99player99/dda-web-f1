@@ -13,6 +13,10 @@ import Quote from "./pages/Quote";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import Contact from "./pages/Contact";
+import Garantias from "./pages/Garantias";
+import Termos from "./pages/Termos";
+import Casos from "./pages/Casos";
+import FAQ from "./pages/FAQ";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -38,6 +42,10 @@ function Router() {
         <Route path={"/blog"} component={Blog} />
         <Route path={"/blog/:id"} component={BlogArticle} />
         <Route path={"/contact"} component={Contact} />
+        <Route path={"/garantias"} component={Garantias} />
+        <Route path={"/termos"} component={Termos} />
+        <Route path={"/casos"} component={Casos} />
+        <Route path={"/faq"} component={FAQ} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

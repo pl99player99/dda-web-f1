@@ -289,7 +289,12 @@ export default function Portfolio() {
             do seu negócio. Vamos criar algo incrível juntos!
           </p>
           <Button asChild className="btn-primary gap-2 text-lg px-8 py-6 w-full sm:w-auto">
-            <Link href="/quote">
+            <Link href="/casos">
+            <Button variant="outline" className="border-border hover:border-accent gap-2 w-full sm:w-auto">
+              Ver Casos de Estudo <ArrowRight className="w-4 h-4" />
+            </Button>
+          </Link>
+          <Link href="/quote">
               Solicitar Orçamento <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
