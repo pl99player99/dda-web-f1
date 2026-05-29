@@ -6,8 +6,11 @@ import ThemeToggle from "@/components/ThemeToggle";
 const navItems = [
   { label: "Serviços", path: "/services" },
   { label: "Portfólio", path: "/portfolio" },
+  { label: "Casos", path: "/casos" },
   { label: "Blog", path: "/blog" },
   { label: "Sobre", path: "/about" },
+  { label: "FAQ", path: "/faq" },
+  { label: "Garantias", path: "/garantias" },
 ];
 
 export default function MobileNav() {

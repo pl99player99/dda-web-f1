@@ -254,6 +254,21 @@ export default function Quote() {
         </div>
       </section>
 
+      {/* Mobile price bar — always visible on mobile, hidden on desktop */}
+      <div className="lg:hidden sticky top-16 z-30 bg-background/95 backdrop-blur border-b border-border px-4 py-3 flex items-center justify-between">
+        <div>
+          <p className="text-xs text-muted-foreground">Estimativa actual</p>
+          <p className="font-display text-2xl text-accent">{calculatedPrice.toLocaleString()} <span className="text-sm font-normal text-muted-foreground">Kz</span></p>
+        </div>
+        <div className="text-right">
+          <p className="text-xs text-muted-foreground">Passo {step + 1} de {STEPS.length}</p>
+          <div className="h-1.5 w-24 bg-border rounded-full overflow-hidden mt-1">
+            <div className="h-full bg-accent rounded-full transition-all duration-500"
+              style={{ width: `${((step + 1) / STEPS.length) * 100}%` }} />
+          </div>
+        </div>
+      </div>
+
       <section className="py-12">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
@@ -624,8 +639,8 @@ export default function Quote() {
               </Card>
             </div>
 
-            {/* Right: Price Summary — sticky */}
-            <div className="lg:col-span-1">
+            {/* Right: Price Summary — sticky, desktop only */}
+            <div className="hidden lg:block lg:col-span-1">
               <Card className="card-modern sticky top-24">
                 <h3 className="font-display text-xl mb-6">Resumo</h3>
 

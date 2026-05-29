@@ -7,6 +7,8 @@ import {
   BriefcaseBusiness,
   Rocket,
   SlidersHorizontal,
+  Shield,
+  HelpCircle,
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
@@ -498,29 +500,71 @@ export default function Services() {
         </div>
       </section>
 
+
+      {/* Trust signals before CTA */}
+      <section className="py-16">
+        <div className="container">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-16">
+            <Link href="/garantias">
+              <div className="card-modern hover:border-orange-400/40 transition-colors cursor-pointer group">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-orange-400/10 border border-orange-400/20 flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-5 h-5 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1 group-hover:text-orange-400 transition-colors">
+                      Garantias DDA-Web
+                    </h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      2 revisões gratuitas, 30 dias de suporte, prazo cumprido ou desconto. Ver todas as garantias →
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/faq">
+              <div className="card-modern hover:border-accent/40 transition-colors cursor-pointer group">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
+                    <HelpCircle className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1 group-hover:text-accent transition-colors">
+                      Perguntas Frequentes
+                    </h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      Prazo, preço, pagamento, revisões — respondemos a tudo antes de começar. Ver FAQ →
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container text-center">
-          <h2 className="font-display text-4xl mb-6">Pronto para Começar?</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Escolha um pacote de site ou solicite uma solução personalizada para
-            sistemas, apps, automações e projetos digitais sob medida!
+      <section className="py-20 bg-stripe relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-accent/5 blur-[80px] rounded-full" />
+        <div className="container relative text-center max-w-xl">
+          <h2 className="font-display text-4xl mb-4">
+            Pronto para começar?
+          </h2>
+          <p className="text-muted-foreground mb-8">
+            Orçamento gratuito. Resposta em menos de 2 horas.
           </p>
-          <Link href="/faq">
-            <Button variant="outline" className="border-border hover:border-accent gap-2 w-full sm:w-auto">
-              Ver FAQ <ArrowRight className="w-4 h-4" />
-            </Button>
-          </Link>
-          <Link href="/garantias">
-            <Button variant="outline" className="border-border hover:border-accent gap-2 w-full sm:w-auto">
-              Garantias
-            </Button>
-          </Link>
-          <Link href="/contact">
-            <Button className="btn-warm gap-2 text-lg px-8 py-6 w-full sm:w-auto">
-              Falar com a Equipa <ArrowRight className="w-5 h-5" />
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/quote">
+              <Button className="btn-warm gap-2 px-8 py-6 w-full sm:w-auto">
+                Calcular Orçamento <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button variant="outline" className="border-border hover:border-accent gap-2 px-8 py-6 w-full sm:w-auto">
+                Falar Connosco
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
