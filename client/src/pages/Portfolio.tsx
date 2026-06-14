@@ -1,4 +1,4 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -288,16 +288,18 @@ export default function Portfolio() {
             Cada projeto é único e customizado para as necessidades específicas
             do seu negócio. Vamos criar algo incrível juntos!
           </p>
-          <Button asChild className="btn-primary gap-2 text-lg px-8 py-6 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/casos">
-            <Button variant="outline" className="border-border hover:border-accent gap-2 w-full sm:w-auto">
-              Ver Casos de Estudo <ArrowRight className="w-4 h-4" />
-            </Button>
-          </Link>
-          <Link href="/quote">
-              Solicitar Orçamento <ArrowRight className="w-5 h-5" />
+              <Button variant="outline" className="border-border hover:border-accent gap-2 w-full sm:w-auto">
+                Ver Casos de Estudo <ArrowRight className="w-4 h-4" />
+              </Button>
             </Link>
-          </Button>
+            <Link href="/quote">
+              <Button className="btn-primary gap-2 text-lg px-8 py-6 w-full sm:w-auto">
+                Solicitar Orçamento <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
