@@ -34,7 +34,7 @@ export default function Navigation() {
     }`}>
       <div className="container flex justify-between items-center py-4">
         <Link href="/" className="flex items-center hover:opacity-90 transition">
-          <img src="/logo.svg" alt="DDA-Web" className="h-10 w-auto max-w-[200px]" />
+          <img src="/logo.png" alt="DDA-Web" className="h-10 w-auto max-w-[200px] site-logo" />
         </Link>
 
         <div className="hidden md:flex gap-7 items-center">

@@ -313,3 +313,8 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, #2a2a2a 30%, #2a2a2a 70%, transparent);
 }
+
+/* Logo — inverte cores no tema claro (logo é branca com fundo transparente) */
+.light .site-logo {
+  filter: invert(1);
+}

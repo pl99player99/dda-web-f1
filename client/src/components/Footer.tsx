@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="block mb-4">
-              <img src="/logo.svg" alt="DDA-Web" className="h-9 w-auto" />
+              <img src="/logo.png" alt="DDA-Web" className="h-9 w-auto site-logo" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-xs">
               Soluções digitais profissionais para empresas em Angola.

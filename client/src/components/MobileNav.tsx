@@ -55,7 +55,7 @@ export default function MobileNav() {
           {/* Header */}
           <div className="flex items-center justify-between px-5 py-4 flex-shrink-0">
             <Link href="/" onClick={() => setIsOpen(false)}>
-              <img src="/logo.svg" alt="DDA-Web" className="h-9 w-auto" />
+              <img src="/logo.png" alt="DDA-Web" className="h-9 w-auto site-logo" />
             </Link>
             <button
               onClick={() => setIsOpen(false)}
