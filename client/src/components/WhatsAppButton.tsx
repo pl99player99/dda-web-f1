@@ -37,7 +37,7 @@ export default function WhatsAppButton() {
       {/* Main button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl glow-accent relative"
+        className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl glow-warm relative"
         title="Contacte-nos no WhatsApp"
         aria-label="Abrir chat WhatsApp"
       >

@@ -22,6 +22,7 @@ export default function Navigation() {
   const navItems = [
     { label: "Serviços", path: "/services" },
     { label: "Portfólio", path: "/portfolio" },
+    { label: "Casos", path: "/casos" },
     { label: "Blog", path: "/blog" },
     { label: "Sobre", path: "/about" },
   ];
@@ -42,7 +43,7 @@ export default function Navigation() {
             <Link
               key={item.path}
               href={item.path}
-              className={`text-sm font-medium transition-colors ${
+              className={`relative text-sm font-medium transition-colors py-1 ${
                 isActive(item.path)
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
@@ -50,7 +51,7 @@ export default function Navigation() {
             >
               {item.label}
               {isActive(item.path) && (
-                <div className="h-0.5 bg-accent mt-0.5 rounded-full" />
+                <div className="absolute left-0 right-0 -bottom-1 h-0.5 bg-accent rounded-full" />
               )}
             </Link>
           ))}
