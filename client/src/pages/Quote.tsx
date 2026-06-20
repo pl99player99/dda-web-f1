@@ -14,7 +14,6 @@ import {
   Server,
   ChevronRight,
   Send,
-  Phone,
 } from "lucide-react";
 import { useState, useEffect, useMemo } from "react";
 import Navigation from "@/components/Navigation";
