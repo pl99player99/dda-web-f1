@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { blogArticles } from "@/data/blogArticles";
 import AnimatedStats from "@/components/AnimatedStats";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -111,7 +112,9 @@ export default function Home() {
       {/* ── STATS ────────────────────────────────────── */}
       <section className="py-14">
         <div className="container">
-          <AnimatedStats />
+          <Reveal>
+            <AnimatedStats />
+          </Reveal>
         </div>
       </section>
 
@@ -119,7 +122,7 @@ export default function Home() {
       <section className="py-24">
         <div className="container">
           {/* Header — left-aligned, not centred */}
-          <div className="max-w-xl mb-14">
+          <Reveal className="max-w-xl mb-14">
             <p className="pill-warm mb-4">O que fazemos</p>
             <h2 className="font-display text-4xl lg:text-5xl mb-4">
               Tudo o que o seu negócio precisa
@@ -129,10 +132,10 @@ export default function Home() {
               Do site simples ao sistema complexo — entregamos o que faz sentido
               para o seu negócio crescer.
             </p>
-          </div>
+          </Reveal>
 
           {/* Services grid — asymmetric */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Reveal delay={100} className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Large card */}
             <div className="md:col-span-2 card-modern bg-gradient-to-br from-card to-card/50 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-all duration-500" />
@@ -183,14 +186,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── HOW IT WORKS ─────────────────────────────── */}
       <section className="py-24 bg-grid">
         <div className="container">
-          <div className="text-center mb-16">
+          <Reveal className="text-center mb-16">
             <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">Processo</p>
             <h2 className="font-display text-4xl lg:text-5xl mb-4">
               Simples como deve ser
@@ -198,9 +201,9 @@ export default function Home() {
             <p className="text-muted-foreground max-w-lg mx-auto">
               Sem reuniões intermináveis. Sem processos complicados. Do contacto à entrega em dias.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative">
+          <Reveal delay={100} className="grid grid-cols-2 md:grid-cols-4 gap-6 relative">
             <div className="hidden md:block absolute top-10 left-[13%] right-[13%] h-px">
               <div className="w-full h-full bg-gradient-to-r from-transparent via-border to-transparent" />
             </div>
@@ -218,7 +221,7 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
 
           <div className="flex justify-center mt-14">
             <Link href="/contact">
@@ -233,7 +236,7 @@ export default function Home() {
       {/* ── WHY US ───────────────────────────────────── */}
       <section className="py-24">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left — text */}
             <div>
               <p className="pill-blue mb-4">Por que escolher-nos</p>
@@ -272,21 +275,21 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── TESTIMONIALS ─────────────────────────────── */}
       <section className="py-24">
         <div className="container">
-          <div className="max-w-xl mb-14">
+          <Reveal className="max-w-xl mb-14">
             <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">Clientes</p>
             <h2 className="font-display text-4xl lg:text-5xl">
               Quem já deu<br />o próximo passo
             </h2>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Reveal delay={100} className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               {
                 name:"Maria João", role:"Restaurante Sabor da Terra",
@@ -325,14 +328,14 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── PORTFOLIO PREVIEW ────────────────────────── */}
       <section className="py-24">
         <div className="container">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+          <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
               <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-2">Portfólio</p>
               <h2 className="font-display text-4xl">Projetos recentes</h2>
@@ -342,9 +345,9 @@ export default function Home() {
                 Ver Todos <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <Reveal delay={100} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { id:1, title:"Restaurante Sabor da Terra", cat:"Site Profissional", image:"/images/project-1.png" },
               { id:4, title:"Sistema de Gestão Kwanza", cat:"Sistema Web", image:"/images/blog-4.png" },
@@ -363,14 +366,14 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── BLOG PREVIEW ─────────────────────────────── */}
       <section className="py-24">
         <div className="container">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+          <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
               <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-2">Blog</p>
               <h2 className="font-display text-4xl">Últimos artigos</h2>
@@ -380,9 +383,9 @@ export default function Home() {
                 Ver Todos <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <Reveal delay={100} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {blogArticles.slice(0,3).map(a => (
               <Link key={a.id} href={`/blog/${a.id}`}>
                 <div className="card-modern overflow-hidden p-0 cursor-pointer group h-full flex flex-col">
@@ -399,7 +402,7 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
