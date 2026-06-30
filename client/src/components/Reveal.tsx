@@ -11,7 +11,11 @@ interface RevealProps {
 export default function Reveal({ children, className = "", delay = 0, variant = "up" }: RevealProps) {
   const { ref, isVisible } = useScrollReveal();
 
-  const translate = variant === "up" ? (isVisible ? "translate-y-0" : "translate-y-6") : "";
+  // Importante: ao ficar visível, removemos a classe de transform por completo
+  // (em vez de usar translate-y-0) para não quebrar `position: sticky` em filhos,
+  // já que qualquer valor de transform — incluindo translateY(0) — cria um novo
+  // bloco de contenção que o sticky não atravessa.
+  const translate = variant === "up" && !isVisible ? "translate-y-6" : "";
 
   return (
     <div

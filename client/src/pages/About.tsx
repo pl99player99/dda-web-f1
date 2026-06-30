@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import AnimatedStats from "@/components/AnimatedStats";
+import Reveal from "@/components/Reveal";
 
 const aboutStats = [
   { numericValue: 50, suffix: "+", label: "Projetos", sub: "entregues" },
@@ -42,6 +43,7 @@ export default function About() {
       {/* Hero */}
       <section className="pt-28 pb-20 bg-grid">
         <div className="container">
+          <Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="pill-blue mb-6">Quem Somos</div>
@@ -70,12 +72,14 @@ export default function About() {
               <AnimatedStats stats={aboutStats} />
             </div>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container">
+          <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="card-modern border-l-4 border-l-accent">
               <div className="w-10 h-10 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center mb-4">
@@ -100,12 +104,14 @@ export default function About() {
               </p>
             </div>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Values */}
       <section className="py-20">
         <div className="container">
+          <Reveal>
           <div className="max-w-lg mb-12">
             <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-2">Valores</p>
             <h2 className="font-display text-4xl">O que nos move</h2>
@@ -121,12 +127,14 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Timeline */}
       <section className="py-20">
         <div className="container max-w-2xl">
+          <Reveal>
           <div className="max-w-lg mb-12">
             <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-2">Jornada</p>
             <h2 className="font-display text-4xl">Como chegámos aqui</h2>
@@ -149,12 +157,14 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Why Us */}
       <section className="py-20">
         <div className="container">
+          <Reveal>
           <div className="max-w-lg mb-12">
             <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-2">Diferenciais</p>
             <h2 className="font-display text-4xl">Por que a DDA-Web?</h2>
@@ -172,13 +182,15 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* CTA */}
       <section className="py-20 bg-stripe relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-accent/5 blur-[100px] rounded-full" />
         <div className="container relative text-center max-w-xl">
+          <Reveal>
           <h2 className="font-display text-4xl mb-4">
             Vamos trabalhar<br />
             <span className="text-gradient-warm">juntos?</span>
@@ -198,7 +210,8 @@ export default function About() {
               </Button>
             </Link>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

@@ -6,6 +6,7 @@ import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedStats from "@/components/AnimatedStats";
+import Reveal from "@/components/Reveal";
 
 /**
  * DDA-Web Portfolio Page
@@ -141,6 +142,7 @@ export default function Portfolio() {
       {/* Header */}
       <section className="pt-28 pb-16 bg-grid">
         <div className="container text-center">
+          <Reveal>
           <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">
             Trabalhos Realizados
           </p>
@@ -152,12 +154,14 @@ export default function Portfolio() {
             Veja exemplos de sites, sistemas e apps que representam nosso padrão
             e os resultados que buscamos para cada cliente
           </p>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Projects Grid */}
       <section className="py-16">
         <div className="container">
+          <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map(project => (
               <div
@@ -267,20 +271,24 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Stats Section */}
       <section className="py-20">
         <div className="container">
+          <Reveal>
           <AnimatedStats />
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-stripe relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-accent/5 blur-[80px] rounded-full" />
         <div className="container relative text-center">
+          <Reveal>
           <h2 className="font-display text-4xl mb-6">
             Quer um Projeto Como Estes?
           </h2>
@@ -300,7 +308,8 @@ export default function Portfolio() {
               </Button>
             </Link>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

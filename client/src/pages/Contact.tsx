@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import ContactForm from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 
 export default function Contact() {
   const contactInfo = [
@@ -48,6 +49,7 @@ export default function Contact() {
       {/* Hero */}
       <section className="pt-28 pb-16 bg-grid">
         <div className="container max-w-2xl">
+          <Reveal>
           <div className="pill-blue mb-6">Fale Connosco</div>
           <h1 className="font-display text-4xl sm:text-5xl mb-4">
             Vamos conversar<br />
@@ -56,12 +58,14 @@ export default function Contact() {
           <p className="text-muted-foreground text-lg">
             Sem compromisso. Respondemos a todas as mensagens.
           </p>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Contact info cards */}
       <section className="py-16">
         <div className="container">
+          <Reveal>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-16">
             {contactInfo.map((item, idx) => (
               <div key={idx} className="card-modern flex flex-col gap-3">
@@ -137,7 +141,8 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { blogArticles, categories } from "@/data/blogArticles";
 import { Link } from "wouter";
+import Reveal from "@/components/Reveal";
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -27,6 +28,7 @@ export default function Blog() {
       {/* Hero */}
       <section className="pt-28 pb-12 bg-grid">
         <div className="container">
+          <Reveal>
           <div className="max-w-2xl mb-8">
             <div className="pill-blue mb-4">Conhecimento</div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight mb-4">
@@ -42,12 +44,14 @@ export default function Blog() {
               value={searchQuery} onChange={e => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition text-sm" />
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Category filter — sticky */}
       <div className="sticky top-16 bg-background/95 backdrop-blur z-30 py-4">
         <div className="container">
+          <Reveal>
           <div className="flex flex-wrap gap-2">
             <button onClick={() => setSelectedCategory(null)}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition border ${
@@ -64,13 +68,15 @@ export default function Blog() {
               </button>
             ))}
           </div>
-        </div>
+                  </Reveal>
+</div>
       </div>
 
       {/* Featured article */}
       {!selectedCategory && !searchQuery && (
         <section className="py-12">
           <div className="container">
+          <Reveal>
             <Link href={`/blog/${featured.id}`}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 group cursor-pointer card-modern overflow-hidden p-0">
                 <div className="relative h-64 lg:h-auto overflow-hidden">
@@ -97,13 +103,15 @@ export default function Blog() {
                 </div>
               </div>
             </Link>
-          </div>
+                    </Reveal>
+</div>
         </section>
       )}
 
       {/* Articles grid */}
       <section className="py-10 pb-20">
         <div className="container">
+          <Reveal>
           {filteredArticles.length === 0 ? (
             <div className="text-center py-20">
               <p className="text-muted-foreground mb-4">Nenhum artigo encontrado.</p>
@@ -141,13 +149,15 @@ export default function Blog() {
               ))}
             </div>
           )}
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* CTA */}
       <section className="py-20 bg-stripe relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-accent/5 blur-[80px] rounded-full" />
         <div className="container relative text-center max-w-xl">
+          <Reveal>
           <h2 className="font-display text-3xl mb-4">
             Pronto para <span className="text-gradient-accent">crescer digitalmente?</span>
           </h2>
@@ -166,7 +176,8 @@ export default function Blog() {
               </Button>
             </Link>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

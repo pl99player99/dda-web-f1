@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 
 export default function Termos() {
   const sections = [
@@ -60,6 +61,7 @@ export default function Termos() {
       {/* Hero */}
       <section className="pt-28 pb-12 bg-grid">
         <div className="container max-w-2xl">
+          <Reveal>
           <div className="pill-blue mb-6">Legal</div>
           <h1 className="font-display text-4xl sm:text-5xl mb-4">
             Termos e Condições
@@ -67,12 +69,14 @@ export default function Termos() {
           <p className="text-muted-foreground">
             Última actualização: Janeiro de 2026. Leia com atenção antes de contratar os nossos serviços.
           </p>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Content */}
       <section className="py-16 pb-24">
         <div className="container max-w-3xl">
+          <Reveal>
           <div className="space-y-10">
             {sections.map((s, i) => (
               <div key={i}>
@@ -91,7 +95,8 @@ export default function Termos() {
               </a>
             </p>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

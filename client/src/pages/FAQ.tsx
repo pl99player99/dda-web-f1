@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { useState } from "react";
+import Reveal from "@/components/Reveal";
 
 const faqs = [
   {
@@ -118,6 +119,7 @@ export default function FAQ() {
       {/* Hero */}
       <section className="pt-28 pb-16 bg-grid">
         <div className="container max-w-2xl">
+          <Reveal>
           <div className="pill-blue mb-6">Dúvidas Frequentes</div>
           <h1 className="font-display text-4xl sm:text-5xl mb-4">
             Tens perguntas?<br />
@@ -127,12 +129,14 @@ export default function FAQ() {
             Reunimos as dúvidas mais comuns dos nossos clientes. Se não encontrares
             o que procuras, fala directamente connosco.
           </p>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* FAQ sections */}
       <section className="py-16 pb-24">
         <div className="container">
+          <Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-5xl">
             {/* Category nav — desktop */}
             <div className="hidden lg:block">
@@ -169,13 +173,15 @@ export default function FAQ() {
               ))}
             </div>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* CTA */}
       <section className="py-20 bg-stripe relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-accent/5 blur-[80px] rounded-full" />
         <div className="container relative text-center max-w-xl">
+          <Reveal>
           <h2 className="font-display text-3xl mb-4">
             Não encontraste o que procuravas?
           </h2>
@@ -194,7 +200,8 @@ export default function FAQ() {
               </Button>
             </a>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

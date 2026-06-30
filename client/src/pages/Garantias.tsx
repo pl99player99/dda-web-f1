@@ -3,6 +3,7 @@ import { ArrowRight, Check, Shield, RefreshCw, Clock, Star, MessageCircle } from
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
+import Reveal from "@/components/Reveal";
 
 export default function Garantias() {
   const garantias = [
@@ -50,6 +51,7 @@ export default function Garantias() {
       {/* Hero */}
       <section className="pt-28 pb-16 bg-grid">
         <div className="container max-w-2xl">
+          <Reveal>
           <div className="pill-warm mb-6">Comprometemos-nos</div>
           <h1 className="font-display text-4xl sm:text-5xl mb-4">
             Trabalhamos com<br />
@@ -59,12 +61,14 @@ export default function Garantias() {
             Não são promessas vagas. São compromissos concretos que assumimos
             antes de começar qualquer projeto.
           </p>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Guarantees */}
       <section className="py-20">
         <div className="container">
+          <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl">
             {garantias.map((g, i) => (
               <div key={i} className="card-modern flex gap-4">
@@ -78,12 +82,14 @@ export default function Garantias() {
               </div>
             ))}
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Commitments */}
       <section className="py-20">
         <div className="container">
+          <Reveal>
           <div className="max-w-3xl">
             <div className="max-w-lg mb-10">
               <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-2">Sempre incluído</p>
@@ -103,12 +109,14 @@ export default function Garantias() {
               ))}
             </div>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Payment policy */}
       <section className="py-20">
         <div className="container max-w-3xl">
+          <Reveal>
           <div className="card-modern border-l-4 border-l-accent">
             <h2 className="font-display text-2xl mb-4">Política de Pagamento</h2>
             <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
@@ -126,13 +134,15 @@ export default function Garantias() {
               </p>
             </div>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* CTA */}
       <section className="py-20 bg-stripe relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-accent/5 blur-[80px] rounded-full" />
         <div className="container relative text-center max-w-xl">
+          <Reveal>
           <h2 className="font-display text-4xl mb-4">
             Tens dúvidas?<br />
             <span className="text-gradient-warm">Fala connosco.</span>
@@ -152,7 +162,8 @@ export default function Garantias() {
               </Button>
             </Link>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

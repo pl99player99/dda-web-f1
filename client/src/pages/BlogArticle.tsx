@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import { blogArticles } from "@/data/blogArticles";
 import { Streamdown } from "streamdown";
 import { toast } from "sonner";
+import Reveal from "@/components/Reveal";
 
 /**
  * DDA-Web Blog Article Page
@@ -63,6 +64,7 @@ export default function BlogArticle() {
       {/* Article Header */}
       <section className="pt-32 pb-12">
         <div className="container max-w-3xl">
+          <Reveal>
           <Link href="/blog">
             <Button variant="ghost" className="gap-2 mb-8">
               <ArrowLeft className="w-4 h-4" />
@@ -112,12 +114,14 @@ export default function BlogArticle() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Article Content */}
       <section className="py-12">
         <div className="container max-w-3xl">
+          <Reveal>
           <div className="prose prose-invert max-w-none mb-12">
             <Streamdown>{article.content}</Streamdown>
           </div>
@@ -137,13 +141,15 @@ export default function BlogArticle() {
               </div>
             </div>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Related Articles */}
       {relatedArticles.length > 0 && (
         <section className="py-12">
           <div className="container">
+          <Reveal>
             <h2 className="font-display text-3xl mb-8">Artigos Relacionados</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedArticles.map(relatedArticle => (
@@ -174,13 +180,15 @@ export default function BlogArticle() {
                 </Link>
               ))}
             </div>
-          </div>
+                    </Reveal>
+</div>
         </section>
       )}
 
       {/* CTA Section */}
       <section className="py-20">
         <div className="container max-w-2xl text-center">
+          <Reveal>
           <h2 className="font-display text-4xl mb-4">
             Pronto para Transformar Seu Negócio?
           </h2>
@@ -196,17 +204,20 @@ export default function BlogArticle() {
               <Button variant="outline">Solicitar Orçamento</Button>
             </Link>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Footer */}
       <footer className="py-12 text-center text-muted-foreground text-sm">
         <div className="container">
+          <Reveal>
           <p>&copy; 2026 DDA-Web. Todos os direitos reservados.</p>
           <p className="mt-2">
             Transformando negócios com tecnologia e inovação.
           </p>
-        </div>
+                  </Reveal>
+</div>
       </footer>
     </div>
   );

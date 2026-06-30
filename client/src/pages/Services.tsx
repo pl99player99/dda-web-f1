@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 
 /**
  * DDA-Web Services Page
@@ -159,6 +160,7 @@ export default function Services() {
       {/* Header */}
       <section className="pt-28 pb-16 bg-grid">
         <div className="container text-center">
+          <Reveal>
           <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">
             O Que Fazemos
           </p>
@@ -172,12 +174,14 @@ export default function Services() {
             automações — escolha o pacote ideal ou fale connosco para uma
             solução personalizada.
           </p>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Packages Grid */}
       <section className="py-16">
         <div className="container">
+          <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {packages.map(pkg => (
               <div
@@ -274,12 +278,14 @@ export default function Services() {
               </div>
             ))}
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Additional Digital Solutions */}
       <section className="py-20">
         <div className="container">
+          <Reveal>
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl mb-4">
               Outras Soluções Digitais
@@ -369,12 +375,14 @@ export default function Services() {
               </Card>
             ))}
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Detailed Comparison */}
       <section className="py-20">
         <div className="container">
+          <Reveal>
           <h2 className="font-display text-4xl mb-12 text-center">
             Comparação Detalhada
           </h2>
@@ -458,12 +466,14 @@ export default function Services() {
               </tbody>
             </table>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container max-w-3xl">
+          <Reveal>
           <h2 className="font-display text-4xl mb-12 text-center">
             Perguntas Frequentes
           </h2>
@@ -497,13 +507,15 @@ export default function Services() {
               </div>
             ))}
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
 
       {/* Trust signals before CTA */}
       <section className="py-16">
         <div className="container">
+          <Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-16">
             <Link href="/garantias">
               <div className="card-modern hover:border-orange-400/40 transition-colors cursor-pointer group">
@@ -540,13 +552,15 @@ export default function Services() {
               </div>
             </Link>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-stripe relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-accent/5 blur-[80px] rounded-full" />
         <div className="container relative text-center max-w-xl">
+          <Reveal>
           <h2 className="font-display text-4xl mb-4">
             Pronto para começar?
           </h2>
@@ -565,7 +579,8 @@ export default function Services() {
               </Button>
             </Link>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

@@ -20,6 +20,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
 import { Link } from "wouter";
+import Reveal from "@/components/Reveal";
 
 const STEPS = [
   "Negócio",
@@ -183,6 +184,7 @@ export default function Quote() {
         <Navigation />
         <section className="pt-28 pb-20 flex items-center justify-center min-h-screen bg-grid">
           <div className="container max-w-lg text-center">
+          <Reveal>
             <div className="w-20 h-20 rounded-full bg-accent/15 border-2 border-accent flex items-center justify-center mx-auto mb-8">
               <Check className="w-10 h-10 text-accent" />
             </div>
@@ -216,7 +218,8 @@ export default function Quote() {
                 </Button>
               </a>
             </div>
-          </div>
+                    </Reveal>
+</div>
         </section>
         <Footer />
       </div>
@@ -230,6 +233,7 @@ export default function Quote() {
       {/* Hero */}
       <section className="pt-28 pb-12 bg-grid">
         <div className="container text-center max-w-2xl">
+          <Reveal>
           <p className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-3">
             Orçamento Gratuito
           </p>
@@ -247,7 +251,8 @@ export default function Quote() {
               Pacote: {selectedPackageName}
             </div>
           )}
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Mobile price bar — always visible on mobile, hidden on desktop */}
@@ -267,6 +272,7 @@ export default function Quote() {
 
       <section className="py-12">
         <div className="container">
+          <Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
 
             {/* Left: Stepper + Form */}
@@ -713,7 +719,8 @@ export default function Quote() {
             </div>
 
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

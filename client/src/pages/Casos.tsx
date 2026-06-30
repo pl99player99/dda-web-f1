@@ -3,6 +3,7 @@ import { ArrowRight, TrendingUp } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
+import Reveal from "@/components/Reveal";
 
 const casos = [
   {
@@ -79,6 +80,7 @@ export default function Casos() {
       {/* Hero */}
       <section className="pt-28 pb-16 bg-grid">
         <div className="container max-w-2xl">
+          <Reveal>
           <div className="pill-warm mb-6">Resultados Reais</div>
           <h1 className="font-display text-4xl sm:text-5xl mb-4">
             Projetos que<br />
@@ -88,12 +90,14 @@ export default function Casos() {
             Não mostramos apenas o que ficou bonito — mostramos o que funcionou.
             Cada caso tem números reais e clientes reais.
           </p>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* Cases */}
       <section className="py-16 pb-24">
         <div className="container space-y-16">
+          <Reveal>
           {casos.map((caso, i) => (
             <div key={caso.id}>
               {caso.comingSoon ? (
@@ -183,13 +187,15 @@ export default function Casos() {
               )}
             </div>
           ))}
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       {/* CTA */}
       <section className="py-20 bg-stripe relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-accent/5 blur-[80px] rounded-full" />
         <div className="container relative text-center max-w-xl">
+          <Reveal>
           <h2 className="font-display text-4xl mb-4">
             O próximo caso<br />
             <span className="text-gradient-warm">pode ser o teu.</span>
@@ -209,7 +215,8 @@ export default function Casos() {
               </Button>
             </Link>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
 
       <Footer />

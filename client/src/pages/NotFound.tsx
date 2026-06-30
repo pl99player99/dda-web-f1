@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Home, Search, MessageCircle } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import Navigation from "@/components/Navigation";
+import Reveal from "@/components/Reveal";
 
 export default function NotFound() {
   const [, setLocation] = useLocation();
@@ -18,6 +19,7 @@ export default function NotFound() {
       <Navigation />
       <section className="pt-32 pb-20 flex items-center justify-center min-h-screen bg-grid">
         <div className="container max-w-2xl text-center">
+          <Reveal>
           <div className="font-display text-[10rem] leading-none text-accent/10 select-none mb-0">
             404
           </div>
@@ -52,7 +54,8 @@ export default function NotFound() {
               ))}
             </div>
           </div>
-        </div>
+                  </Reveal>
+</div>
       </section>
     </div>
   );
